@@ -7,6 +7,7 @@ rm(list = ls())
 
 # Packages
 library(rio)
+library(gridExtra)
 library(tidyverse)
 
 # Directories
@@ -34,6 +35,9 @@ cdfw_port <- cdfw_port_orig %>%
   setNames(tolower(colnames(.))) %>% 
   rename(tl_lb="landings (lbs)",
          value_usd="ex-vessel value ($)") %>% 
+  # Make factor in South to North order
+  mutate(port=factor(port, levels=c("San Diego", "Los Angeles", "Santa Barbara", 
+                                    "Morro Bay", "Monterey", "San Francisco", "Bodega Bay", "Fort Bragg", "Eureka")))
   arrange(year, port)
 
 # CDFW 1915-2018 landings by region
@@ -178,6 +182,25 @@ crfs_rec1 <- crfs_rec %>%
 # Merge recreational landings
 rec <- plyr::rbind.fill(cpfv_rec1, crfs_rec1)
 
+
+# Price data
+############################################
+
+# CDFW region
+# PSMFC
+
+cdfw_prices <- cdfw_region %>% 
+  select(year, price_usd_lb) %>% 
+  filter(!is.na(price_usd_lb)) %>% 
+  mutate(source="CDFW region")
+
+psmfc_prices <- psmfc %>% 
+  select(year, price_usd_lb) %>% 
+  filter(!is.na(price_usd_lb)) %>% 
+  mutate(source="PSMFC")
+
+prices <- rbind(cdfw_prices, psmfc_prices)
+
 # Plot data
 ################################################################################
 
@@ -191,8 +214,6 @@ my_theme <- theme(axis.text=element_text(size=7),
                   panel.grid.minor = element_blank(),
                   panel.background = element_blank(), 
                   axis.line = element_line(colour = "black"))
-
-
 
 # Commercial landings
 g <- ggplot(comm, aes(x=year, y=tl_lb/1e6, col=source)) +
@@ -216,6 +237,61 @@ g
 ggsave(g, filename=file.path(plotdir, "Fig2_dungeness_landings_recreational.png"), width=6.5, height=3, units="in", dpi=600)
 
 
+# CDFW by port
+g <- ggplot(cdfw_port, aes(x=year, y=tl_lb/1e6, fill=port)) +
+  geom_area() + 
+  labs(x="", y="Total landings (millions of pounds)") +
+  scale_fill_discrete(name="Port (south to north)") +
+  theme_bw() + my_theme
+g
+ggsave(g, filename=file.path(plotdir, "Fig3_dungeness_landings_comm_port.png"), width=6.5, height=3, units="in", dpi=600)
 
-  
-  
+
+# Prices
+##################################################################
+
+g <- ggplot(prices, aes(x=year, y=price_usd_lb, col=source)) +
+  geom_point() +
+  geom_line() +
+  labs(x="", y="Price (USD / lb)") +
+  scale_color_discrete(name="Source") +
+  theme_bw() + my_theme
+g
+ggsave(g, filename=file.path(plotdir, "FigX_dungeness_prices.png"), width=6.5, height=3, units="in", dpi=600)
+
+# Catch vs. profits
+##################################################################
+
+# CDFW catch and profts comparison
+p1 <- ggplot(cdfw_port, aes(x=tl_lb/1e6, y=value_usd/1e6, col=port)) +
+  geom_point() +
+  ggtitle("CDFW 2000-2017 landings by port") +
+  labs(x="Landings (millions of lbs)", y="Value (millions of USD)") +
+  scale_colour_discrete(name="Port") +
+  theme_bw() + my_theme
+p1
+
+# NMFS catch and profits comparison
+p2 <- ggplot(nmfs, aes(x=tl_lb/1e6, y=value_usd/1e6, col=year)) +
+  geom_point() +
+  ggtitle("NMFS 1950-2016 landings") +
+  labs(x="Landings (millions of lbs)", y="Value (millions of USD)") +
+  scale_color_gradientn(colors=RColorBrewer::brewer.pal(9, "YlOrRd"), name="Year") +
+  theme_bw() + my_theme
+p2
+
+# PSMFC 1915-2005 landings
+p3 <- ggplot(psmfc, aes(x=tl_lb_total/1e6, y=value_usd/1e6)) +
+  geom_point() +
+  ggtitle("PSMFC landings") +
+  labs(x="Landings (millions of lbs)", y="Value (millions of USD)") +
+  theme_bw() + my_theme
+p3
+
+# Arrange
+g <- grid.arrange(p1, p2, p3, ncol=3)
+
+ggsave(g, filename=file.path(plotdir, "FigX_value_landings_correlation.png"), width=10.5, height=3, units="in", dpi=600)
+
+
+

@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+data/raw/charm
+data/processed/charm_nowcast_dataframe.Rds

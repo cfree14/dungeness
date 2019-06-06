@@ -15,6 +15,8 @@ outputdir <- "data/pier_sampling/processed"
 plotdir <- "data/pier_sampling/figures"
 
 # Read data
+# All pier data downloaded from here:
+# http://www.sccoos.org/data/habs/history.php?location=Santa%20Cruz%20Wharf
 data_orig <- read.delim(file.path(inputdir, "Harmful Algal Blooms_2008-2019.csv"),
                         sep=",", skip=7, header=T, check.names=F, na.strings="NaN", as.is=T)
 colnames(data_orig) <- iconv(colnames(data_orig), to = "ASCII", sub = "")

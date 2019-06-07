@@ -65,7 +65,6 @@ data <- data_orig %>%
   # Rearrange columns
   select(date, datetime, everything())
 
-
 # Perform checks
 anyDuplicated(colnames(data))
 str(data)
@@ -73,6 +72,11 @@ str(data)
 # Export data
 saveRDS(data, file.path(outputdir, "2008_2019_pier_sampling_data.Rds"))
 
+
+# Piers
+piers <- data %>%
+  select(location, long_dd, lat_dd) %>% 
+  unique()
 
 # Quick plot
 ################################################################################

@@ -14,8 +14,8 @@ library(gganimate)
 library(gifski)
 
 # Directories
-datadir <- "data/raw/charm"
-plotdir <- "data/figures"
+datadir <- "data/charm/raw"
+plotdir <- "data/charm/figures"
 
 # Read data
 pn_brick <- raster::brick(file.path(datadir, "PN_nowcast_2014present.nc"))

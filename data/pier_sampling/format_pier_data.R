@@ -8,6 +8,7 @@ rm(list = ls())
 # Packages
 library(lubridate)
 library(tidyverse)
+library(plyr)
 
 # Directories
 inputdir <- "data/pier_sampling/raw"
@@ -63,7 +64,8 @@ data <- data_orig %>%
   mutate(date=ymd(paste(year, month, day, sep="-")),
          datetime=ymd_hms(paste(date, time))) %>% 
   # Rearrange columns
-  select(date, datetime, everything())
+  select(date, datetime, everything()) %>% 
+  arrange(location, datetime)
 
 # Perform checks
 anyDuplicated(colnames(data))
@@ -77,6 +79,11 @@ saveRDS(data, file.path(outputdir, "2008_2019_pier_sampling_data.Rds"))
 piers <- data %>%
   select(location, long_dd, lat_dd) %>% 
   unique()
+
+# Time intervals
+intervals <- difftime(data$datetime[2:nrow(data)], data$datetime[1:(nrow(data)-1)], units="hours")
+hist(as.numeric(intervals), breaks=seq(0,200,0.25))
+abline(v=1)
 
 # Quick plot
 ################################################################################

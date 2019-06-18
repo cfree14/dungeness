@@ -11,8 +11,8 @@ library(tidyverse)
 library(rnaturalearth)
 
 # Directories
-datadir <- "data/processed"
-plotdir <- "data/figures"
+datadir <- "data/landings/processed"
+plotdir <- "data/landings/figures"
 
 # Read data
 ports <- read.csv(file.path(datadir, "dungeness_ports.csv"), as.is=T)

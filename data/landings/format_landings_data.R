@@ -11,9 +11,9 @@ library(gridExtra)
 library(tidyverse)
 
 # Directories
-inputdir <- "data/raw/CA Landings Data"
-outputdir <- "data/processed"
-plotdir <- "data/figures"
+inputdir <- "data/landings/raw"
+outputdir <- "data/landings/processed"
+plotdir <- "data/landings/figures"
 
 # Read data
 list.files(inputdir)
@@ -292,6 +292,7 @@ p3
 g <- grid.arrange(p1, p2, p3, ncol=3)
 
 ggsave(g, filename=file.path(plotdir, "FigX_value_landings_correlation.png"), width=10.5, height=3, units="in", dpi=600)
+
 
 
 

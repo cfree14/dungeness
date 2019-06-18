@@ -10,9 +10,9 @@ library(rio)
 library(tidyverse)
 
 # Directories
-inputdir <- "data/raw/aquamaps"
-outputdir <- "data/processed"
-plotdir <- "data/figures"
+inputdir <- "data/aquamaps/raw"
+outputdir <- "data/aquamaps/processed"
+plotdir <- "data/aquamaps/figures"
 
 # Read data
 list.files(inputdir)

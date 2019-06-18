@@ -11,9 +11,9 @@ library(gridExtra)
 library(tidyverse)
 
 # Directories
-inputdir <- "data/raw/CA Landings Data"
-outputdir <- "data/processed"
-plotdir <- "data/figures"
+inputdir <- "data/landings/raw"
+outputdir <- "data/landings/processed"
+plotdir <- "data/landings/figures"
 
 # Read data
 traps_orig <- import(file.path(inputdir, "permit_data_manually_modified.xlsx"), which=1)
@@ -35,6 +35,9 @@ stats <- traps %>%
   summarize(n_permits=sum(n_permits),
             n_traps=sum(n_traps)) %>% 
   ungroup()
+
+# Total number of traps
+sum(stats$n_traps)
   
 # Format permits data
 # Sleuthing in the original data file made me realize that

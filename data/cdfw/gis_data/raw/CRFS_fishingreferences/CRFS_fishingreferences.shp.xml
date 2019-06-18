@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>CDFG</origin>
+				<pubdate>Unpublished Material</pubdate>
+				<pubtime>Unknown</pubtime>
+				<title Sync="TRUE">CRFS_fishingreferences</title>
+				<edition>First</edition>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<serinfo>
+					<sername>None</sername>
+				</serinfo>
+				<ftname Sync="TRUE">CRFS_fishingreferences</ftname>
+				<onlink Sync="TRUE">\\BEETHOVEN\C$\Documents and Settings\GWSchmidt.GEO\Desktop\CRFS_fishingreferences\CRFS_fishingreferences.shp</onlink></citeinfo>
+		</citation>
+		<descript>
+			<abstract>Recreational fishing references for California Recreational Fishery Survey (CRFS). Gathered by Pacific States Marine Fisheries Commission (PSMFC) CRFS field supervisors for each region. Compiled during 2002-2006 CRFS field seasons.</abstract>
+			<purpose>Recreational fishing references for California Recreational Fishery Survey (CRFS). To provide recreational fishing reference locations for CRFS field survey maps for anler interviews.</purpose>
+			<supplinf>
+
+--END ORIGINAL METADATA--</supplinf>
+			<langdata Sync="TRUE">en</langdata>
+		</descript>
+		<timeperd>
+			<timeinfo>
+				<rngdates><begdate>2002</begdate><begtime>unknown</begtime><enddate>2006</enddate></rngdates></timeinfo>
+			<current>ground condition</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>None planned</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-123.439342</westbc>
+				<eastbc Sync="TRUE">-115.720055</eastbc>
+				<northbc Sync="TRUE">38.184999</northbc>
+				<southbc Sync="TRUE">30.484167</southbc>
+			</bounding>
+			<lboundng>
+				<leftbc Sync="TRUE">-301016.972192</leftbc>
+				<rightbc Sync="TRUE">374678.220145</rightbc>
+				<topbc Sync="TRUE">18563.564394</topbc>
+				<bottombc Sync="TRUE">-827668.508378</bottombc>
+			</lboundng>
+		</spdom>
+		<keywords>
+			<theme><themekey>structure</themekey></theme>
+			<place>
+				<placekey>California</placekey>
+			</place>
+			<theme><themekey>cultural</themekey><themekey>hydrography</themekey></theme></keywords>
+		<accconst>None</accconst>
+		<useconst>None.  </useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>California Department of Fish and Game</cntorg>
+					<cntper>Marine Region GIS</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>20 Lower Ragsdale Dr.</address>
+					<city>Monterey</city>
+					<state>CA</state>
+					<postal>93940</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>831.649.7143</cntvoice>
+				<cntfax>831.649.2917</cntfax>
+				<cntemail>mr_gis@dfg.ca.gov</cntemail>
+				<cntemail>geo_data@dfg.ca.gov</cntemail>
+				<hours>8 am to 5 pm  Monday - Friday</hours>
+				<cntinst>Email is preferred.</cntinst>
+			</cntinfo>
+		</ptcontac>
+		<secinfo>
+			<secsys>None</secsys>
+			<secclass>Unclassified</secclass>
+			<sechandl>None</sechandl>
+		</secinfo>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.1.0.722</native>
+		<natvform Sync="TRUE">Shapefile</natvform>
+	</idinfo>
+	<dataqual>
+		<lineage>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><date Sync="TRUE">20060727</date><time Sync="TRUE">17014000</time></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="CRFS_fishingreferences">
+				<sdtstype Sync="TRUE">Entity point</sdtstype>
+				<ptvctcnt Sync="TRUE">586</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="CRFS_fishingreferences">
+				<efeatyp Sync="TRUE">Simple</efeatyp>
+				<esritopo Sync="TRUE">FALSE</esritopo>
+				<linrefer Sync="TRUE">FALSE</linrefer>
+				<spindex Sync="TRUE">TRUE</spindex>
+				<efeageom Sync="TRUE">Point</efeageom>
+				<efeacnt Sync="TRUE">586</efeacnt>
+			</esriterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.002048</absres>
+						<ordres Sync="TRUE">0.002048</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">meters</plandu>
+				</planci>
+				<mapproj><mapprojn Sync="TRUE">Albers Conical Equal Area</mapprojn><albers><stdparll Sync="TRUE">34.000000</stdparll><stdparll Sync="TRUE">40.500000</stdparll><longcm Sync="TRUE">-120.000000</longcm><latprjo Sync="TRUE">0.000000</latprjo><feast Sync="TRUE">0.000000</feast><fnorth Sync="TRUE">-4000000.000000</fnorth></albers></mapproj></planar>
+			<geodetic>
+				<horizdn Sync="TRUE">North American Datum of 1927</horizdn>
+				<ellips Sync="TRUE">Clarke 1866</ellips>
+				<semiaxis Sync="TRUE">6378206.400000</semiaxis>
+				<denflat Sync="TRUE">294.978698</denflat>
+			</geodetic>
+			<cordsysn>
+				<geogcsn Sync="TRUE">GCS_North_American_1927</geogcsn>
+				<projcsn Sync="TRUE">Albers Conical Equal Area</projcsn>
+			</cordsysn>
+		</horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="CRFS_fishingreferences">
+			<enttyp>
+				<enttypl Sync="TRUE">CRFS_fishingreferences</enttypl>
+				<enttypc Sync="TRUE">586</enttypc>
+				<enttypt Sync="TRUE">Feature Class</enttypt>
+			</enttyp>
+			<attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">Shape</attrlabl><attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Feature geometry.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">NAME</attrlabl><attalias Sync="TRUE">NAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">37</attwidth><attrdef>Name of feature</attrdef></attr><attr><attrlabl Sync="TRUE">TYPE</attrlabl><attalias Sync="TRUE">TYPE</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">20</attwidth><attrdef>artifical reef, bank,basin,bay,beach,boundary,bridge,buoy,canyon,channel,city,cove,creek,crfs site,dock,fishing spot,gulf,harbor,island,jetty,lagoon,landing,lighthouse,man-made,marina,natural feature,oil platform,passage,pier,point,preserve,ramp,reef,river,rock,shipwreck,shoal,slough,state park,strait,trench,wharf</attrdef></attr><attr><attrlabl Sync="TRUE">COUNTY</attrlabl><attalias Sync="TRUE">COUNTY</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">15</attwidth><attrdef>County in which has jurisdiction of feature</attrdef></attr><attr><attrlabl Sync="TRUE">X</attrlabl><attalias Sync="TRUE">X</attalias><attrtype Sync="TRUE">Float</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">11</atnumdec></attr><attr><attrlabl Sync="TRUE">Y</attrlabl><attalias Sync="TRUE">Y</attalias><attrtype Sync="TRUE">Float</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">11</atnumdec></attr></detailed>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>California Department of Fish and Game, Marine Region</cntorg>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>Mailing and physical address</addrtype>
+					<address>20 Lower Ragsdale Dr.</address>
+					<city>Monterey</city>
+					<state>California</state>
+					<postal>93940</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>831.649.7143</cntvoice>
+				<cntfax>831.649.2917</cntfax>
+				<cntemail>mr_gis@dfg.ca.gov</cntemail>
+				<cntemail>geodata@dfg.ca.gov</cntemail>
+			</cntinfo>
+		</distrib>
+		<resdesc Sync="TRUE">Downloadable Data</resdesc>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formname>DXF</formname>
+					<filedec>Zip</filedec>
+					<transize Sync="TRUE">0.016</transize>
+					<dssize Sync="TRUE">0.016</dssize>
+				</digtinfo>
+			</digform>
+			<fees>Cost of media</fees>
+			<ordering>Submit requests by email to mr_gis@dfg.ca.gov</ordering>
+			<turnarnd>14 days</turnarnd>
+		</stdorder>
+		<custom>Email:  mr_gis@dfg.ca.gov</custom>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20060830</metd>
+		<metfrd>Undetermined</metfrd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>California Department of Fish and Game</cntorg>
+					<cntper>Marine Region GIS</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>Mailing and physical address</addrtype>
+					<address>40 Lower Ragsdale Dr.</address>
+					<city>Monterey</city>
+					<state>California</state>
+					<postal>93940</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>831.649.7143</cntvoice>
+				<cntfax>831.649.2917</cntfax>
+				<cntemail>mr_gis@dfg.ca.gov</cntemail>
+				<hours>8am to 5pm</hours>
+				<cntinst>Email</cntinst>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metac>None</metac>
+		<metuc>None</metuc>
+		<metsi>
+			<metsc>Unclassified</metsc>
+		</metsi>
+		<langmeta Sync="TRUE">en</langmeta>
+		<metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<dataIdInfo>
+		<envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.1.0.722</envirDesc>
+		<dataLang>
+			<languageCode Sync="TRUE" value="en"></languageCode>
+		</dataLang>
+		<geoBox esriExtentType="decdegrees">
+			<westBL Sync="TRUE">-123.439342</westBL>
+			<eastBL Sync="TRUE">-115.720055</eastBL>
+			<northBL Sync="TRUE">38.184999</northBL>
+			<southBL Sync="TRUE">30.484167</southBL>
+			<exTypeCode Sync="TRUE">1</exTypeCode>
+		</geoBox>
+		<idCitation>
+			<resTitle Sync="TRUE">CRFS_fishingreferences</resTitle>
+			<presForm>
+				<PresFormCd Sync="TRUE" value="005"></PresFormCd>
+			</presForm>
+		</idCitation>
+		<spatRpType>
+			<SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd>
+		</spatRpType>
+		<dataExt>
+			<geoEle>
+				<GeoBndBox esriExtentType="native">
+					<westBL Sync="TRUE">-301016.972192</westBL>
+					<northBL Sync="TRUE">18563.564394</northBL>
+					<southBL Sync="TRUE">-827668.508378</southBL>
+					<eastBL Sync="TRUE">374678.220145</eastBL>
+					<exTypeCode Sync="TRUE">1</exTypeCode>
+				</GeoBndBox>
+			</geoEle>
+		</dataExt>
+	</dataIdInfo>
+	<distInfo>
+		<distributor>
+			<distorTran>
+				<onLineSrc>
+					<orDesc Sync="TRUE">002</orDesc>
+					<protocol Sync="TRUE">Local Area Network</protocol>
+					<linkage Sync="TRUE">file://\\BEETHOVEN\C$\Documents and Settings\GWSchmidt.GEO\Desktop\CRFS_fishingreferences\CRFS_fishingreferences.shp</linkage>
+				</onLineSrc>
+				<transSize Sync="TRUE">0.016</transSize>
+			</distorTran>
+			<distorFormat>
+				<formatName Sync="TRUE">Shapefile</formatName>
+			</distorFormat>
+		</distributor>
+	</distInfo>
+	<Esri>
+		<CreaDate>20060727</CreaDate>
+		<ModDate>20060830</ModDate>
+		<ModTime>15511000</ModTime>
+		<SyncDate>20060830</SyncDate>
+		<SyncOnce>FALSE</SyncOnce>
+		<SyncTime>15465300</SyncTime>
+		<CreaTime>17014000</CreaTime>
+		<MetaID>{E6A78675-3CA5-426D-B4A1-250B52171C66}</MetaID></Esri>
+	<mdChar>
+		<CharSetCd Sync="TRUE" value="004"></CharSetCd>
+	</mdChar>
+	<mdDateSt Sync="TRUE">20060830</mdDateSt>
+	<mdHrLv>
+		<ScopeCd Sync="TRUE" value="005"></ScopeCd>
+	</mdHrLv>
+	<mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+	<mdLang>
+		<languageCode Sync="TRUE" value="en"></languageCode>
+	</mdLang>
+	<mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName>
+	<mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer>
+	<refSysInfo>
+		<RefSystem>
+			<refSysID>
+				<identCode Sync="TRUE">Albers Conical Equal Area</identCode>
+			</refSysID>
+		</RefSystem>
+	</refSysInfo>
+	<spatRepInfo>
+		<VectSpatRep>
+			<topLvl>
+				<TopoLevCd Sync="TRUE" value="001"></TopoLevCd>
+			</topLvl>
+			<geometObjs Name="CRFS_fishingreferences"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="004"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">586</geoObjCnt></geometObjs></VectSpatRep>
+		<GridSpatRep>
+			<numDims Sync="TRUE">2</numDims>
+			<tranParaAv Sync="TRUE">1</tranParaAv>
+			<axDimProps>
+				<Dimen>
+					<dimName>
+						<DimNameTypCd Sync="TRUE" value="002"></DimNameTypCd>
+					</dimName>
+					<dimResol Sync="TRUE">0.999664</dimResol>
+					<dimSize Sync="TRUE">2974</dimSize>
+				</Dimen>
+				<Dimen>
+					<dimName>
+						<DimNameTypCd Sync="TRUE" value="001"></DimNameTypCd>
+					</dimName>
+					<dimResol Sync="TRUE">0.999664</dimResol>
+					<dimSize Sync="TRUE">8244</dimSize>
+				</Dimen>
+			</axDimProps>
+			<cellGeo>
+				<CellGeoCd Sync="TRUE" value="002"></CellGeoCd>
+			</cellGeo>
+		</GridSpatRep>
+	</spatRepInfo>
+</metadata>

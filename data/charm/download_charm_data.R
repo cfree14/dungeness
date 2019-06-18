@@ -10,12 +10,13 @@ rm(list = ls())
 library(thredds)
 
 # Packages
+library(ncdf4)
 library(raster)
 library(tidyverse)
 
 # Directories
-inputdir <- "data/raw/charm"
-outputdir <- "data/processed"
+inputdir <- "data/charm/raw"
+outputdir <- "data/charm/processed"
 
 # Look up datasets in CeNCOOS THREDDS server
 cencoos <- "http://thredds.cencoos.org/thredds/catalog.html"
@@ -47,14 +48,35 @@ download_charm_nowcasts <- function(dataset){
                             out_file = file.path(inputdir, outfile_name),
                             var=ncdf_vars$name,
                             bbox = NULL, # download all grid cells
-                            ncss_args=list(temporal = "all", accept="netcdf4"), # download all dates
+                            ncss_args=list(temporal = "all", accept="netcdf4", addLatLon="true"), # download all dates
                             overwrite=T)
   
   # Read NetCDF as raster brick
+  # charm_ncdf <- nc_open(file.path(inputdir, outfile_name)) # deprecated - don't use this
   charm_brick <- raster::brick(ncdf)
+  layer_names <- names(charm_brick)
+
+  # Transpose x to y and double flip the map
+  # https://stackoverflow.com/questions/44425548/plotting-netcdf-file-with-raster-package-leads-to-distorted-representation-r
+  charm_brick_flipped <- flip(flip(t(charm_brick), direction = "y"), direction = "x")
   
-  # Plot Raster
-  plot_1raster(date="2016-05-20", data=charm_brick, title=dataset)
+  # Rotate from 0:360 to -180:180
+  charm_brick_rotated <- rotate(charm_brick_flipped)
+  
+  # Restore lost layer names
+  names(charm_brick_rotated) <- layer_names
+  
+  # Assign coordinate system
+  crs(charm_brick_rotated) <- "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0" 
+  
+  # Plot raster
+  plot_1raster(date="2016-05-20", data=charm_brick_rotated, title=dataset)
+  
+  # Export brick
+  if(dataset=="HAB Pseudo Nitzschia Nowcast"){outfile_name <- "PN_nowcast_2014present_brick.Rds"}
+  if(dataset=="HAB Cellular Domoic Acid Nowcast"){outfile_name <- "DAC_nowcast_2014present_brick.Rds"}
+  if(dataset=="HAB Particulate Domoic Acid Nowcast"){outfile_name <- "DAP_nowcast_2014present_brick.Rds"}
+  saveRDS(charm_brick_rotated, file=file.path(outputdir, outfile_name))
     
 }
 
@@ -80,9 +102,9 @@ plot_1raster <- function(date, data, title){
 
 
 # Download data
-# download_charm_nowcasts(dataset="HAB Cellular Domoic Acid Nowcast")
+download_charm_nowcasts(dataset="HAB Cellular Domoic Acid Nowcast")
 download_charm_nowcasts(dataset="HAB Particulate Domoic Acid Nowcast")
-# download_charm_nowcasts(dataset="HAB Pseudo Nitzschia Nowcast")
+download_charm_nowcasts(dataset="HAB Pseudo Nitzschia Nowcast")
 
 
 

@@ -1,4 +1,8 @@
 
+# Things to do:
+# 1. Block 208 doesn't have a block centroid
+# 2. 2015-12-16 Crescent City samples don't have a block
+
 # Clear workspace
 rm(list = ls())
 
@@ -44,7 +48,7 @@ crab1517 <- crab1517_orig %>%
   setNames(tolower(colnames(.))) %>% 
   rename(sampleid="is#",
          block="block #",
-         depth_f="depth (fathoms)",
+         depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)")
 colnames(crab1517)
 
@@ -53,7 +57,7 @@ crab1718 <- crab1718_orig %>%
   rename(sampleid="is#",
          block="block #",
          species="species - viscera",
-         depth_f="depth (fathoms)",
+         depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)",
          lat_long="lat/long coordinates")
 colnames(crab1718)
@@ -65,20 +69,20 @@ crab1819 <- crab1819_orig %>%
          species="species - viscera",
          block="block #",
          lat_long="lat/long coordinates",
-         depth_f="depth (fathoms)",
+         depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)") %>% 
-  # select(-c(...10, ...11, ...12))
-  select(-c(x__1, x__2, x__3))
+  select(-c(...10, ...11, ...12))
+  # select(-c(x__1, x__2, x__3))
 colnames(crab1819)
 
 lobster16 <- lobster16_orig %>% 
   setNames(tolower(colnames(.))) %>% 
   rename(sampleid="is#",
          block="block #",
-         depth_f="depth (fathoms)",
+         depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)") %>% 
-  # select(-...9)
-  select(-x__1)
+  select(-...9)
+  # select(-x__1)
 colnames(lobster16)  
 
 lobster1718 <- lobster1718_orig %>% 
@@ -86,7 +90,7 @@ lobster1718 <- lobster1718_orig %>%
   rename(sampleid="is#",
          block="block #",
          lat_long="lat/long coordinates",
-         depth_f="depth (fathoms)",
+         depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)") 
 colnames(lobster1718)  
 
@@ -97,7 +101,7 @@ lobster1819 <- lobster1819_orig %>%
          species="species - viscera",
          block="block #",
          lat_long="lat/long coordinates",
-         depth_f="depth (fathoms)",
+         depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)") 
 colnames(lobster1819) 
 
@@ -118,39 +122,41 @@ data <- data_merged %>%
   # Format depth
   # 1 fathom = 6 feet = 1.8 meters
   # Convert everything to fathoms then meters
-  mutate(depth_f=plyr::revalue(depth_f, c("Unk"="",
-                                          "unknown"="",
-                                          "< 25"=25 / 6,
-                                          "< 30"=30 / 6,
-                                          "> 25"=25 / 6,
-                                          "> 30"=30 / 6,
-                                          "10 ft"=10 / 6, 
-                                          "10-20 feet"=15 / 6, 
-                                          "110 feet"=110 / 6,
-                                          "140 feet"=140 / 6,
-                                          "15 feet"=15 / 6,
-                                          "22-35 feet"=28.5 / 6,
-                                          "30 feet"=30 / 6,
-                                          "30 to 40 feet"=35 / 6,
-                                          "31 to 40 feet"= 35.5 / 6,
-                                          "32 to 40 feet"=36 / 6,
-                                          "33 to 40 feet"=36.5 / 6,
-                                          "34 to 40 feet"=38 / 6,
-                                          "35 feet"=35 / 6,
-                                          "40 feet"=40 / 6,
-                                          "45 feet"=45 / 6,
-                                          "60 feet"=60 / 6)),
-         depth_f=as.numeric(depth_f),
-         depth_ft=depth_f*6,
+  mutate(depth_fthm=plyr::revalue(depth_fthm, c("Unk"="",
+                                                "unknown"="",
+                                                "< 25"=25 / 6,
+                                                "< 30"=30 / 6,
+                                                "> 25"=25 / 6,
+                                                "> 30"=30 / 6,
+                                                "10 ft"=10 / 6, 
+                                                "10-20 feet"=15 / 6, 
+                                                "110 feet"=110 / 6,
+                                                "140 feet"=140 / 6,
+                                                "15 feet"=15 / 6,
+                                                "22-35 feet"=28.5 / 6,
+                                                "30 feet"=30 / 6,
+                                                "30 to 40 feet"=35 / 6,
+                                                "31 to 40 feet"= 35.5 / 6,
+                                                "32 to 40 feet"=36 / 6,
+                                                "33 to 40 feet"=36.5 / 6,
+                                                "34 to 40 feet"=38 / 6,
+                                                "35 feet"=35 / 6,
+                                                "40 feet"=40 / 6,
+                                                "45 feet"=45 / 6,
+                                                "60 feet"=60 / 6)),
+         depth_fthm=as.numeric(depth_fthm),
+         depth_ft=depth_fthm*6,
          depth_m=depth_ft * 0.3048) %>%
-  # Format species
+  # Format species and sex
   mutate(species=freeR::sentcase(species),
+         sex=ifelse(species=="Lobster (f)", "female", 
+                    ifelse(species=="Lobster (m)", "male", "unknown")),
          species=plyr::revalue(species, c("Lobster"="Spiny lobster",
-                                          "Lobster (f)"="Spiny lobster (F)", 
-                                          "Lobster (m)"="Spiny lobster (M)"))) %>% 
+                                          "Lobster (f)"="Spiny lobster", 
+                                          "Lobster (m)"="Spiny lobster"))) %>% 
   # Format DA ppm
-  mutate(da_ppm_prefix=ifelse(grepl("<", da_ppm), "<", NA), 
-         da_ppm=as.numeric(gsub("<| |ND|nd", "", da_ppm))) %>%
+  mutate(da_ppm_prefix=ifelse(grepl("<|ND|nd", da_ppm), "<", ""), 
+         da_ppm=as.numeric(ifelse(grepl("<|ND|nd", da_ppm), "2.5", da_ppm))) %>%
   # Format lat/long
   rename(latlong_orig=lat_long) %>% 
   mutate(latlong_orig=str_trim(latlong_orig)) %>% 
@@ -158,22 +164,27 @@ data <- data_merged %>%
   left_join(blocks_df, by="block") %>% 
   select(sampleid, year, date, 
          port, area, block, block_long_dd, block_lat_dd,
-         latlong_orig, depth_m, 
-         species, da_ppm_prefix, da_ppm)
+         latlong_orig, depth_m, depth_fthm,
+         species, sex, da_ppm_prefix, da_ppm)
   
+# Inspect data (plus a few remaining problems)
+# Block 208 doesn't have a block centroid
+# 2015-12-16 Crescent City samples don't have a block
+freeR::complete(data)
+table(data$sex)
+sdata <- filter(data, is.na(block))
 
-# Write CSV
-write.csv(data, file=file.path(inputdir, "crab_da_data_temp.csv"), 
-          fileEncoding="UTF-8", row.names=F)
+# Export temporary data file to deal with some of the lat/long encoding problems
+write.csv(data, file=file.path(inputdir, "crab_da_data_temp.csv"), fileEncoding="UTF-8", row.names=F)
 
 
 # Read data for lat/long formatting
 ################################################################################
 
-# Read file
+# Read in temporary file
 data1 <- read.csv(file.path(inputdir, "crab_da_data_temp.csv"), as.is=T, fileEncoding = "UTF-8", strip.white = T)
 
-# Lat/long key
+# Format unique lat/longs
 latlong <- data1 %>% 
   select(latlong_orig) %>% 
   unique() %>% 
@@ -231,17 +242,69 @@ latlong <- data1 %>%
   mutate(lat_dd=ifelse(lat_dd>180, lat, lat_dd),
          long_dd=ifelse(long_dd>180, long, long_dd))
 
-
-# Add coordinates to original data
-data2 <- data1 %>% 
+# Add formatted coordinates to original data
+data2 <- data1 %>%  
   left_join(select(latlong, latlong_orig, lat_dd, long_dd), by="latlong_orig")
 
+# Some of the lat/longs didn't get properly formatted
+# Look up the sample ids of samples missing coordinates but with coord info
 sdata <- data2 %>%
   filter(!is.na(latlong_orig) & is.na(lat_dd))
 
+# Ids of samples with coord info that needs to get put in manually
+prob_ids1 <- c("168100317M", "168100317N", "168100317O", "168100317P", "168100317Q", "168100317R")
+prob_ids2 <- c("168100317S", "168100317T", "168100317U", "168100317V", "168100317W", "168100317X")
+
+# Add corrected lat/longs
+data2$lat_dd[data2$sampleid %in% prob_ids1] <- 41+16/60
+data2$long_dd[data2$sampleid %in% prob_ids1] <- (124+9/60)
+data2$lat_dd[data2$sampleid %in% prob_ids2] <- 41+33/60 
+data2$long_dd[data2$sampleid %in% prob_ids2] <- (124+11/60)  
+
+# Multiply longitudes by -1
+data3 <- data2 %>% 
+  mutate(lat_dd=as.numeric(lat_dd),
+         long_dd=as.numeric(long_dd), 
+         long_dd = -1 * long_dd) %>% 
+  select(sampleid:latlong_orig, long_dd, lat_dd, everything())
+
+# Export final data
+write.csv(data3, file=file.path(outputdir, "CDPH_crab_viscera_da_data.csv"), row.names=F)
+
+# Plot data
+################################################################################
+
+# Get US states
+usa <- rnaturalearth::ne_states(country = "United States of America")
+usa <- sf::st_as_sf(usa)
+
+# Setup theme
+my_theme <- theme(axis.text=element_text(size=7),
+                  axis.title=element_text(size=9),
+                  plot.title=element_text(size=11),
+                  legend.text=element_text(size=7),
+                  legend.title=element_text(size=9),
+                  panel.grid.major = element_line(colour = 'transparent'),
+                  panel.grid.minor = element_blank(),
+                  panel.background = element_blank(), 
+                  axis.line = element_line(colour = "black"))
+
+# Plot data
+g <- ggplot(data=usa) +
+  geom_sf(fill="grey80", col="white", size=0.5) +
+  geom_point(data3, mapping=aes(x=long_dd, y=lat_dd, col=species, size=da_ppm)) +
+  coord_sf(xlim = c(-125, -113), ylim = c(32, 42)) +
+  scale_color_discrete(name="Species") +
+  scale_size_continuous(name="Domoic acid (ppm)") +
+  labs(x="", y="") +
+  theme_bw() + my_theme
+g
+
+# Export
+ggsave(g, filename=file.path(plotdir, "CDPH_crab_viscera_da_data.png"), width=4.5, height=3.5, units="in", dpi=600)
 
 
-plot(lat_dd ~ long_dd*-1, data2)
+
 
 
 

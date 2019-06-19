@@ -91,7 +91,7 @@ table(data$type)
 freeR::complete(data)
 
 # Export data
-saveRDS(data, file=file.path(outputdir, "viscera_da_molluscs.Rds"))
+saveRDS(data, file=file.path(outputdir, "CDPH_mollusc_viscera_da_data.Rds"))
 
 
 # Plot data
@@ -118,5 +118,5 @@ g <- ggplot(data, aes(x=long_dd, y=lat_dd, size=da_ppm, col=species)) +
   theme_bw() + my_theme
 g
 
-ggsave(g, filename=file.path(plotdir, "mollusc_da_concentrations.png"), width=6.5, height=5.5, units="in", dpi=600)
+ggsave(g, filename=file.path(plotdir, "CDPH_mollusc_viscera_da_data.png"), width=6.5, height=5.5, units="in", dpi=600)
 

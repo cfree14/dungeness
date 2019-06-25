@@ -1,0 +1,36 @@
+﻿Date,Area,Open_Close,Northern,Southern,Reason
+11/15/05,Central,Open,38.7669444,32.16667,
+12/31/05,Northern,Open,42.66667,38.7669444,Body condition
+11/15/06,Central,Open,38.7669444,32.16667,
+12/1/06,Northern,Open,42.66667,38.7669444,
+12/1/07,Central,Open,38,37.6,Oil spill
+12/1/07,Northern,Open,42.66667,38.7669444,
+12/1/09,Northern,Open,42.66667,38.7669444,
+12/1/10,Northern,Open,42.66667,38.7669444,
+1/15/12,Northern,Open,42.66667,38.7669444,Body condition
+11/15/12,Central,Open,38.7669444,32.16667,
+1/15/13,Northern,Open,42.66667,38.7669444,Body condition
+8/14/13,Northern,Close,42.66667,38.7669444,
+12/1/13,Northern,Open,42.66667,38.7669444,
+11/15/14,Central,Open,38.7669444,32.16667,
+12/1/14,Northern,Open,42.66667,38.7669444,
+3/26/16,Central,Open,38.7669444,32.16667,Domoic acid
+5/12/16,Northern,Open,40.77083333,38.7669444,Domoic acid
+5/12/16,Northern,Open,42.66667,41.285,Domoic acid
+5/19/16,Northern,Open,41.285,40.77083333,Domoic acid
+6/30/16,Central,Close,38.7669444,32.16667,
+7/15/16,Northern,Close,42.66667,38.7669444,
+11/15/16,Central,Open,38,32.16667,
+12/1/16,Northern,Open,42.66667,41.285,Domoic acid
+12/3/16,Central,Open,38.56805556,38,Domoic acid
+12/24/16,Central,Open,38.76694444,38.56805556,Domoic acid
+12/26/16,Northern,Open,38.95138889,38.76694444,Domoic acid
+12/29/16,Northern,Open,39.55083333,38.95138889,Domoic acid
+1/16/17,Northern,Open,40.0175,39.55083333,Domoic acid
+1/15/18,Northern,Open,42.66667,38.7669444,Body condition
+11/15/18,Central,Open,38.3,32.16667,
+12/8/18,Central,Open,38.7669444,38.3,Domoic acid
+1/15/19,Northern,Open,41.13333333,38.7669444,Body condition
+1/25/19,Northern,Open,42.66667,41.13333333,Domoic acid
+4/15/19,Northern,Close,42.66667,38.7669444,Marine life entanglement
+4/15/19,Central,Close,38.7669444,32.16667,Marine life entanglement

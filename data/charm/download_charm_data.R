@@ -73,10 +73,16 @@ download_charm_nowcasts <- function(dataset){
   plot_1raster(date="2016-05-20", data=charm_brick_rotated, title=dataset)
   
   # Export brick
-  if(dataset=="HAB Pseudo Nitzschia Nowcast"){outfile_name <- "PN_nowcast_2014present_brick.Rds"}
-  if(dataset=="HAB Cellular Domoic Acid Nowcast"){outfile_name <- "DAC_nowcast_2014present_brick.Rds"}
-  if(dataset=="HAB Particulate Domoic Acid Nowcast"){outfile_name <- "DAP_nowcast_2014present_brick.Rds"}
-  saveRDS(charm_brick_rotated, file=file.path(outputdir, outfile_name))
+  # if(dataset=="HAB Pseudo Nitzschia Nowcast"){outfile_name <- "PN_nowcast_2014present_brick.Rds"}
+  # if(dataset=="HAB Cellular Domoic Acid Nowcast"){outfile_name <- "DAC_nowcast_2014present_brick.Rds"}
+  # if(dataset=="HAB Particulate Domoic Acid Nowcast"){outfile_name <- "DAP_nowcast_2014present_brick.Rds"}
+  # saveRDS(charm_brick_rotated, file=file.path(outputdir, outfile_name))
+  
+  # Export raster
+  if(dataset=="HAB Pseudo Nitzschia Nowcast"){outfile_name <- "PN_nowcast_2014present_brick.grd"}
+  if(dataset=="HAB Cellular Domoic Acid Nowcast"){outfile_name <- "DAC_nowcast_2014present_brick.grd"}
+  if(dataset=="HAB Particulate Domoic Acid Nowcast"){outfile_name <- "DAP_nowcast_2014present_brick.grd"}
+  writeRaster(charm_brick_rotated, file=file.path(outputdir, outfile_name))
     
 }
 

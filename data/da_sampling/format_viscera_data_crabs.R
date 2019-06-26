@@ -1,7 +1,7 @@
 
 # Things to do:
 # 1. Block 208 doesn't have a block centroid
-# 2. 2015-12-16 Crescent City samples don't have a block
+# Add region
 
 # Clear workspace
 rm(list = ls())
@@ -22,12 +22,12 @@ plotdir <- "data/da_sampling/figures"
 gisdir <- "data/cdfw/gis_data/processed"
 
 # Read data
-crab1517_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA.xlsx"), which=1)
-crab1718_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA.xlsx"), which=2)
-crab1819_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA.xlsx"), which=3)
-lobster16_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA.xlsx"), which=4)
-lobster1718_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA.xlsx"), which=5)
-lobster1819_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA.xlsx"), which=6)
+crab1517_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), which=1)
+crab1718_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), which=2)
+crab1819_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), which=3)
+lobster16_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), which=4)
+lobster1718_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), which=5)
+lobster1819_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), which=6)
 
 # Read block centroids
 blocks <- sf::st_read(dsn=gisdir, layer="CA_fishing_blocks_clip_centroids") %>% 
@@ -38,7 +38,7 @@ blocks_df <- data.frame(block=block_ids, block_coords) %>%
   rename(block_lat_dd=Y, block_long_dd=X)
 
 # Read sampling site coords
-sites <- import(file.path(inputdir, "crab_da_sampling_sites.xlsx"))
+sites <- import(file.path(inputdir, "2014_crab_da_sampling_sites.xlsx"))
 
 
 # Format individual files
@@ -71,8 +71,7 @@ crab1819 <- crab1819_orig %>%
          lat_long="lat/long coordinates",
          depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)") %>% 
-  select(-c(...10, ...11, ...12))
-  # select(-c(x__1, x__2, x__3))
+  select(sampleid:da_ppm)
 colnames(crab1819)
 
 lobster16 <- lobster16_orig %>% 
@@ -81,8 +80,7 @@ lobster16 <- lobster16_orig %>%
          block="block #",
          depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)") %>% 
-  select(-...9)
-  # select(-x__1)
+  select(sampleid:da_ppm)
 colnames(lobster16)  
 
 lobster1718 <- lobster1718_orig %>% 
@@ -108,6 +106,12 @@ colnames(lobster1819)
 # Merge and format files
 ################################################################################
 
+# Regions
+n_ports <- c("Crescent City", "Trinidad", "Eureka", "Fort Bragg")
+c_ports <- c("Bodega Bay", "Half Moon Bay/SF", "Half Moon Bay", 
+             "Santa Cruz", "Monterey", "Monterey Bay", "Morro Bay", "San Luis Obispo", 
+             "Santa Barbara", "Ventura", "LA/San Pedro", "Catalina", "San Diego")
+
 # Merge
 data_merged <- plyr::rbind.fill(crab1517, crab1718, crab1819, 
                          lobster16, lobster1718, lobster1819)
@@ -116,9 +120,14 @@ data_merged <- plyr::rbind.fill(crab1517, crab1718, crab1819,
 data <- data_merged %>% 
   # Format date
   mutate(date=ymd(date),
-         year=year(date)) %>% 
+         year=year(date),
+         day=yday(date)) %>% 
   # Format ports
-  mutate(port=plyr::revalue(port, c("Ft. Bragg"="Fort Bragg"))) %>% # Monterey == Monterey Bay?
+  mutate(port=plyr::revalue(port, c("Ft. Bragg"="Fort Bragg",
+                                    "Trindad"="Trinidad",
+                                    "Cresecent City"="Crescent City"))) %>% # Monterey == Monterey Bay?
+  # Add region
+  mutate(region=ifelse(port%in%n_ports, "Northern", "Central")) %>% 
   # Format depth
   # 1 fathom = 6 feet = 1.8 meters
   # Convert everything to fathoms then meters
@@ -154,6 +163,11 @@ data <- data_merged %>%
          species=plyr::revalue(species, c("Lobster"="Spiny lobster",
                                           "Lobster (f)"="Spiny lobster", 
                                           "Lobster (m)"="Spiny lobster"))) %>% 
+  # Add season
+  # Nortern:
+  # Central:
+  mutate(season=ifelse(species!="Dungeness crab", "not relevant", 
+                       ifelse(region=="Nortern" & day )))
   # Format DA ppm
   mutate(da_ppm_prefix=ifelse(grepl("<|ND|nd", da_ppm), "<", ""), 
          da_ppm=as.numeric(ifelse(grepl("<|ND|nd", da_ppm), "2.5", da_ppm))) %>%
@@ -162,8 +176,8 @@ data <- data_merged %>%
   mutate(latlong_orig=str_trim(latlong_orig)) %>% 
   # Rearrange columns
   left_join(blocks_df, by="block") %>% 
-  select(sampleid, year, date, 
-         port, area, block, block_long_dd, block_lat_dd,
+  select(sampleid, year, date, day, 
+         region, port, area, block, block_long_dd, block_lat_dd,
          latlong_orig, depth_m, depth_fthm,
          species, sex, da_ppm_prefix, da_ppm)
   
@@ -172,6 +186,8 @@ data <- data_merged %>%
 # 2015-12-16 Crescent City samples don't have a block
 freeR::complete(data)
 table(data$sex)
+table(data$port)
+table(data$area)
 sdata <- filter(data, is.na(block))
 
 # Export temporary data file to deal with some of the lat/long encoding problems

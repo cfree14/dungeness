@@ -119,7 +119,8 @@ data_merged <- plyr::rbind.fill(crab1517, crab1718, crab1819,
 # Format
 data <- data_merged %>% 
   # Format date
-  mutate(date=ymd(date),
+  mutate(#date=ifelse(date==as.POSIXct("1900-01-11"), as.POSIXct("2016-01-27"), date),
+         date=ymd(date),
          year=year(date),
          day=yday(date)) %>% 
   # Format ports
@@ -164,10 +165,13 @@ data <- data_merged %>%
                                           "Lobster (f)"="Spiny lobster", 
                                           "Lobster (m)"="Spiny lobster"))) %>% 
   # Add season
-  # Nortern:
-  # Central:
-  mutate(season=ifelse(species!="Dungeness crab", "not relevant", 
-                       ifelse(region=="Nortern" & day )))
+  # Northern: Dec 1 (335) to Jul 15 (196)
+  # Central: Nov 15 (319) to Jun 30 (181)
+  mutate(season_type=ifelse(species!="Dungeness crab", "not relevant", 
+                       ifelse(region=="Northern" & (day>=335 | day <=196), "in-season",
+                              ifelse(region=="Central" & (day>=319 | day <=181), "in-season", "out-of-season"))),
+         season=ifelse(season_type=="in-season" & day>=319, paste(year, year+1, sep="-"),
+                       ifelse(season_type=="in-season" & day<319, paste(year-1, year, sep="-"), season_type))) %>% 
   # Format DA ppm
   mutate(da_ppm_prefix=ifelse(grepl("<|ND|nd", da_ppm), "<", ""), 
          da_ppm=as.numeric(ifelse(grepl("<|ND|nd", da_ppm), "2.5", da_ppm))) %>%
@@ -176,19 +180,26 @@ data <- data_merged %>%
   mutate(latlong_orig=str_trim(latlong_orig)) %>% 
   # Rearrange columns
   left_join(blocks_df, by="block") %>% 
-  select(sampleid, year, date, day, 
+  select(sampleid, year, date, day, season,
          region, port, area, block, block_long_dd, block_lat_dd,
          latlong_orig, depth_m, depth_fthm,
          species, sex, da_ppm_prefix, da_ppm)
   
 # Inspect data (plus a few remaining problems)
 # Block 208 doesn't have a block centroid
-# 2015-12-16 Crescent City samples don't have a block
 freeR::complete(data)
 table(data$sex)
+table(data$season)
 table(data$port)
 table(data$area)
 sdata <- filter(data, is.na(block))
+
+# Dungeness stats
+stats <- data %>% 
+  filter(species=="Dungeness crab") %>% 
+  group_by(year, region, port, area, season) %>% 
+  summarize(n=n())
+
 
 # Export temporary data file to deal with some of the lat/long encoding problems
 write.csv(data, file=file.path(inputdir, "crab_da_data_temp.csv"), fileEncoding="UTF-8", row.names=F)

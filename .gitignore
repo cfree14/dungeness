@@ -3,6 +3,6 @@
 .RData
 .Ruserdata
 data/charm/raw
-data/charm/processed/charm_nowcast_dataframe.Rds
-data/charm/processed/charm_pn_nowcast_dataframe.Rds
+data/charm/processed/
+data/bathymetry/raw
 *.DS_Store

@@ -116,8 +116,18 @@ c_ports <- c("Bodega Bay", "Half Moon Bay/SF", "Half Moon Bay",
 data_merged <- plyr::rbind.fill(crab1517, crab1718, crab1819, 
                          lobster16, lobster1718, lobster1819)
 
+# Look for duplicated IDs
+dup_ids <- data_merged$sampleid[duplicated(data_merged$sampleid)]
+dup_data <- data_merged %>% 
+  filter(sampleid %in% dup_ids) %>% 
+  arrange(sampleid)
+
+# Remove duplicated entries
+data_merged_nodups <- data_merged %>% unique()
+anyDuplicated(data_merged_nodups$sampleid)
+
 # Format
-data <- data_merged %>% 
+data <- data_merged_nodups %>% 
   # Format date
   mutate(#date=ifelse(date==as.POSIXct("1900-01-11"), as.POSIXct("2016-01-27"), date),
          date=ymd(date),

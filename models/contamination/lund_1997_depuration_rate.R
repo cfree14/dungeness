@@ -1,4 +1,7 @@
 
+# Packages
+library(tidyverse)
+
 # Lund 1997 data
 # μg = ppm 
 data <- tibble(day=c(1,7,14,21),
@@ -33,11 +36,11 @@ g <- ggplot(data, aes(x = day, y = da_ppm)) +
   geom_hline(yintercept=30, linetype="dotted") +
   annotate("text", x=30, y=32, hjust=1, label="Management action level (30 ppm)", size=2) +
   labs(x="Day", y="Domoic acid concentration (ppm)", 
-       title="Deputation of domoic acid from Dungeness crabs",
+       title="Depuration of domoic acid from Dungeness crabs",
        subtitle=expression("Lund et al. 1997"*italic("Journal of Shellfish Research"))) +
   theme_bw() + my_theme
 g
 
 # Export
 plotdir <- "models/contamination/figures"
-ggsave(g, filename=file.path(plotdir, "FigSX_lund_deputation_rate.png"), width=4, height=4, units="in", dpi=600)
+ggsave(g, filename=file.path(plotdir, "FigSX_lund_depuration_rate.png"), width=4, height=4, units="in", dpi=600)

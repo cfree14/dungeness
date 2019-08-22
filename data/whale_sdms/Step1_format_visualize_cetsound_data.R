@@ -17,12 +17,13 @@ library(fasterize)
 library(cowplot)
 
 # Directories
-datadir <- "data/whale_sdms/data/raw"
+inputdir <- "data/whale_sdms/data/raw"
+outputdir <- "data/whale_sdms/data"
 plotdir <- "data/whale_sdms/figures"
 
 # Read data
-summer <- sf::st_read(dsn=file.path(datadir, "swfsc_CCE_SummerFall_Becker_et_al_2016"), layer="Humpback_whale")
-winter <- sf::st_read(dsn=file.path(datadir, "swfsc_CalCOFI_WinterSpring_Becker_et_al_2017"), layer="Humpback_whale")
+summer <- sf::st_read(dsn=file.path(inputdir, "swfsc_CCE_SummerFall_Becker_et_al_2016"), layer="Humpback_whale")
+winter <- sf::st_read(dsn=file.path(inputdir, "swfsc_CalCOFI_WinterSpring_Becker_et_al_2017"), layer="Humpback_whale")
 
 # Projections
 moll <- CRS("+proj=moll")
@@ -61,6 +62,9 @@ winter_ras <- winter_moll %>%
 # Maximum values
 max(summer_ras$dens, na.rm=T)
 max(winter_ras$dens, na.rm=T)
+
+# Export data
+save(summer_ras, winter_ras, file=file.path(outputdir, "becker_mean_humpback_density_rasters.Rdata"))
 
 
 # Plot data

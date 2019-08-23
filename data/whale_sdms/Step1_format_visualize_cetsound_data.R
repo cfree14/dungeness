@@ -98,6 +98,7 @@ g1 <- ggplot() +
                        breaks=seq(0,4,1),
                        colors=rev(RColorBrewer::brewer.pal( 10, "RdBu")), 
                        na.value = NA) +
+  guides(fill=guide_colorbar(title.position="top")) +
   # Plot CA/Mexico
   geom_sf(data=usa, fill="grey85", col="white", size=0.2) +
   geom_sf(data=mexico, fill="grey85", col="white", size=0.2) +
@@ -119,6 +120,7 @@ g2 <- ggplot() +
                        breaks=seq(0,4,1),
                        colors=rev(RColorBrewer::brewer.pal( 10, "RdBu")), 
                        na.value = NA) +
+  guides(fill=guide_colorbar(title.position="top")) +
   # Plot CA/Mexico
   geom_sf(data=usa, fill="grey85", col="white", size=0.2) +
   geom_sf(data=mexico, fill="grey85", col="white", size=0.2) +

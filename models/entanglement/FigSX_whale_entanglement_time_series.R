@@ -6,8 +6,7 @@ rm(list = ls())
 ################################################################################
 
 # Packages
-library(sf)
-library(raster)
+library(ggplot)
 library(tidyverse)
 library(lubridate)
 library(rio)
@@ -146,12 +145,14 @@ check$n.x==check$n.y
 ################################################################################
 
 # Plot final figure
+pbr <- 16.7
+pbr_label <- paste("Potential Biological Removal (PBR) =", pbr, "whales")
 g <- ggplot(data, aes(x=year, y=n, fill=fishery)) +
   geom_bar(stat="identity") +
   labs(x="", y="Number of entanglements", 
        title="U.S. West Coast Humpback whale entanglements") +
-  geom_hline(yintercept=11, color="grey60", linetype="dotted") +
-  annotate("text", label="Potential Biological Removal (PBR)", x=2000, y=12.5, hjust=0, color="grey60", size=2) +
+  geom_hline(yintercept=pbr, color="grey60", linetype="dotted") +
+  annotate("text", label=pbr_label, x=2000, y=pbr+1.2, hjust=0, color="grey60", size=2) +
   scale_x_continuous(breaks=2000:2018) +
   scale_fill_discrete(name="Fishery") +
   theme_bw() + my_theme

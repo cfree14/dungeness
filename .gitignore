@@ -5,4 +5,6 @@
 data/charm/raw
 data/charm/processed/
 data/bathymetry/raw
+data/cdfw/landings_confidential
+data/rockfish_survey/data
 *.DS_Store

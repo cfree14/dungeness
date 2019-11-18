@@ -6,12 +6,42 @@ seasonsfile <- here::here("data/fishing_seasons/seasons.csv")
 seaskeyfile <- here::here("data/fishing_seasons/seasons_key.csv")
 seasregfile <- here::here("data/fishing_seasons/seasons_reg.csv")
 
+dates2plot <- interval("2011-10-01","2019-09-30")
+
+mollusc_samples <- readRDS(here::here("data/da_sampling/processed/CDPH_mollusc_viscera_da_data.Rds")) %>%
+					as_tibble() %>%
+					group_by(lat_dd,date) %>%
+					summarise(Nsamples=n())
+
+crab_samples <- read_csv(here::here("data/da_sampling/processed/CDPH_crab_viscera_da_data.csv"),
+						 col_types=list(
+						  sampleid = col_character(),
+						  year = col_double(),
+						  date = col_date(format = ""),
+						  port = col_character(),
+						  area = col_character(),
+						  block = col_double(),
+						  block_long_dd = col_double(),
+						  block_lat_dd = col_double(),
+						  latlong_orig = col_character(),
+						  long_dd = col_double(),
+						  lat_dd = col_double(),
+						  depth_m = col_double(),
+						  depth_fthm = col_double(),
+						  species = col_character(),
+						  sex = col_character(),
+						  da_ppm_prefix = col_character(),
+						  da_ppm = col_double()
+							)) %>%
+					mutate(lat_dd=coalesce(lat_dd,block_lat_dd)) %>%
+					group_by(lat_dd,date) %>%
+					summarise(Nsamples=n()) %>%
+					filter(date %within% dates2plot)
+
 seasreg <- read_csv(seasregfile)
 
 seaskey <- read_csv(seaskeyfile, col_types=list(col_character(),col_date(format="%m/%d/%y"),col_date(format="%m/%d/%y"))) %>%
                     transmute(Season,Interval=interval(Start,End))
-
-dates2plot <- interval("2011-10-01","2019-09-30")
 
 getseas <- function(x) seaskey[x%within%seaskey$Interval,]$Season
 
@@ -52,18 +82,18 @@ seasreg_rect <- seaskey %>%
 
 ggplot() +
 	geom_rect(data=seasreg_rect,
-				mapping=aes(xmin=Reg_Open, xmax=Reg_Close, ymax=Reg_North, ymin=Reg_South),colour="grey50",fill="grey75") +
+				mapping=aes(xmin=Reg_Open, xmax=Reg_Close, ymax=Reg_North, ymin=Reg_South),colour="grey50",fill="grey90") +
 	geom_rect(data=newdat,
 				mapping=aes(xmin=Reg_Open, xmax=Open_Date, ymin=Southern, ymax=Northern, fill=Open_Reason), alpha=0.7) +
 	geom_rect(data=newdat,
 				mapping=aes(xmin=Reg_Close, xmax=Close_Date, ymin=Southern, ymax=Northern, fill=Close_Reason), alpha=0.7) +
 	geom_text(data=newdat, aes(x=Reg_Open+(Open_Date-Reg_Open)/2, y=Southern+(Northern-Southern)/2, label=na_if(Reg_Open-Open_Date,0)), size=2) + 
 	geom_text(data=newdat, aes(x=Reg_Close+(Close_Date-Reg_Close)/2, y=Southern+(Northern-Southern)/2, label=na_if(Close_Date-Reg_Close,0)), size=2) + 
-#	geom_text(data=newdat, aes(x=Open_Date+(Close_Date-Open_Date)/2, y=Southern+(Northern-Southern)/2, label=Close_Date-Open_Date+1), size=3) + 
-	ylab("Latitude") +
-	xlab("Date") +
 	labs(title="California Dungeness Crab Seasons",
-        x ="Date", y = "Latitude (Degree Decimals)", fill="Reason") +
+        x ="Date", y = "Latitude (Degree Decimals)", fill="Reason", size="Sample Size") +
+	geom_point(data=mollusc_samples, aes(x=date, y=lat_dd), colour="yellow", alpha=0.6, shape="x") +
+	geom_point(data=crab_samples, aes(x=date, y=lat_dd, size=Nsamples), alpha=0.1)  + 
+	scale_size_continuous(range = c(.5, 3)) +
 	ggthemes::theme_tufte()
 
 

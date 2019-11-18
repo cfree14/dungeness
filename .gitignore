@@ -3,8 +3,12 @@
 .RData
 .Ruserdata
 data/charm/raw
+<<<<<<< Updated upstream
 data/charm/processed/
 data/bathymetry/raw
 data/cdfw/landings_confidential
 data/whale_surveys/data/0006779-190813142620410.csv
-*.DS_Store
+data/charm/processed/charm_nowcast_dataframe.Rds
+data/charm/processed/charm_pn_nowcast_dataframe.Rds
+**/.DS_Store
+

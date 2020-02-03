@@ -12,6 +12,7 @@ rm(list = ls())
 # Packages
 library(sf)
 library(rio)
+library(readxl)
 library(tidyverse)
 library(lubridate)
 
@@ -19,26 +20,21 @@ library(lubridate)
 inputdir <- "data/da_sampling/raw"
 outputdir <- "data/da_sampling/processed"
 plotdir <- "data/da_sampling/figures"
-gisdir <- "data/cdfw/gis_data/processed"
+blockdir <- "data/cdfw/gis_data/processed"
 
 # Read data
-crab1517_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), which=1)
-crab1718_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), which=2)
-crab1819_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), which=3)
-lobster16_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), which=4)
-lobster1718_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), which=5)
-lobster1819_orig <- import(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), which=6)
+crab1517_orig <- read_excel(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), sheet=1)
+crab1718_orig <- read_excel(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), sheet=2)
+crab1819_orig <- read_excel(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), sheet=3)
+lobster16_orig <- read_excel(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), sheet=4)
+lobster1718_orig <- read_excel(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), sheet=5)
+lobster1819_orig <- read_excel(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), sheet=6)
 
 # Read block centroids
-blocks <- sf::st_read(dsn=gisdir, layer="CA_fishing_blocks_clip_centroids") %>% 
-  st_transform("+init=epsg:4326") 
-block_ids <- blocks$BLOCK10_ID
-block_coords <- sf::st_coordinates(blocks)
-blocks_df <- data.frame(block=block_ids, block_coords) %>% 
-  rename(block_lat_dd=Y, block_long_dd=X)
+blocks <- read.csv(file.path(blockdir, "CA_commercial_fishing_blocks.csv"))
 
 # Read sampling site coords
-sites <- import(file.path(inputdir, "2014_crab_da_sampling_sites.xlsx"))
+sites <- read_excel(file.path(inputdir, "2014_crab_da_sampling_sites.xlsx"))
 
 
 # Format individual files
@@ -47,7 +43,7 @@ sites <- import(file.path(inputdir, "2014_crab_da_sampling_sites.xlsx"))
 crab1517 <- crab1517_orig %>% 
   setNames(tolower(colnames(.))) %>% 
   rename(sampleid="is#",
-         block="block #",
+         block_id="block #",
          depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)")
 colnames(crab1517)
@@ -55,7 +51,7 @@ colnames(crab1517)
 crab1718 <- crab1718_orig %>% 
   setNames(tolower(colnames(.))) %>% 
   rename(sampleid="is#",
-         block="block #",
+         block_id="block #",
          species="species - viscera",
          depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)",
@@ -67,7 +63,7 @@ crab1819 <- crab1819_orig %>%
   rename(sampleid="is#",
          date="date of catch",
          species="species - viscera",
-         block="block #",
+         block_id="block #",
          lat_long="lat/long coordinates",
          depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)") %>% 
@@ -77,7 +73,7 @@ colnames(crab1819)
 lobster16 <- lobster16_orig %>% 
   setNames(tolower(colnames(.))) %>% 
   rename(sampleid="is#",
-         block="block #",
+         block_id="block #",
          depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)") %>% 
   select(sampleid:da_ppm)
@@ -86,7 +82,7 @@ colnames(lobster16)
 lobster1718 <- lobster1718_orig %>% 
   setNames(tolower(colnames(.))) %>% 
   rename(sampleid="is#",
-         block="block #",
+         block_id="block #",
          lat_long="lat/long coordinates",
          depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)") 
@@ -97,7 +93,7 @@ lobster1819 <- lobster1819_orig %>%
   rename(sampleid="is#",
          date="date of catch",
          species="species - viscera",
-         block="block #",
+         block_id="block #",
          lat_long="lat/long coordinates",
          depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)") 
@@ -189,20 +185,18 @@ data <- data_merged_nodups %>%
   rename(latlong_orig=lat_long) %>% 
   mutate(latlong_orig=str_trim(latlong_orig)) %>% 
   # Rearrange columns
-  left_join(blocks_df, by="block") %>% 
+  left_join(select(blocks, block_id, block_long_dd, block_lat_dd), by="block_id") %>% 
   select(sampleid, year, date, day, season,
-         region, port, area, block, block_long_dd, block_lat_dd,
+         region, port, area, block_id, block_long_dd, block_lat_dd,
          latlong_orig, depth_m, depth_fthm,
          species, sex, da_ppm_prefix, da_ppm)
   
 # Inspect data (plus a few remaining problems)
-# Block 208 doesn't have a block centroid
 freeR::complete(data)
 table(data$sex)
 table(data$season)
 table(data$port)
 table(data$area)
-sdata <- filter(data, is.na(block))
 
 # Dungeness stats
 stats <- data %>% 

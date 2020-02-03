@@ -10,3 +10,6 @@ data/whale_surveys/data/0006779-190813142620410.csv
 admin/
 data/whale_sdms/data
 *.DS_Store
+data/charm/processed/charm_nowcast_dataframe.Rds
+data/charm/processed/charm_pn_nowcast_dataframe.Rds
+

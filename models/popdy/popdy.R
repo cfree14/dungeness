@@ -1,4 +1,11 @@
 
+# Ultimately, I would like this to be a function that includes the tuning and prints diagnostics.
+# Functions should:
+# (1) tune R0 and fleet model
+# (2) initialize population
+# (3) run model
+# (4) print diagnostics - side-by-side maps of the distribution of catch and distribution of equilibrium biomass.
+
 # Clear workspace
 rm(list = ls())
 
@@ -17,7 +24,7 @@ lhdir <- "data/life_history/data"
 # Read life history data
 vonb <- read.csv(file.path(lhdir, "dcrab_length_weight_at_age.csv"), as.is=T) %>% 
   mutate(sex=recode(sex, "Female"="females", "Male"="males")) %>% 
-  rename(age=age_yr_int)
+  rename(age_yr=age_yr_int)
 
 
 # Biomass distribution
@@ -125,6 +132,9 @@ step_length_yr <- 1 # 1/52 # 1 week = 1/52, 1 year = 1
 nsteps <- nyears / step_length_yr
 nsteps_per_year = 1/step_length_yr 
 ncells <- nrow(blocks)
+effort_dynamics <- "none"
+effort_dynamics <- "constant"
+
 
 # On converting mortality time-scales
 # Hordyk et al. (2015) Some explorations of the life history ratios to describe length composition, spawning-per-recruit, and the spawning potential ratio. ICES JMS.
@@ -165,6 +175,13 @@ lh_at_age <- tibble(age=1:tmax_yr,
 nages <- length(1:tmax_yr)
 nsexes <- 2
 
+# Fleet parameters
+############################################
+
+ntraps_max <- 173900
+ntraps_ramp <- 109275
+ntraps_per_block <- ntraps_ramp/ncells
+
 # Functions
 ############################################
 
@@ -172,6 +189,7 @@ nsexes <- 2
 calc_recruits <- function(h, r0, eggs_n, epr){
   r = (4 * h * r0 * eggs_n) / (epr * r0 * (1-h) + (5*h+1) * eggs_n)
 }
+
 
 
 
@@ -183,11 +201,12 @@ calc_recruits <- function(h, r0, eggs_n, epr){
 
 # 1. Setup population data template
 # 1st time step only, others get appended as calculated
-pop_df_temp <- expand_grid(step=1, select(blocks, block_id, pbiomass), sex=c("males", "females"), age=1:tmax_yr, n=NA)
+pop_df_temp <- expand_grid(step=1, select(blocks, block_id, pbiomass), sex=c("males", "females"), age_yr=1:tmax_yr, 
+                           biomass_n=NA, catch_n=NA)
 
 # 2. Setup initial population
 pop_df <- pop_df_temp %>% 
-  mutate(n=ifelse(step==1, 1e4, NA))
+  mutate(biomass_n=ifelse(step==1, 1e4, NA))
 
 
 # Run population model
@@ -203,18 +222,40 @@ for(t in 2:nsteps){
   pop_t_df <- map_df(block_ids, function(x){
     
     # Last timestep's biomass
-    N_male_a_t <- pop_df %>% filter(block_id==x & step==(t-1) & sex=="males") %>% pull(n)
-    N_female_a_t <- pop_df %>% filter(block_id==x & step==(t-1) & sex=="females") %>% pull(n)
+    N_male_a_t <- pop_df %>% filter(block_id==x & step==(t-1) & sex=="males") %>% pull(biomass_n)
+    N_female_a_t <- pop_df %>% filter(block_id==x & step==(t-1) & sex=="females") %>% pull(biomass_n)
+    
+    # Calculate catch
+    #########################################
+    
+    # No fishing
+    if(effort_dynamics=="none"){
+      Fmort_male_a <- rep(0, tmax_yr)
+      C_male_a_t <- rep(0, tmax_yr)
+    }
+    
+    # Constant effort
+    if(effort_dynamics=="constant"){
+      E <- 1000
+      u_male_s <- E * q_m
+      Nmort_male_a <- lh_at_age$nmort_step
+      Fmort_male_a <- u_male_s * lh_at_age$pretained_m
+      C_male_a_t <- N_male_a_t * (Nmort_male_a *Fmort_male_a)/(Nmort_male_a+Fmort_male_a) * (1 - exp(-(Nmort_male_a + Fmort_male_a)))
+    }
+    
+    # Update biomass
+    #########################################
     
     # Mortality: this timestep's biomass
-    N_male_a_t1 <- N_male_a_t * exp(-lh_at_age$nmort_step)
+    N_male_a_t1 <- N_male_a_t * exp(-(lh_at_age$nmort_step + Fmort_male_a))
     N_female_a_t1 <- N_female_a_t * exp(-lh_at_age$nmort_step)
     
     # Record this years biomasses using initial as template
     out_df <- pop_df_temp %>% 
       filter(block_id==x) %>% 
       mutate(step=t,
-             n=ifelse(sex=="males", N_male_a_t1, N_female_a_t1))
+             biomass_n=ifelse(sex=="males", N_male_a_t1, N_female_a_t1),
+             catch_n=ifelse(sex=="males", C_male_a_t, 0))
     return(out_df)
   
   })
@@ -234,9 +275,9 @@ for(t in 2:nsteps){
     # Reproduction (not sperm limited)
     N_female_a_t_global <- pop_t_df %>% 
       filter(sex=="females") %>% 
-      group_by(age) %>% 
-      summarise(n=sum(n, na.rm=T)) %>% 
-      pull(n)
+      group_by(age_yr) %>% 
+      summarise(biomass_n=sum(biomass_n, na.rm=T)) %>% 
+      pull(biomass_n)
     eggs_t_global <- sum(N_female_a_t_global * lh_at_age$pmature * lh_at_age$fecundity)
     
     # Recruitment (age-1s)
@@ -247,17 +288,17 @@ for(t in 2:nsteps){
     pop_t_df <- pop_t_df %>% 
       # Age each age class by one year
       group_by(block_id, sex) %>% 
-      mutate(n1=c(NA, n[1:(tmax_yr-1)])) %>% 
+      mutate(biomass_n1=c(NA, biomass_n[1:(tmax_yr-1)])) %>% 
       # Add recruits
-      mutate(n1=ifelse(age==1, pbiomass*recruits_t_global/2, n1)) %>% 
+      mutate(biomass_n1=ifelse(age_yr==1, pbiomass*recruits_t_global/2, biomass_n1)) %>% 
       # Remove n column and rename (I kept this in just to check that things were working)
-      select(-n) %>% 
-      rename(n=n1) %>% 
+      select(-biomass_n) %>% 
+      rename(biomass_n=biomass_n1) %>% 
       # Ungroup
       ungroup()
     
     # Confirm that recruits were distributed correctly
-    if(!all.equal(sum(pop_t_df$n[pop_t_df$age==1]), recruits_t_global)){
+    if(!all.equal(sum(pop_t_df$biomass_n[pop_t_df$age_yr==1]), recruits_t_global)){
       stop("Number of recruits distributed does not match number produced.")
     }
     
@@ -277,8 +318,9 @@ if(!nrow(pop_df) == ncells * nages * nsexes * nsteps){stop("Number of rows is wr
 
 # Add cohort weights
 pop_df1 <- pop_df %>% 
-  left_join(select(vonb, -cw_mm), by=c("sex", "age")) %>% 
-  mutate(biomass_mt=n*weight_g/1000/1000)
+  left_join(select(vonb, -cw_mm), by=c("sex", "age_yr")) %>% 
+  mutate(biomass_mt=biomass_n*weight_g/1000/1000,
+         catch_mt=catch_n*weight_g/1000/1000)
 
 # Total population stats
 #############################################
@@ -287,7 +329,7 @@ pop_df1 <- pop_df %>%
 tot_stats <- pop_df1 %>% 
   group_by(step) %>% 
   summarize(q_total_mt=sum(biomass_mt),
-            q_legal_mt=sum(biomass_mt[sex=="males" & age>=4])) %>% 
+            q_legal_mt=sum(biomass_mt[sex=="males" & age_yr>=4])) %>% 
   gather(key="type", value="biomass_mt", 2:ncol(.)) %>% 
   mutate(type=recode(type, "q_total_mt"="Total", "q_legal_mt"="Legal"))
 
@@ -300,10 +342,38 @@ g <- ggplot(tot_stats, aes(x=step, y=biomass_mt, color=type)) +
   theme_bw()
 g
 
+# Catch time series
+#############################################
+
+# Catch stats
+catch_stats <- pop_df1 %>% 
+  group_by(step) %>% 
+  summarize(catch_n=sum(catch_n),
+            catch_mt=sum(catch_mt))
 
 
+# Plot total population stats
+g <- ggplot(catch_stats, aes(x=step, y=catch_mt)) +
+  geom_line() +
+  labs(x="Week", y="Catch (mt)") +
+  expand_limits(y = 0) +
+  theme_bw()
+g
 
+# Terminal year population structure
+#############################################
 
+last_year_stats <- pop_df1 %>% 
+  filter(step==nsteps) %>% 
+  group_by(age_yr,sex) %>% 
+  summarize(biomass_n=sum(biomass_n))
+
+g <- ggplot(last_year_stats, aes(x=age_yr, y=biomass_n/1e6, fill=sex)) +
+  geom_bar(stat="identity") +
+  labs(x="Age (yr)", y="Number of crabs (millions)", main="Age distribution in the last time step") +
+  scale_x_continuous(breaks=1:tmax_yr) +
+  theme_bw()
+g
 
 
 

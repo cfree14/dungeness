@@ -31,6 +31,9 @@
 # Setup
 ################################################################################
 
+# Clear workspace
+rm(list = ls())
+
 # Packages
 library(tidyverse)
 
@@ -66,9 +69,9 @@ calc_molt_increment <- function(a=1.3, b=0.23, c=0.22, xstar=105, width_mm){
 # Female (Butler 1961, "study d"): a=1.26, b=0.240, c=0.352, X*=83
 # Average (Wainwright & Armstrong 1993 judgement): a=1.3, b=0.23, c=0.22, and X*=105
 cw <- seq(0, 250, 1)
-mi_m <- sapply(cws, function(x) calc_molt_increment(a=1.20, b=0.248, c=0.230, xstar=105, width_mm=x))
-mi_f <- sapply(cws, function(x) calc_molt_increment(a=1.26, b=0.240, c=0.352, xstar=83, width_mm=x))
-mi_avg <- sapply(cws, function(x) calc_molt_increment(a=1.3, b=0.23, c=0.22, xstar=105, width_mm=x))
+mi_m <- sapply(cw, function(x) calc_molt_increment(a=1.20, b=0.248, c=0.230, xstar=105, width_mm=x))
+mi_f <- sapply(cw, function(x) calc_molt_increment(a=1.26, b=0.240, c=0.352, xstar=83, width_mm=x))
+mi_avg <- sapply(cw, function(x) calc_molt_increment(a=1.3, b=0.23, c=0.22, xstar=105, width_mm=x))
 plot(mi_m ~ cw, xlab="Carapace width (mm)", ylab="Molt increment (mm)")
 
 # Build merged data
@@ -96,7 +99,6 @@ calc_im_period <- function(tmin_c=1.13, tmax_c=13.44, a=5.25, b=0.0175, width_mm
 # Check and plot
 ip_15c <- sapply(cw, function(x) calc_im_period(width_mm=x, temp_c=15))
 plot(ip_15c ~ cw, xlab="Carapace width (mm)", ylab="Intermolt period (days)")
-
 
 # Build merged data
 ip_data <- tibble(cw_mm=cw, ip_days=ip_15c)
@@ -193,8 +195,8 @@ g4 <- ggplot(vonb_df, aes(x=age_yr, y=cw_mm, color=sex)) +
   labs(x="Age (yr)", y="Carapace width (mm)",title="Length-at-age") +
   scale_color_discrete(name="Sex") +
   scale_x_continuous(breaks=0:10) +
-  geom_hline(yintercept=146, linetype="dotted", lwd=0.3) +
-  annotate("text", x=10, y=152, label="Legal size (5.75 in)", hjust=1, vjust=0, size=2) +
+  geom_hline(yintercept=159, linetype="dotted", lwd=0.3) +
+  annotate("text", x=10, y=165, label="Legal size (6.25 in)", hjust=1, vjust=0, size=2) +
   theme_bw() + my_theme + theme(legend.position=c(0.8,0.2),
                                 legend.background = element_rect(fill=alpha('blue', 0)))
 g4

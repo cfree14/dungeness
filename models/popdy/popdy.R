@@ -14,6 +14,7 @@ rm(list = ls())
 
 # Packages
 library(sf)
+library(lubridate)
 library(tidyverse)
 
 # Directories
@@ -127,19 +128,34 @@ sum(blocks$pbiomass) # must be one
 ############################################
 
 # Parameters
-nyears <- 20
-step_length_yr <- 1 # 1/52 # 1 week = 1/52, 1 year = 1
+nyears <- 1
+step_length_yr <- 1/52 # 1/52 # 1 week = 1/52, 1 year = 1
 nsteps <- nyears / step_length_yr
-nsteps_per_year = 1/step_length_yr 
+nsteps_per_year <- 1 / step_length_yr 
 ncells <- nrow(blocks)
 effort_dynamics <- "none"
 effort_dynamics <- "constant"
 
+# Start date
+start_date <- ymd("2014-10-01")
+open_date <- ymd("2014-11-15")
+close_date <- ymd("2015-07-15")
+
+# Measure times between dates
+start_week <- 1
+wks_since_start <- difftime(open_date, start_date, units = "week") %>% as.numeric() %>% round()
+wks_since_open <- difftime(close_date, open_date, units = "week") %>% as.numeric() %>% round()
+wks_after_close <- 52 - (wks_since_start + wks_since_open)
+
+# Create vector marking the weeks in which fishing happens (fishing season)
+fishing_yn_vec <- c(rep(F, wks_since_start), rep(T, wks_since_open), rep(F, wks_after_close))
+length(fishing_yn_vec)
 
 # On converting mortality time-scales
 # Hordyk et al. (2015) Some explorations of the life history ratios to describe length composition, spawning-per-recruit, and the spawning potential ratio. ICES JMS.
 # "Converting between time-scales is straightforward: M = 4.6 year−1 can be converted to a monthly rate M = 4.6/12 = 0.38 month−1`,
 # where tmax = 12 months, or a weekly rate M = 4.6/52 = 0.088 week−1`, where tmax = 52 week"
+
 
 # Life history parameters
 ############################################
@@ -171,7 +187,7 @@ lh_at_age <- tibble(age=1:tmax_yr,
                     catchability_m=q_m,
                     catchability_f=q_f)
 
-# Dervied values
+# Derived values
 nages <- length(1:tmax_yr)
 nsexes <- 2
 
@@ -228,19 +244,30 @@ for(t in 2:nsteps){
     # Calculate catch
     #########################################
     
-    # No fishing
-    if(effort_dynamics=="none"){
-      Fmort_male_a <- rep(0, tmax_yr)
-      C_male_a_t <- rep(0, tmax_yr)
-    }
+    # In season?
+    fishing_yn <- fishing_yn_vec[t]
     
-    # Constant effort
-    if(effort_dynamics=="constant"){
-      E <- 1000
-      u_male_s <- E * q_m
-      Nmort_male_a <- lh_at_age$nmort_step
-      Fmort_male_a <- u_male_s * lh_at_age$pretained_m
-      C_male_a_t <- N_male_a_t * (Nmort_male_a *Fmort_male_a)/(Nmort_male_a+Fmort_male_a) * (1 - exp(-(Nmort_male_a + Fmort_male_a)))
+    # If not fishing, record zero catch
+    # If fishing, calculate and record catch
+    if(!fishing_yn){
+      C_male_a_t <- rep(0, tmax_yr)
+    }else{
+      
+      # No fishing
+      if(effort_dynamics=="none"){
+        Fmort_male_a <- rep(0, tmax_yr)
+        C_male_a_t <- rep(0, tmax_yr)
+      }
+      
+      # Constant effort
+      if(effort_dynamics=="constant"){
+        E <- 1000
+        u_male_s <- E * q_m
+        Nmort_male_a <- lh_at_age$nmort_step
+        Fmort_male_a <- u_male_s * lh_at_age$pretained_m
+        C_male_a_t <- N_male_a_t * (Nmort_male_a *Fmort_male_a)/(Nmort_male_a+Fmort_male_a) * (1 - exp(-(Nmort_male_a + Fmort_male_a)))
+      }
+      
     }
     
     # Update biomass

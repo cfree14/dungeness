@@ -1,13 +1,17 @@
 
 # For testing
-# nyears <- 1
-# step_length_yr <- 1/52 # 1 = 1 year; 1/52 = 1 week
-# effort_dynamics <- "constant" # none or constant
-# r0 <- 42*10^6 # virgin recruitment (R0)
-# age_dist <- age_dist_stable
+if(F){
+  nyears <- 1
+  step_length_yr <- 1/52 # 1 = 1 year; 1/52 = 1 week
+  effort_dynamics <- "constant" # none or constant
+  r0 <- 42*10^6 # virgin recruitment (R0)
+  age_dist <- age_dist_stable
+  a <- 0.15
+  b <- 0.1
+}
 
 # Function to run model
-run_model <- function(nyears, step_length_yr, r0, effort_dynamics, age_dist){
+run_model <- function(nyears, step_length_yr, r0, effort_dynamics, age_dist, a, b){
   
   # 1. Parameters
   ################################################################################
@@ -29,7 +33,7 @@ run_model <- function(nyears, step_length_yr, r0, effort_dynamics, age_dist){
   # "Converting between time-scales is straightforward: M = 4.6 year−1 can be converted to a monthly rate M = 4.6/12 = 0.38 month−1`,
   # where tmax = 12 months, or a weekly rate M = 4.6/52 = 0.088 week−1`, where tmax = 52 week"
   
-  # Constant life history 
+  # Constant life history
   tmax_yr <- 10
   h <- 0.65 # steepness
   epr <- 630222 # eggs per recruit
@@ -69,7 +73,7 @@ run_model <- function(nyears, step_length_yr, r0, effort_dynamics, age_dist){
     start_date <- ymd("2014-10-01")
     open_date <- ymd("2014-11-15")
     close_date <- ymd("2015-07-15")
-    
+
     # Measure times between dates
     start_week <- 1
     wks_since_start <- difftime(open_date, start_date, units = "week") %>% as.numeric() %>% round()
@@ -83,9 +87,9 @@ run_model <- function(nyears, step_length_yr, r0, effort_dynamics, age_dist){
     
     # Fleet parameters
     ntraps_max <- 173900
-    ntraps_ramp <- 109275
-    ntraps_per_block <- ntraps_ramp/ncells
-    
+    ntraps_max_obs <- 143550
+    ntraps_max_fix <- 100000
+
   }
 
   
@@ -109,6 +113,9 @@ run_model <- function(nyears, step_length_yr, r0, effort_dynamics, age_dist){
       # Fill initial biomass with provided age distribution
       mutate(biomass_n=biomass_n_init) %>% 
       select(-biomass_n_init)
+    b0 <- age_dist %>% 
+      filter(sex=="males" & age_yr>=4) %>% 
+      pull(biomass_n_init) %>% sum()
   }
   
   # 2. Run population model
@@ -117,6 +124,23 @@ run_model <- function(nyears, step_length_yr, r0, effort_dynamics, age_dist){
   # Loop through time steps
   t <- 2; x <- 102
   for(t in 2:nsteps){
+    
+    # Calculate CA wide values
+    #########################################
+    
+    # Number of legal-sized males in previous time step
+    B_tot_prev <- pop_df %>% 
+      filter(step==(t-1) & sex=="males" & age_yr>=4) %>% 
+      pull(biomass_n) %>% sum()
+    
+    # Effort in previous time step
+    E_tot_prev <- pop_df %>% 
+      filter(step==(t-1)) %>%
+      select(block_id, traps_n) %>% 
+      unique() %>% pull(traps_n) %>% sum()
+    
+    # Loop through cells
+    #########################################
     
     # Loop through cells: x <- block_ids[1]
     print(t)
@@ -134,6 +158,7 @@ run_model <- function(nyears, step_length_yr, r0, effort_dynamics, age_dist){
       if(effort_dynamics=="none"){
         Fmort_male_a <- rep(0, tmax_yr)
         C_male_a_t <- rep(0, tmax_yr)
+        E <- 0
       }
       
       # Constant effort
@@ -143,13 +168,48 @@ run_model <- function(nyears, step_length_yr, r0, effort_dynamics, age_dist){
         if(!fishing_yn){
           Fmort_male_a <- rep(0, tmax_yr)
           C_male_a_t <- rep(0, tmax_yr)
+          E <- 0
         }else{
-          e_prop <- 
-          E <- ntraps_max * unique(pop_df$pbiomass[pop_df$block_id==x]) # apply traps in proportion to biomass
+          # CA-wide effort
+          E_tot <- ntraps_max_obs
+          # Block-level effort
+          E_prop <- unique(pop_df$pbiomass[pop_df$block_id==x]) 
+          E <- E_tot * E_prop
           u_male_s <- E * q_m
           Nmort_male_a <- lh_at_age$nmort_step
           Fmort_male_a <- u_male_s * lh_at_age$pretained_m
-          C_male_a_t <- N_male_a_t * (Nmort_male_a * Fmort_male_a)/(Nmort_male_a+Fmort_male_a) * (1 - exp(-(Nmort_male_a + Fmort_male_a)))
+          C_male_a_t <- calc_catch(N=N_male_a_t, M=Nmort_male_a, F=Fmort_male_a)
+        }
+      }
+      
+      # Biomass-coupled effort
+      if(effort_dynamics=="biomass-coupled"){
+        # In season?
+        fishing_yn <- fishing_yn_vec[t]
+        if(!fishing_yn){
+          E <- 0
+          Fmort_male_a <- rep(0, tmax_yr)
+          C_male_a_t <- rep(0, tmax_yr)
+        }else{
+          # CA-wide effort
+          if(t==7){
+            E_tot <- ntraps_max_fix
+          }else{
+            # E_tot <- calc_effort(E_max=ntraps_max_fix, E_prev=E_tot_prev, B_prev=B_tot_prev, b0=b0, a=0.4, x=0.4)
+            E_tot <- calc_effort2(E_max=ntraps_max_fix, E_prev=E_tot_prev, B_prev=B_tot_prev, b0=b0, a=a, b=b)
+          }
+          # Block-level effort
+          # Proportion of biomass in cell
+          B_cell <- pop_df %>% 
+            filter(block_id==x & step==(t-1) & sex=="males" & age_yr>=4) %>% 
+            pull(biomass_n) %>% sum()
+          B_prop <- B_cell / B_tot_prev
+          E_prop <- B_prop
+          E <- E_tot * E_prop
+          u_male_s <- E * q_m
+          Nmort_male_a <- lh_at_age$nmort_step
+          Fmort_male_a <- u_male_s * lh_at_age$pretained_m
+          C_male_a_t <- calc_catch(N=N_male_a_t, M=Nmort_male_a, F=Fmort_male_a)
         }
       }
       
@@ -157,22 +217,30 @@ run_model <- function(nyears, step_length_yr, r0, effort_dynamics, age_dist){
       #########################################
       
       # Mortality: this time step's biomass
-      N_male_a_t1 <- N_male_a_t * exp(-(lh_at_age$nmort_step + Fmort_male_a))
-      N_female_a_t1 <- N_female_a_t * exp(-lh_at_age$nmort_step)
+      N_male_a_t1 <- calc_abundance(N=N_male_a_t, M=lh_at_age$nmort_step, F=Fmort_male_a)
+      N_female_a_t1 <- calc_abundance(N=N_female_a_t, M=lh_at_age$nmort_step, F=0)
       
-      # Record this years biomasses using initial as template
+      # Record this time step's biomass using initial as template
       out_df <- pop_df_temp %>% 
         filter(block_id==x) %>% 
         mutate(step=t,
                biomass_n=ifelse(sex=="males", N_male_a_t1, N_female_a_t1),
+               traps_n=E,
                catch_n=ifelse(sex=="males", C_male_a_t, 0))
       return(out_df)
       
     })
     
-    # 2c. If its the last time step of the year, conduct recruitment and senescence
-    yr_steps <- nsteps_per_year * 1:nyears
-    if(t %in% yr_steps){
+    # 2b. If it's the time step of recruitment, calculate number of recruits
+    if(step_length_yr==1){
+      t_spawn <- 1
+    }else{
+      start_date <- ymd("2014-10-01")
+      spawn_date <- ymd("2015-05-01")
+      t_spawn <- difftime(spawn_date, start_date, units = "week") %>% as.numeric() %>% round()
+    }
+    spawn_steps <- t_spawn * 1:nyears
+    if(t %in% spawn_steps){
       
       # Calculate population-wide reproduction and recruitment and
       # distribute recruits proportional to catch
@@ -188,10 +256,16 @@ run_model <- function(nyears, step_length_yr, r0, effort_dynamics, age_dist){
         group_by(age_yr) %>% 
         summarise(biomass_n=sum(biomass_n, na.rm=T)) %>% 
         pull(biomass_n)
-      eggs_t_global <- sum(N_female_a_t_global * lh_at_age$pmature * lh_at_age$fecundity)
+      eggs_t_global <- calc_eggprod(nfemales=N_female_a_t_global, pmature=lh_at_age$pmature, fecundity=lh_at_age$fecundity)
       
       # Recruitment (age-1s)
       recruits_t_global <- calc_recruits(h=h, r0=r0, eggs_n=eggs_t_global, epr=epr)
+      
+    }
+    
+    # 2c. If its the last time step of the year, age and senesce fish
+    endyr_steps <- nsteps_per_year * 1:nyears
+    if(t %in% endyr_steps){
       
       # Add recruits (age-1s) to year t dataframe
       # Assume 50:50 sex ratio (that's why divided by zero)

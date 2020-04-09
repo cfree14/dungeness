@@ -22,6 +22,7 @@ library(lubridate)
 datadir <- "data/whale_sdms/data"
 plotdir <- "models/figures"
 gisdir <- "data/cdfw/gis_data/processed"
+outputdir <- "output"
 
 # Read time step key
 date_key <- read.csv(file.path("models", "model_time_step_key.csv"), as.is=T)
@@ -79,6 +80,9 @@ blocks_nwhales <- blocks_sf %>%
   filter(block_type=="Inshore") %>% 
   mutate(whales_sqkm=whales_n/block_area_sqkm, 
          whales_100sqkm_cap=pmin(whales_sqkm*100, 10))
+
+# Export weekly block-level whale abundance predictions
+saveRDS(data2, file=file.path(outputdir, "nwhales_block_week.Rds"))
   
 
 # Build animation

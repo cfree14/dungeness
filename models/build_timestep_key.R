@@ -30,7 +30,9 @@ date_key <- tibble(date=dates,
                    season=sort(rep(seasons, 52))) %>% 
   select(season, week, date) %>% 
   mutate(fishing_c=week %in% 8:40,
-         fishing_n=week %in% 10:42)
+         fishing_n=week %in% 10:42,
+         year=substr(season, 1, 4) %>% as.numeric) %>% 
+  select(year, everything())
 
 # Export
 write.csv(date_key, file=file.path(datadir, "model_time_step_key.csv"), row.names = F)

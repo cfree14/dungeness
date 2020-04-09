@@ -22,6 +22,7 @@ datadir <- "models/contamination/data"
 codedir <- "models/contamination"
 gisdir <- "data/cdfw/gis_data/processed"
 plotdir <- "models/figures"
+outputdir <- "output"
 
 # Read C-HARM data
 data_orig <- readRDS(file.path(datadir, "CHARM_crab_da_data.Rds"))
@@ -60,7 +61,7 @@ dap_brick1 <- dap_brick[[194:nlayers(dap_brick)]] %>%
 ################################################################################
 
 # Mean pDA by CA fishing block
-block_pda_avg <- raster::extract(x=dap_brick, y=blocks_sf, method="simple", fun="mean", na.rm=T)
+# block_pda_avg <- raster::extract(x=dap_brick, y=blocks_sf, method="simple", fun="mean", na.rm=T)
 
 # Convert blocks SF to raster
 ras_temp <- dap_brick[[1]]
@@ -137,6 +138,9 @@ zstats4 <- zstats3 %>%
 zstats5 <- zstats4 %>% 
   select(block_id, date, p_over_avg) %>% 
   filter(date %in% ymd(date_key$date))
+
+# Export weekly block-level p(contaminated) predictions
+saveRDS(zstats5, file=file.path(outputdir, "pcontaminated_block_week.Rds"))
 
 
 # Build animation

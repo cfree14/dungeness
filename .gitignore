@@ -8,8 +8,8 @@
 
 # Admin files to ignore
 admin/
-references/
 drafts/
+references/
 
 # C-HARM data to ignore
 data/charm/raw
@@ -30,8 +30,6 @@ data/whale_surveys/data/0006779-190813142620410.csv
 # Output to ignore
 output
 
-# Temporarily ignore contamination model paper
-models/contamination/paper
 
 
 

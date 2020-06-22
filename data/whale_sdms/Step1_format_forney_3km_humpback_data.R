@@ -15,7 +15,7 @@ library(cowplot)
 library(lubridate)
 
 # Directories
-inputdir <- "data/whale_sdms/data/raw"
+inputdir <- "data/whale_sdms/data"
 outputdir <- "data/whale_sdms/data"
 plotdir <- "data/whale_sdms/figures"
 

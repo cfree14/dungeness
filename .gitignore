@@ -1,15 +1,37 @@
+
+# Hidden files to ignore
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+*.DS_Store
+
+# Admin files to ignore
+admin/
+references/
+drafts/
+
+# C-HARM data to ignore
 data/charm/raw
 data/charm/processed/
-data/bathymetry/raw
-data/cdfw/landings_confidential
-data/whale_surveys/data/0006779-190813142620410.csv
-admin/
-data/whale_sdms/data
-*.DS_Store
 data/charm/processed/charm_nowcast_dataframe.Rds
 data/charm/processed/charm_pn_nowcast_dataframe.Rds
+
+# Bathymetry data to ignore
+data/bathymetry/raw
+
+# CDFW confidential data to ignore
+data/cdfw/landings_confidential
+
+# Whale SDM data to ignore
+data/whale_sdms/data
+data/whale_surveys/data/0006779-190813142620410.csv
+
+# Output to ignore
+output
+
+# Temporarily ignore contamination model paper
+models/contamination/paper
+
+
 

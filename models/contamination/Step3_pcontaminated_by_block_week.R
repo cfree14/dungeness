@@ -146,6 +146,9 @@ saveRDS(zstats5, file=file.path(outputdir, "pcontaminated_block_week.Rds"))
 # Build animation
 ################################################################################
 
+# Read
+zstats5 <- readRDS(file=file.path(outputdir, "pcontaminated_block_week.Rds"))
+
 # Add p(contaminated) statistics to blocks SF object
 blocks_sf_pcontam <- blocks_sf %>% 
   filter(block_type=="Inshore") %>% 
@@ -163,8 +166,8 @@ mexico <- rnaturalearth::ne_countries(country="Mexico", returnclass = "sf")
 # Plot 
 g <- ggplot() +
   # Plot p(contaminated)
-  # geom_sf(blocks_sf_pcontam %>% filter(date=="2014-10-01"), mapping=aes(fill=p_over_avg)) + # single date
-  geom_sf(blocks_sf_pcontam, mapping=aes(fill=p_over_avg, group=date)) +
+  geom_sf(blocks_sf_pcontam %>% filter(date=="2014-10-01"), mapping=aes(fill=p_over_avg)) + # single date
+  # geom_sf(blocks_sf_pcontam, mapping=aes(fill=p_over_avg, group=date)) +
   scale_fill_gradientn(name="Proportion of crabs\nabove DA threshold",
                        limits=c(0,1),
                        breaks=seq(0,1,0.2),
@@ -185,8 +188,8 @@ g <- ggplot() +
 #g
 
 # Export single state to get size right
-# ggsave(g, filename=file.path(plotdir, "whale_n_by_block_date_single.png"),
-#        width=4.5, height=6.5, units="in", dpi=600)
+ggsave(g, filename=file.path(plotdir, "pcontaminated_by_block_date_single.png"),
+       width=4.5, height=6.5, units="in", dpi=600)
 
 
 # Save animation

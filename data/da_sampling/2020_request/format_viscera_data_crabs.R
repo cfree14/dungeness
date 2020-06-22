@@ -1,8 +1,4 @@
 
-# Things to do:
-# 1. Block 208 doesn't have a block centroid
-# Add region
-
 # Clear workspace
 rm(list = ls())
 
@@ -11,30 +7,27 @@ rm(list = ls())
 
 # Packages
 library(sf)
-library(rio)
 library(readxl)
 library(tidyverse)
 library(lubridate)
 
 # Directories
-inputdir <- "data/da_sampling/raw"
-outputdir <- "data/da_sampling/processed"
-plotdir <- "data/da_sampling/figures"
+inputdir <- "data/da_sampling/2020_request/raw"
+outputdir <- "data/da_sampling/2020_request/processed"
 blockdir <- "data/cdfw/gis_data/processed"
 
 # Read data
-crab1517_orig <- read_excel(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), sheet=1)
-crab1718_orig <- read_excel(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), sheet=2)
-crab1819_orig <- read_excel(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), sheet=3)
-lobster16_orig <- read_excel(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), sheet=4)
-lobster1718_orig <- read_excel(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), sheet=5)
-lobster1819_orig <- read_excel(file.path(inputdir, "Free Request 061019 2015-2019 DA revised.xlsx"), sheet=6)
+crab1517_orig <- read_excel(file.path(inputdir, "Free Request 05-19-2020 2015-2020 DA.xlsx"), sheet=1)
+crab1718_orig <- read_excel(file.path(inputdir, "Free Request 05-19-2020 2015-2020 DA.xlsx"), sheet=2)
+crab1819_orig <- read_excel(file.path(inputdir, "Free Request 05-19-2020 2015-2020 DA.xlsx"), sheet=3)
+crab1920_orig <- read_excel(file.path(inputdir, "Free Request 05-19-2020 2015-2020 DA.xlsx"), sheet=4)
+lobster16_orig <- read_excel(file.path(inputdir, "Free Request 05-19-2020 2015-2020 DA.xlsx"), sheet=5)
+lobster1718_orig <- read_excel(file.path(inputdir, "Free Request 05-19-2020 2015-2020 DA.xlsx"), sheet=6)
+lobster1819_orig <- read_excel(file.path(inputdir, "Free Request 05-19-2020 2015-2020 DA.xlsx"), sheet=7)
+lobster1920_orig <- read_excel(file.path(inputdir, "Free Request 05-19-2020 2015-2020 DA.xlsx"), sheet=8)
 
 # Read block centroids
 blocks <- read.csv(file.path(blockdir, "CA_commercial_fishing_blocks.csv"))
-
-# Read sampling site coords
-sites <- read_excel(file.path(inputdir, "2014_crab_da_sampling_sites.xlsx"))
 
 
 # Format individual files
@@ -45,14 +38,15 @@ crab1517 <- crab1517_orig %>%
   rename(sampleid="is#",
          block_id="block #",
          depth_fthm="depth (fathoms)",
-         da_ppm="result (ppm)")
+         da_ppm="result (ppm)",
+         comm_name="species")
 colnames(crab1517)
 
 crab1718 <- crab1718_orig %>% 
   setNames(tolower(colnames(.))) %>% 
   rename(sampleid="is#",
          block_id="block #",
-         species="species - viscera",
+         comm_name="species - viscera",
          depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)",
          lat_long="lat/long coordinates")
@@ -62,21 +56,34 @@ crab1819 <- crab1819_orig %>%
   setNames(tolower(colnames(.))) %>% 
   rename(sampleid="is#",
          date="date of catch",
-         species="species - viscera",
+         comm_name="species - viscera",
          block_id="block #",
          lat_long="lat/long coordinates",
          depth_fthm="depth (fathoms)",
          da_ppm="result (ppm)") %>% 
-  select(sampleid:da_ppm)
+  dplyr::select(sampleid:da_ppm)
 colnames(crab1819)
+
+crab1920 <- crab1920_orig %>% 
+  setNames(tolower(colnames(.))) %>% 
+  rename(sampleid="is #",
+         date="date of catch",
+         comm_name="species - viscera",
+         block_id="block #",
+         lat_long="lat/long coordinates",
+         depth_fthm="depth (fathoms)",
+         da_ppm="result (ppm) fda action >30") %>% 
+  dplyr::select(sampleid:da_ppm)
+colnames(crab1920)
 
 lobster16 <- lobster16_orig %>% 
   setNames(tolower(colnames(.))) %>% 
   rename(sampleid="is#",
          block_id="block #",
          depth_fthm="depth (fathoms)",
-         da_ppm="result (ppm)") %>% 
-  select(sampleid:da_ppm)
+         da_ppm="result (ppm)",
+         comm_name=species) %>% 
+  dplyr::select(sampleid:da_ppm)
 colnames(lobster16)  
 
 lobster1718 <- lobster1718_orig %>% 
@@ -85,14 +92,26 @@ lobster1718 <- lobster1718_orig %>%
          block_id="block #",
          lat_long="lat/long coordinates",
          depth_fthm="depth (fathoms)",
-         da_ppm="result (ppm)") 
+         da_ppm="result (ppm)",
+         comm_name=species) 
 colnames(lobster1718)  
 
 lobster1819 <- lobster1819_orig %>% 
   setNames(tolower(colnames(.))) %>% 
   rename(sampleid="is#",
          date="date of catch",
-         species="species - viscera",
+         comm_name="species - viscera",
+         block_id="block #",
+         lat_long="lat/long coordinates",
+         depth_fthm="depth (fathoms)",
+         da_ppm="result (ppm)") 
+colnames(lobster1819) 
+
+lobster1920 <- lobster1920_orig %>% 
+  setNames(tolower(colnames(.))) %>% 
+  rename(sampleid="is #",
+         date="date of catch",
+         comm_name="species - viscera",
          block_id="block #",
          lat_long="lat/long coordinates",
          depth_fthm="depth (fathoms)",
@@ -104,13 +123,13 @@ colnames(lobster1819)
 
 # Regions
 n_ports <- c("Crescent City", "Trinidad", "Eureka", "Fort Bragg")
-c_ports <- c("Bodega Bay", "Half Moon Bay/SF", "Half Moon Bay", 
-             "Santa Cruz", "Monterey", "Monterey Bay", "Morro Bay", "San Luis Obispo", 
+c_ports <- c("Bodega Bay", "Half Moon Bay/SF", "Half Moon Bay",
+             "Santa Cruz", "Monterey", "Monterey Bay", "Morro Bay", "San Luis Obispo",
              "Santa Barbara", "Ventura", "LA/San Pedro", "Catalina", "San Diego")
 
 # Merge
-data_merged <- plyr::rbind.fill(crab1517, crab1718, crab1819, 
-                         lobster16, lobster1718, lobster1819)
+data_merged <- plyr::rbind.fill(crab1517, crab1718, crab1819,  crab1920,
+                                lobster16, lobster1718, lobster1819, lobster1920)
 
 # Look for duplicated IDs
 dup_ids <- data_merged$sampleid[duplicated(data_merged$sampleid)]
@@ -122,86 +141,68 @@ dup_data <- data_merged %>%
 data_merged_nodups <- data_merged %>% unique()
 anyDuplicated(data_merged_nodups$sampleid)
 
-# Format
+# Format data
 data <- data_merged_nodups %>% 
   # Format date
-  mutate(#date=ifelse(date==as.POSIXct("1900-01-11"), as.POSIXct("2016-01-27"), date),
-         date=ymd(date),
-         year=year(date),
-         day=yday(date)) %>% 
+  mutate(date=ymd(date),
+         year=year(date)) %>% 
   # Format ports
-  mutate(port=plyr::revalue(port, c("Ft. Bragg"="Fort Bragg",
-                                    "Trindad"="Trinidad",
-                                    "Cresecent City"="Crescent City"))) %>% # Monterey == Monterey Bay?
+  mutate(port=recode(port, 
+                     "Ft. Bragg"="Fort Bragg",
+                     "Trindad"="Trinidad",
+                     "Cresecent City"="Crescent City")) %>% 
   # Add region
   mutate(region=ifelse(port%in%n_ports, "Northern", "Central")) %>% 
-  # Format depth
-  # 1 fathom = 6 feet = 1.8 meters
-  # Convert everything to fathoms then meters
-  mutate(depth_fthm=plyr::revalue(depth_fthm, c("Unk"="",
-                                                "unknown"="",
-                                                "< 25"=25 / 6,
-                                                "< 30"=30 / 6,
-                                                "> 25"=25 / 6,
-                                                "> 30"=30 / 6,
-                                                "10 ft"=10 / 6, 
-                                                "10-20 feet"=15 / 6, 
-                                                "110 feet"=110 / 6,
-                                                "140 feet"=140 / 6,
-                                                "15 feet"=15 / 6,
-                                                "22-35 feet"=28.5 / 6,
-                                                "30 feet"=30 / 6,
-                                                "30 to 40 feet"=35 / 6,
-                                                "31 to 40 feet"= 35.5 / 6,
-                                                "32 to 40 feet"=36 / 6,
-                                                "33 to 40 feet"=36.5 / 6,
-                                                "34 to 40 feet"=38 / 6,
-                                                "35 feet"=35 / 6,
-                                                "40 feet"=40 / 6,
-                                                "45 feet"=45 / 6,
-                                                "60 feet"=60 / 6)),
-         depth_fthm=as.numeric(depth_fthm),
-         depth_ft=depth_fthm*6,
-         depth_m=depth_ft * 0.3048) %>%
-  # Format species and sex
-  mutate(species=freeR::sentcase(species),
-         sex=ifelse(species=="Lobster (f)", "female", 
-                    ifelse(species=="Lobster (m)", "male", "unknown")),
-         species=plyr::revalue(species, c("Lobster"="Spiny lobster",
-                                          "Lobster (f)"="Spiny lobster", 
-                                          "Lobster (m)"="Spiny lobster"))) %>% 
-  # Add season
-  # Northern: Dec 1 (335) to Jul 15 (196)
-  # Central: Nov 15 (319) to Jun 30 (181)
-  mutate(season_type=ifelse(species!="Dungeness crab", "not relevant", 
-                       ifelse(region=="Northern" & (day>=335 | day <=196), "in-season",
-                              ifelse(region=="Central" & (day>=319 | day <=181), "in-season", "out-of-season"))),
-         season=ifelse(season_type=="in-season" & day>=319, paste(year, year+1, sep="-"),
-                       ifelse(season_type=="in-season" & day<319, paste(year-1, year, sep="-"), season_type))) %>% 
+  # Format common name and sex
+  mutate(comm_name=freeR::sentcase(comm_name),
+         sex=ifelse(comm_name=="Lobster (f)", "female", 
+                    ifelse(comm_name=="Lobster (m)", "male", "unknown")),
+         comm_name=recode(comm_name, 
+                          "Lobster"="Spiny lobster",
+                          "Lobster (f)"="Spiny lobster",
+                          "Lobster (m)"="Spiny lobster",
+                          "Spiny lobsters"="Spiny lobster")) %>% 
+  # Add species name
+  mutate(species=recode(comm_name,
+                        "Dungeness crab"="Metacarcinus magister",
+                        "Rock crab"="Cancer spp.", # Cancer productus, Cancer anthonyi, Cancer antennarius
+                        "Sheep crab"="Loxorhynchus grandis",
+                        "Spider crab"="unknown", # this might be Sheep crab as per Duy Truong June 27, 2019 email
+                        "Spiny lobster"="Panulirus interruptus")) %>%  # California spiny lobster
   # Format DA ppm
   mutate(da_ppm_prefix=ifelse(grepl("<|ND|nd", da_ppm), "<", ""), 
          da_ppm=as.numeric(ifelse(grepl("<|ND|nd", da_ppm), "2.5", da_ppm))) %>%
   # Format lat/long
   rename(latlong_orig=lat_long) %>% 
   mutate(latlong_orig=str_trim(latlong_orig)) %>% 
+  # Format block id and addd block stats
+  mutate(block_id = recode(block_id, "108/115"="115") %>% as.numeric) %>% 
+  left_join(dplyr::select(blocks, block_id, block_long_dd, block_lat_dd), by="block_id") %>% 
+  # Add survey id
+  mutate(survey_id=paste(date, area, comm_name)) %>% 
   # Rearrange columns
-  left_join(select(blocks, block_id, block_long_dd, block_lat_dd), by="block_id") %>% 
-  select(sampleid, year, date, day, season,
+  dplyr::select(sampleid, year, date, survey_id, 
          region, port, area, block_id, block_long_dd, block_lat_dd,
-         latlong_orig, depth_m, depth_fthm,
-         species, sex, da_ppm_prefix, da_ppm)
+         latlong_orig, depth_fthm,
+         comm_name, species, sex, da_ppm_prefix, da_ppm)
   
+# Any duplicated IDs?
+anyDuplicated(data$sampleid)
+
 # Inspect data (plus a few remaining problems)
+str(data)
 freeR::complete(data)
-table(data$sex)
-table(data$season)
+table(data$year) # weird date
+table(data$region)
 table(data$port)
 table(data$area)
+table(data$comm_name)
+table(data$species)
+table(data$sex)
 
-# Dungeness stats
-stats <- data %>% 
-  filter(species=="Dungeness crab") %>% 
-  group_by(year, region, port, area, season) %>% 
+# Count by survey
+nsurvey <- data %>% 
+  group_by(year, survey_id, comm_name) %>% 
   summarize(n=n())
 
 
@@ -217,7 +218,7 @@ data1 <- read.csv(file.path(inputdir, "crab_da_data_temp.csv"), as.is=T, fileEnc
 
 # Format unique lat/longs
 latlong <- data1 %>% 
-  select(latlong_orig) %>% 
+  dplyr::select(latlong_orig) %>% 
   unique() %>% 
   mutate(latlong=trimws(latlong_orig),
          # Erase NA info
@@ -253,6 +254,7 @@ latlong <- data1 %>%
                                           "41 38 124  10" = "41 38, 124 10",
                                           "41 45 124  19" = "41 45, 124 19",
                                           "41 45.700  124 19.400" = "41 45.700, 124 19.400",
+                                          "41 45 .760, 124 18.921"="	41 45.760, 124 18.921",
                                           "41 45.000  124 18.705" = "41 45.000, 124 18.705",
                                           "41 10.47  124 11.32" = "41 10.47, 124 11.32",
                                           "41 10.11  124 13.06" = "41 10.11, 124 13.06",
@@ -260,7 +262,10 @@ latlong <- data1 %>%
                                           "34 03.2499 119 32.80" = "34 03.2499, 119 32.80",
                                           "34 02.60 119 32.24" = "34 02.60, 119 32.24",
                                           "33 59.310 119 32.427" = "33 59.310, 119 32.427",
-                                          "34 02.69 119 32.45" = "34 02.69, 119 32.45"))) %>% 
+                                          "34 02.69 119 32.45" = "34 02.69, 119 32.45",
+                                          "41 16.00 -124 09.00" = "41 16.00, 124 09.00", 
+                                          "41 33.00 -124 11.00" = "41 33.00, 124 11.00", 
+                                          "37 51.760-122 42.785" = "37 51.760, 122 42.785"))) %>% 
   # Add length of names
   mutate(nchar=nchar(latlong)) %>% 
   mutate(lat=sapply(latlong, function(x) unlist(strsplit(x, ","))[1]),
@@ -275,7 +280,7 @@ latlong <- data1 %>%
 
 # Add formatted coordinates to original data
 data2 <- data1 %>%  
-  left_join(select(latlong, latlong_orig, lat_dd, long_dd), by="latlong_orig")
+  left_join(dplyr::select(latlong, latlong_orig, lat_dd, long_dd), by="latlong_orig")
 
 # Some of the lat/longs didn't get properly formatted
 # Look up the sample ids of samples missing coordinates but with coord info
@@ -297,46 +302,13 @@ data3 <- data2 %>%
   mutate(lat_dd=as.numeric(lat_dd),
          long_dd=as.numeric(long_dd), 
          long_dd = -1 * long_dd) %>% 
-  select(sampleid:latlong_orig, long_dd, lat_dd, everything())
+  dplyr::select(sampleid:latlong_orig, long_dd, lat_dd, everything())
+
+# Inspect
+str(data3)
+freeR::complete(data3)
 
 # Export final data
-write.csv(data3, file=file.path(outputdir, "CDPH_crab_viscera_da_data.csv"), row.names=F)
-
-# Plot data
-################################################################################
-
-# Get US states
-usa <- rnaturalearth::ne_states(country = "United States of America")
-usa <- sf::st_as_sf(usa)
-
-# Setup theme
-my_theme <- theme(axis.text=element_text(size=7),
-                  axis.title=element_text(size=9),
-                  plot.title=element_text(size=11),
-                  legend.text=element_text(size=7),
-                  legend.title=element_text(size=9),
-                  panel.grid.major = element_line(colour = 'transparent'),
-                  panel.grid.minor = element_blank(),
-                  panel.background = element_blank(), 
-                  axis.line = element_line(colour = "black"))
-
-# Plot data
-g <- ggplot(data=usa) +
-  geom_sf(fill="grey80", col="white", size=0.5) +
-  geom_point(data3, mapping=aes(x=long_dd, y=lat_dd, col=species, size=da_ppm)) +
-  coord_sf(xlim = c(-125, -113), ylim = c(32, 42)) +
-  scale_color_discrete(name="Species") +
-  scale_size_continuous(name="Domoic acid (ppm)") +
-  labs(x="", y="") +
-  theme_bw() + my_theme
-g
-
-# Export
-ggsave(g, filename=file.path(plotdir, "CDPH_crab_viscera_da_data.png"), width=4.5, height=3.5, units="in", dpi=600)
-
-
-
-
-
+saveRDS(data3, file=file.path(outputdir, "CDPH_crab_viscera_da_data.rds"))
 
 

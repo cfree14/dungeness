@@ -62,61 +62,64 @@ data <- data_orig %>%
   # 2. Split species and type based on comma
   # 3. Species to sentence case
   # 4. Replace cultured species
-  mutate(type_orig=plyr::revalue(type_orig, c("Clam, razor"="Razor Clam",
-                                              "Gaper Clam meat"="Gaper Clam, meat",
-                                              "Gaper Clam viscera"="Gaper Clam, viscera",
-                                              "Razor Clam meat"="Razor Clam, meat",
-                                              "Razor Clam viscera"="Razor Clam, viscera",
-                                              "Rock Scallop adductor"="Rock Scallop, adductor",
-                                              "Rock Scallop viscera"="Rock Scallop, viscera")),
-         species=sub('\\s*,.*','', type_orig),
+  mutate(type_orig=recode(type_orig, 
+                          "Clam, razor"="Razor Clam",
+                          "Gaper Clam meat"="Gaper Clam, meat",
+                          "Gaper Clam viscera"="Gaper Clam, viscera",
+                          "Razor Clam meat"="Razor Clam, meat",
+                          "Razor Clam viscera"="Razor Clam, viscera",
+                          "Rock Scallop adductor"="Rock Scallop, adductor",
+                          "Rock Scallop viscera"="Rock Scallop, viscera"),
+         comm_name=sub('\\s*,.*','', type_orig),
          type_new=sub('.*,\\s*','\\1', type_orig),
-         type_new=tolower(ifelse(species==type_new, NA, type_new)),
+         type_new=tolower(ifelse(comm_name==type_new, NA, type_new)),
          tissue=ifelse(type_new%in%c("wild", "cultured", "sentinel") | is.na(type_new), "whole", type_new),
          type=ifelse(type_new%in%c("wild", "cultured", "sentinel"), type_new, "wild"),
-         type=ifelse(species=="Cultured Rock Scallop", "cultured", type),
-         species=freeR::sentcase(species),
-         species=plyr::revalue(species, c("Cultured rock scallop"="Rock scallop")))  %>% 
+         type=ifelse(comm_name=="Cultured Rock Scallop", "cultured", type),
+         comm_name=freeR::sentcase(comm_name),
+         comm_name=recode(comm_name, "Cultured rock scallop"="Rock scallop"))  %>% 
+  # Add scientific name
+  mutate(species=recode(comm_name, 
+                        "Basket cockle"="Clinocardium nuttallii",
+                        "Bay mussel"="Mytilus galloprovincialis", # Mediterranean mussel
+                        "Gaper clam"="Tresus nuttallii", 
+                        "Kumamoto oyster"="Crassostrea sikamea", 
+                        "Littleneck clam"="Leukoma staminea", # Pacific littleneck clam
+                        "Manila clam"="Venerupis philippinarum",
+                        "Pacific oyster"="Crassostrea gigas", 
+                        "Pismo clam"="Tivela stultorum", 
+                        "Razor clam"="Siliqua patula", # Pacific razor clam 
+                        "Rock scallop"="Crassadoma gigantea", 
+                        "Sea mussel"="Mytilus californianus", 
+                        "Washington clam"="Saxidomus spp.")) %>% # Saxidomus giganteus or Saxidomus nuttalli
+  # Fill in missing lat/longs
+  # Humboldt Bay, Gunther Is. 1-1 = Indian Island, Humboldt Bay, Eureka, CA : 40.809702, -124.169595
+  mutate(lat_dd=ifelse(location=="Humboldt Bay, Gunther Is. 1-1", 40.809702, lat_dd),
+         long_dd=ifelse(location=="Humboldt Bay, Gunther Is. 1-1", -124.169595, long_dd)) %>% 
   # Arrange columns
-  select(sampleid,
+  dplyr::select(sampleid,
          county, location, long_dd, lat_dd,
          year, date,
-         type_orig, species, type, tissue, da_ppm, da_ppm_prefix) %>% 
-  arrange(species, date)
+         type_orig, comm_name, species, type, tissue, da_ppm, da_ppm_prefix) %>% 
+  arrange(species, date) %>% 
+  # Remove problematic samples
+  filter(!sampleid %in% c("F18E00025", "F18E00092"))
+  
+# Are sample ids unique?
+anyDuplicated(data$sampleid)
+freeR::which_duplicated(data$sampleid) # F18E00025 and F18E00092 - these got dup;cated
+sum(data$sampleid %in% c("F18E00025", "F18E00092"))
 
 # Inspect data
-table(data$species)
+table(data$comm_name)
 table(data$tissue)
 table(data$type)
 freeR::complete(data)
 
+# Check species names
+freeR::suggest_names(data$species)
+
 # Export data
-saveRDS(data, file=file.path(outputdir, "CDPH_mollusc_viscera_da_data.Rds"))
+write.csv(data, file=file.path(outputdir, "CDPH_mollusc_viscera_da_data.csv"), row.names=F)
 
-
-# Plot data
-################################################################################
-
-# Theme
-my_theme <- theme(axis.text=element_text(size=7),
-                  axis.title=element_text(size=9),
-                  plot.title=element_text(size=11),
-                  legend.text=element_text(size=7),
-                  legend.title=element_text(size=9),
-                  panel.grid.major = element_line(colour = 'transparent'),
-                  panel.grid.minor = element_blank(),
-                  panel.background = element_blank(), 
-                  axis.line = element_line(colour = "black"))
-
-# Plot data
-g <- ggplot(data, aes(x=long_dd, y=lat_dd, size=da_ppm, col=species)) +
-  geom_point() +
-  facet_wrap(~year) +
-  labs(x="", y="") +
-  scale_color_discrete(name="Species") +
-  scale_size_continuous(name="Domoic acid\nconcentration (ppm)") +
-  theme_bw() + my_theme
-g
-
-ggsave(g, filename=file.path(plotdir, "CDPH_mollusc_viscera_da_data.png"), width=6.5, height=5.5, units="in", dpi=600)
 

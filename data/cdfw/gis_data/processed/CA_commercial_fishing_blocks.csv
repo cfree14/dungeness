@@ -1,558 +1,558 @@
-"block_id","block_type","block_region","block_area","block_district","block_lat_dd","block_long_dd","block_area_sqkm"
-101,"Inshore","Northern","Northern California","District 6",41.9164915968656,-123.917852343799,255.959
-102,"Inshore","Northern","Northern California","District 6",41.9181078575617,-124.271279348007,193.625
-103,"Inshore","Northern","Northern California","District 6",41.9164977583509,-124.417875629109,255.971
-104,"Inshore","Northern","Northern California","District 6",41.9165033641051,-124.58455395873,255.985
-105,"Inshore","Northern","Northern California","District 6",41.9165076923546,-124.751223852551,255.994
-106,"Inshore","Northern","Northern California","District 6",41.9164994429986,-124.917893250732,255.964
-107,"Inshore","Northern","Northern California","District 6",41.6972736305774,-124.155819467121,14.9667
-108,"Inshore","Northern","Northern California","District 6",41.73899821132,-124.26417180332,202.503
-109,"Inshore","Northern","Northern California","District 6",41.7498278817123,-124.417872013492,256.618
-110,"Inshore","Northern","Northern California","District 6",41.7498307118813,-124.58454479083,256.622
-111,"Inshore","Northern","Northern California","District 6",41.7498315211082,-124.751217462946,256.62
-112,"Inshore","Northern","Northern California","District 6",41.7498320113484,-124.917888825576,256.618
-113,"Inshore","Northern","Northern California","District 6",41.4404976471889,-123.956181780796,8.13363
-114,"Inshore","Northern","Northern California","District 6",41.5706879436917,-124.132502030394,101.942
-115,"Inshore","Northern","Northern California","District 6",41.5831647540055,-124.251191942234,257.272
-116,"Inshore","Northern","Northern California","District 6",41.5831650751929,-124.417865464026,257.276
-117,"Inshore","Northern","Northern California","District 6",41.5831654399842,-124.584539036097,257.275
-118,"Inshore","Northern","Northern California","District 6",41.5831658824174,-124.751211524431,257.275
-119,"Inshore","Northern","Northern California","District 6",41.5831662597495,-124.917883139827,257.274
-120,"Inshore","Northern","Northern California","District 6",41.4180531832033,-124.118893299282,151.097
-121,"Inshore","Northern","Northern California","District 6",41.4165006894519,-124.251189413485,257.927
-122,"Inshore","Northern","Northern California","District 6",41.4165001279873,-124.417861822768,257.928
-123,"Inshore","Northern","Northern California","District 6",41.416500086261,-124.584534282676,257.928
-124,"Inshore","Northern","Northern California","District 6",41.4165003431929,-124.751206390875,257.928
-125,"Inshore","Northern","Northern California","District 6",41.4165006152848,-124.917878063314,257.927
-126,"Inshore","Northern","Northern California","District 6",41.2604195854841,-124.134570575893,98.4299
-127,"Inshore","Northern","Northern California","District 6",41.2498355990186,-124.251186753246,258.576
-128,"Inshore","Northern","Northern California","District 6",41.2498347759768,-124.41785826809,258.578
-129,"Inshore","Northern","Northern California","District 6",41.2498345497739,-124.584530131178,258.578
-130,"Inshore","Northern","Northern California","District 6",41.249834767562,-124.751201917922,258.578
-131,"Inshore","Northern","Northern California","District 6",41.2498349646037,-124.917873510949,258.577
-132,"Inshore","Northern","Northern California","District 6",41.0594454272245,-124.147941208953,39.825
-133,"Inshore","Northern","Northern California","District 6",41.0831705266875,-124.251183496103,259.224
-134,"Inshore","Northern","Northern California","District 6",41.0831694262835,-124.417854528447,259.225
-135,"Inshore","Northern","Northern California","District 6",41.0831690481454,-124.584525932523,259.226
-136,"Inshore","Northern","Northern California","District 6",41.0831692788584,-124.751197617552,259.226
-137,"Inshore","Northern","Northern California","District 6",41.0831695592636,-124.917869288195,259.226
-138,"Inshore","Northern","Northern California","District 6",41.7496088088786,-125.251229641298,2309.55
-139,"Inshore","Northern","Northern California","District 6",41.2496199692954,-125.251217062847,2327.19
-201,"Inshore","Northern","Northern California","District 6",40.949400103713,-124.149303361324,39.2476
-202,"Inshore","Northern","Northern California","District 6",40.9170420436169,-124.251740583096,258.02
-203,"Inshore","Northern","Northern California","District 6",40.9165042464061,-124.417850010385,259.871
-204,"Inshore","Northern","Northern California","District 6",40.9165039416399,-124.584521410179,259.872
-205,"Inshore","Northern","Northern California","District 6",40.9165042136123,-124.75119327483,259.872
-206,"Inshore","Northern","Northern California","District 6",40.9165046526999,-124.91786526633,259.872
-207,"Inshore","Northern","Northern California","District 6",40.9165053343492,-125.084537578882,259.872
-208,"Inshore","Northern","Northern California","District 8",40.824391754265,-124.142593076297,44.1428
-209,"Inshore","Northern","Northern California","District 9",40.7204690759439,-124.233037707755,21.5209
-210,"Inshore","Northern","Northern California","District 7",40.7665868385966,-124.281564753143,147.625
-211,"Inshore","Northern","Northern California","District 7",40.7498397634376,-124.417844606619,260.514
-212,"Inshore","Northern","Northern California","District 7",40.7498394815181,-124.584516524587,260.515
-213,"Inshore","Northern","Northern California","District 7",40.7498398830776,-124.751188873289,260.515
-214,"Inshore","Northern","Northern California","District 7",40.7498404875393,-124.917861461916,260.516
-215,"Inshore","Northern","Northern California","District 7",40.7498411256769,-125.084534276055,260.516
-216,"Inshore","Northern","Northern California","District 7",40.6469004587244,-124.322162963549,10.232
-217,"Inshore","Northern","Northern California","District 7",40.5888577506312,-124.425551856339,233.412
-218,"Inshore","Northern","Northern California","District 7",40.58317600042,-124.584511292795,261.157
-219,"Inshore","Northern","Northern California","District 7",40.5831762532685,-124.751184634669,261.157
-220,"Inshore","Northern","Northern California","District 7",40.5831768396143,-124.917857839184,261.157
-221,"Inshore","Northern","Northern California","District 7",40.5831774462564,-125.084531174618,261.158
-222,"Inshore","Northern","Northern California","District 7",40.4115859475953,-124.441371080815,184.268
-223,"Inshore","Northern","Northern California","District 7",40.4165134721701,-124.584506563571,261.796
-224,"Inshore","Northern","Northern California","District 7",40.4165136111523,-124.751180622695,261.797
-225,"Inshore","Northern","Northern California","District 7",40.4165139098922,-124.91785464543,261.797
-226,"Inshore","Northern","Northern California","District 7",40.4165144536141,-125.084528436325,261.796
-227,"Inshore","Northern","Northern California","District 7",40.1897420128455,-124.29896075582,34.9392
-228,"Inshore","Northern","Northern California","District 7",40.2472431303479,-124.423130895098,244.439
-229,"Inshore","Northern","Northern California","District 7",40.2498514329482,-124.584502744712,262.434
-230,"Inshore","Northern","Northern California","District 7",40.2498514785548,-124.751177334976,262.434
-231,"Inshore","Northern","Northern California","District 7",40.2498516890378,-124.917851893134,262.434
-232,"Inshore","Northern","Northern California","District 7",40.2498521105404,-125.084526050585,262.433
-233,"Inshore","Northern","Northern California","District 7",40.0490296566354,-124.120243934667,97.3514
-234,"Inshore","Northern","Northern California","District 7",40.0797218055108,-124.254474694674,250.154
-235,"Inshore","Northern","Northern California","District 7",40.0831900527567,-124.417824551617,263.068
-236,"Inshore","Northern","Northern California","District 7",40.0831898099864,-124.584499304344,263.069
-237,"Inshore","Northern","Northern California","District 7",40.0831897608747,-124.75117438968,263.069
-238,"Inshore","Northern","Northern California","District 7",40.0831898236163,-124.917849340574,263.069
-239,"Inshore","Northern","Northern California","District 7",40.0831900547333,-125.084523672752,263.068
-240,"Inshore","Northern","Northern California","District 7",40.7496341972726,-125.417880202821,2344.64
-241,"Inshore","Northern","Northern California","District 7",40.2496517116116,-125.417872439884,2361.88
-242,"Inshore","Northern","Northern California","District 7",39.8827050094276,-123.957745266658,91.2949
-243,"Inshore","Northern","Northern California","District 7",39.9159329377633,-124.085065688135,261.659
-244,"Inshore","Northern","Northern California","District 7",39.9165295036097,-124.251146883092,263.698
-245,"Inshore","Northern","Northern California","District 7",39.916529071282,-124.417821507072,263.7
-246,"Inshore","Northern","Northern California","District 7",39.9165288333627,-124.584496824223,263.701
-247,"Inshore","Northern","Northern California","District 7",39.9165286352445,-124.75117213911,263.701
-248,"Inshore","Northern","Northern California","District 7",39.6914044914888,-123.817122013642,18.0828
-249,"Inshore","Northern","Northern California","District 7",39.7486378440766,-123.919532810761,258.59
-250,"Inshore","Northern","Northern California","District 7",39.7498700797407,-124.084471263888,264.326
-251,"Inshore","Northern","Northern California","District 7",39.7498695397197,-124.251145005034,264.328
-252,"Inshore","Northern","Northern California","District 7",39.7498690268694,-124.417819744721,264.33
-253,"Inshore","Northern","Northern California","District 7",39.7498684886189,-124.584495259479,264.331
-254,"Inshore","Northern","Northern California","District 7",39.7498680036487,-124.751170593057,264.331
-255,"Inshore","Northern","Northern California","District 7",39.5800386047075,-123.806876884606,86.243
-256,"Inshore","Northern","Northern California","District 7",39.5832113819523,-123.917797624732,264.949
-257,"Inshore","Northern","Northern California","District 7",39.5832109642077,-124.084469806057,264.954
-258,"Inshore","Northern","Northern California","District 7",39.5832101425735,-124.251143809909,264.956
-259,"Inshore","Northern","Northern California","District 7",39.5832092841196,-124.41781876544,264.958
-260,"Inshore","Northern","Northern California","District 7",39.5832084422796,-124.584494253178,264.959
-261,"Inshore","Northern","Northern California","District 7",39.5832076889619,-124.75116952531,264.959
-262,"Inshore","Northern","Northern California","District 7",39.4336769622705,-123.822887249115,31.5395
-263,"Inshore","Northern","Northern California","District 7",39.4165527548706,-123.917796693111,265.576
-264,"Inshore","Northern","Northern California","District 7",39.416552219313,-124.084469536558,265.58
-265,"Inshore","Northern","Northern California","District 7",39.4165510618254,-124.251143719544,265.582
-266,"Inshore","Northern","Northern California","District 7",39.4165498541948,-124.417818687123,265.584
-267,"Inshore","Northern","Northern California","District 7",39.4165486157334,-124.584494011996,265.584
-268,"Inshore","Northern","Northern California","District 7",39.2331325676897,-123.805665530535,81.3509
-269,"Inshore","Northern","Northern California","District 7",39.2498940646513,-123.917797580356,266.202
-270,"Inshore","Northern","Northern California","District 7",39.2498931629281,-124.084470676521,266.205
-271,"Inshore","Northern","Northern California","District 7",39.249891665448,-124.251144729228,266.206
-272,"Inshore","Northern","Northern California","District 7",39.2498901096347,-124.417819376993,266.207
-273,"Inshore","Northern","Northern California","District 7",39.2498885858456,-124.584494194313,266.208
-274,"Inshore","Northern","Northern California","District 7",39.0776252370777,-123.770320727186,202.203
-275,"Inshore","Northern","Northern California","District 7",39.0832343290468,-123.9178006038,266.824
-276,"Inshore","Northern","Northern California","District 7",39.0832332145611,-124.08447291804,266.827
-277,"Inshore","Northern","Northern California","District 7",39.0832316112944,-124.251146313597,266.827
-278,"Inshore","Northern","Northern California","District 7",39.0832298473968,-124.417820263635,266.829
-279,"Inshore","Northern","Northern California","District 7",39.0832280922511,-124.584494436988,266.828
-280,"Inshore","Northern","Northern California","District 7",39.7496729128435,-125.084519211946,2378.96
-281,"Inshore","Northern","Northern California","District 7",39.2496979170778,-124.917841969465,2395.85
-301,"Inshore","Central/Southern","Sacramento River & Delta Area","District 12",38.0652227779852,-122.382836506725,257.886
-401,"Inshore","Northern","Northern California","District 7",38.8484740637064,-123.655382003608,8.04079
-402,"Inshore","Northern","Northern California","District 7",38.9098216178996,-123.765227402174,214.958
-403,"Inshore","Northern","Northern California","District 7",38.9165724170619,-123.917802083376,267.447
-404,"Inshore","Northern","Northern California","District 7",38.9165717434199,-124.084474291618,267.449
-405,"Inshore","Northern","Northern California","District 7",38.9165702609832,-124.251147400432,267.448
-406,"Inshore","Northern","Northern California","District 7",38.9165686970972,-124.417820830867,267.449
-407,"Inshore","Central/Southern","Central California","District 10",38.6928344835791,-123.470505900419,34.6703
-408,"Inshore","Central/Southern","Central California","District 10",38.7365339744918,-123.595724881943,212.644
-409,"Inshore","Central/Southern","Central California","District 10",38.7499092108147,-123.751129099432,268.065
-410,"Inshore","Central/Southern","Central California","District 10",38.7499096144922,-123.917801561106,268.066
-411,"Inshore","Central/Southern","Central California","District 10",38.7499092440613,-124.084474380773,268.066
-412,"Inshore","Central/Southern","Central California","District 10",38.7499081107122,-124.251147573037,268.066
-413,"Inshore","Central/Southern","Central California","District 10",38.7499067024084,-124.417820916359,268.065
-414,"Inshore","Central/Southern","Central California","District 10",38.5232011536543,-123.298578765774,36.2504
-415,"Inshore","Central/Southern","Central California","District 10",38.5747679254234,-123.426824990426,231.052
-416,"Inshore","Central/Southern","Central California","District 10",38.5832451978641,-123.584457206971,268.679
-417,"Inshore","Central/Southern","Central California","District 10",38.5832460421519,-123.75112919942,268.68
-418,"Inshore","Central/Southern","Central California","District 10",38.5832465334621,-123.917801729437,268.681
-419,"Inshore","Central/Southern","Central California","District 10",38.5832463060201,-124.084474568938,268.681
-420,"Inshore","Central/Southern","Central California","District 10",38.5832455219802,-124.251147584355,268.681
-421,"Inshore","Central/Southern","Central California","District 10",38.5832444480113,-124.417820666238,268.68
-422,"Inshore","Central/Southern","Central California","District 10",38.3860496864952,-123.128340128991,89.9947
-423,"Inshore","Central/Southern","Central California","District 10",38.4149852313919,-123.252534444289,263.716
-424,"Inshore","Central/Southern","Central California","District 10",38.4165804592909,-123.417788277257,269.286
-425,"Inshore","Central/Southern","Central California","District 10",38.416581841527,-123.584458536927,269.29
-426,"Inshore","Central/Southern","Central California","District 10",38.4165827926658,-123.751130031512,269.291
-427,"Inshore","Central/Southern","Central California","District 10",38.4165832638227,-123.917802122915,269.292
-428,"Inshore","Central/Southern","Central California","District 10",38.4165832029775,-124.084474709269,269.293
-430,"Inshore","Central/Southern","Central California","District 10",38.1934429829168,-122.948456937043,61.4875
-431,"Inshore","Central/Southern","Central California","District 10",38.2458271192395,-123.087519763075,254.811
-432,"Inshore","Central/Southern","Central California","District 10",38.2499171696646,-123.251118530251,269.897
-433,"Inshore","Central/Southern","Central California","District 10",38.249918005722,-123.417789082419,269.897
-434,"Inshore","Central/Southern","Central California","District 10",38.2499189983995,-123.584459681907,269.899
-435,"Inshore","Central/Southern","Central California","District 10",38.2499196220385,-123.751130947241,269.9
-436,"Inshore","Central/Southern","Central California","District 10",38.2499200446453,-123.917802637559,269.901
-437,"Inshore","Central/Southern","Central California","District 10",38.2499199778325,-124.0844747908,269.902
-438,"Inshore","Central/Southern","Central California","District 10",38.0687307963557,-122.949948976745,86.4344
-439,"Inshore","Central/Southern","Central California","District 10",38.0836582782591,-123.084868031836,269.071
-440,"Inshore","Central/Southern","Central California","District 10",38.0832558704806,-123.251118159125,270.504
-441,"Inshore","Central/Southern","Central California","District 10",38.0832559168637,-123.417789373252,270.505
-442,"Inshore","Central/Southern","Central California","District 10",38.0832563039949,-123.584460329241,270.506
-443,"Inshore","Central/Southern","Central California","District 10",38.0832566071879,-123.751131545382,270.508
-444,"Inshore","Central/Southern","Central California","District 10",38.0832568349917,-123.917803037616,270.508
-445,"Inshore","Central/Southern","Central California","District 10",38.0832567432738,-124.084474736305,270.509
-446,"Inshore","Central/Southern","Central California","District 10",37.8589123227005,-122.624502263092,48.5783
-447,"Inshore","Central/Southern","Central California","District 10",37.8918614144501,-122.764368135261,173.73
-448,"Inshore","Central/Southern","Central California","District 10",37.9160927248548,-122.917342256443,269.415
-449,"Inshore","Central/Southern","Central California","District 10",37.9162513006838,-123.084757316027,269.968
-450,"Inshore","Central/Southern","Central California","District 10",37.9165932825461,-123.251117862781,271.115
-451,"Inshore","Central/Southern","Central California","District 10",37.9165932310984,-123.41778937158,271.114
-452,"Inshore","Central/Southern","Central California","District 10",37.9165933244708,-123.584460557057,271.113
-453,"Inshore","Central/Southern","Central California","District 10",37.9165935176845,-123.751131741499,271.113
-455,"Inshore","Central/Southern","Central California","District 10",37.7483750704826,-122.586848910301,262.838
-456,"Inshore","Central/Southern","Central California","District 10",37.7499288883995,-122.751098291974,271.719
-457,"Inshore","Central/Southern","Central California","District 10",37.7499401741861,-122.917754923578,271.661
-458,"Inshore","Central/Southern","Central California","District 10",37.7499950121248,-123.08454899126,271.332
-459,"Inshore","Central/Southern","Central California","District 10",37.7499293950124,-123.251117962328,271.717
-460,"Inshore","Central/Southern","Central California","District 10",37.7499297550416,-123.417789412398,271.716
-461,"Inshore","Central/Southern","Central California","District 10",37.7499300876892,-123.584460524899,271.715
-462,"Inshore","Central/Southern","Central California","District 10",37.7499302670811,-123.751131536352,271.715
-464,"Inshore","Central/Southern","Central California","District 10",37.5854358999997,-122.587207843507,262.196
-465,"Inshore","Central/Southern","Central California","District 10",37.5832679600176,-122.751099280574,272.317
-466,"Inshore","Central/Southern","Central California","District 10",37.583266706798,-122.917773323691,272.317
-467,"Inshore","Central/Southern","Central California","District 10",37.5832661239925,-123.084446124147,272.315
-468,"Inshore","Central/Southern","Central California","District 10",37.5832663725211,-123.251117713676,272.316
-469,"Inshore","Central/Southern","Central California","District 10",37.5832666896982,-123.417789034596,272.316
-470,"Inshore","Central/Southern","Central California","District 10",37.5832669342017,-123.584460099874,272.315
-471,"Inshore","Central/Southern","Central California","District 10",37.5832670598203,-123.751131050872,272.316
-472,"Inshore","Central/Southern","Central California","District 10",37.4036869758287,-122.462898197354,116.527
-473,"Inshore","Central/Southern","Central California","District 10",37.4166075990841,-122.584426594799,272.918
-474,"Inshore","Central/Southern","Central California","District 10",37.4166062918401,-122.751100026077,272.917
-475,"Inshore","Central/Southern","Central California","District 10",37.4166049684579,-122.917773192724,272.915
-476,"Inshore","Central/Southern","Central California","District 10",37.4166040668867,-123.084445585167,272.913
-477,"Inshore","Central/Southern","Central California","District 10",37.4166038793364,-123.251117118956,272.913
-478,"Inshore","Central/Southern","Central California","District 10",37.2471662908574,-122.452113277051,158.172
-479,"Inshore","Central/Southern","Central California","District 10",37.2499444396878,-122.58442686585,273.513
-480,"Inshore","Central/Southern","Central California","District 10",37.2499437181129,-122.751099886478,273.512
-481,"Inshore","Central/Southern","Central California","District 10",37.249942746701,-122.917772553717,273.511
-482,"Inshore","Central/Southern","Central California","District 10",37.2499419379089,-123.084444663584,273.509
-483,"Inshore","Central/Southern","Central California","District 10",37.2499415675145,-123.251116168096,273.509
-484,"Inshore","Central/Southern","Central California","District 10",38.7497221817667,-124.751166430644,2412.57
-485,"Inshore","Central/Southern","Central California","District 10",38.2497439042238,-124.417819184782,2429.11
-486,"Inshore","Central/Southern","Central California","District 10",37.749761860256,-124.084474147303,2445.44
-487,"Inshore","Central/Southern","Central California","District 10",37.3332600418176,-123.584458925788,1639.27
-488,"Inshore","Central/Southern","San Francisco Bay","District 13",37.8145365660972,-122.361166880878,459.063
-489,"Inshore","Central/Southern","San Francisco Bay","District 13",37.5843170813147,-122.216059620987,302.874
-501,"Inshore","Central/Southern","Central California","District 17",37.0457325324697,-122.284635703486,100.383
-502,"Inshore","Central/Southern","Central California","District 17",37.0815817060541,-122.419544681347,267.497
-503,"Inshore","Central/Southern","Central California","District 17",37.0832815752875,-122.584426987717,274.105
-504,"Inshore","Central/Southern","Central California","District 17",37.0832810882467,-122.75109950805,274.105
-505,"Inshore","Central/Southern","Central California","District 17",37.0832803511334,-122.91777177032,274.104
-506,"Inshore","Central/Southern","Central California","District 17",37.0832796719335,-123.08444353764,274.103
-507,"Inshore","Central/Southern","Central California","District 17",36.852617950167,-121.823062831472,9.74843
-508,"Inshore","Central/Southern","Central California","District 17",36.895712208631,-121.923865617063,198.834
-509,"Inshore","Central/Southern","Central California","District 17",36.8976268772945,-122.087084351264,210.472
-510,"Inshore","Central/Southern","Central California","District 17",36.9163905120996,-122.251303170259,273.915
-511,"Inshore","Central/Southern","Central California","District 17",36.9166189873881,-122.417754101691,274.696
-512,"Inshore","Central/Southern","Central California","District 17",36.9166188690651,-122.584426469921,274.696
-513,"Inshore","Central/Southern","Central California","District 17",36.9166184241135,-122.751098622154,274.695
-514,"Inshore","Central/Southern","Central California","District 17",36.9166177493596,-122.917770546709,274.695
-515,"Inshore","Central/Southern","Central California","District 17",36.9166170355056,-123.084442039737,274.694
-516,"Inshore","Central/Southern","Central California","District 17",36.7619269447015,-121.817672868968,51.5131
-517,"Inshore","Central/Southern","Central California","District 17",36.7499568950738,-121.917733643069,275.286
-518,"Inshore","Central/Southern","Central California","District 17",36.7499566223924,-122.084407082061,275.286
-519,"Inshore","Central/Southern","Central California","District 17",36.7499565409194,-122.251080203515,275.285
-520,"Inshore","Central/Southern","Central California","District 17",36.7499563965802,-122.417752994627,275.285
-521,"Inshore","Central/Southern","Central California","District 17",36.7499561183064,-122.584425313631,275.285
-522,"Inshore","Central/Southern","Central California","District 17",36.7499555420989,-122.751097196446,275.284
-523,"Inshore","Central/Southern","Central California","District 17",36.74995494233,-122.917768864854,275.284
-524,"Inshore","Central/Southern","Central California","District 17",36.7499542463928,-123.084440295126,275.283
-525,"Inshore","Central/Southern","Central California","District 17",36.6577678602786,-121.829710032249,1.85193
-526,"Inshore","Central/Southern","Central California","District 17",36.6026325979716,-121.940990320989,141.933
-527,"Inshore","Central/Southern","Central California","District 17",36.5832940704713,-122.084405654459,275.873
-528,"Inshore","Central/Southern","Central California","District 17",36.5832937843379,-122.251078901894,275.873
-529,"Inshore","Central/Southern","Central California","District 17",36.5832935382366,-122.417751743656,275.872
-530,"Inshore","Central/Southern","Central California","District 17",36.5832930854904,-122.584423918066,275.871
-531,"Inshore","Central/Southern","Central California","District 17",36.5832925104149,-122.751095667228,275.871
-532,"Inshore","Central/Southern","Central California","District 18",36.4083616726815,-121.95769186226,139.56
-533,"Inshore","Central/Southern","Central California","District 18",36.4166304411315,-122.084405651002,276.459
-534,"Inshore","Central/Southern","Central California","District 18",36.4166303356513,-122.251078393194,276.458
-535,"Inshore","Central/Southern","Central California","District 18",36.4166301263685,-122.417750727814,276.457
-536,"Inshore","Central/Southern","Central California","District 18",36.4166297345576,-122.584422556815,276.456
-537,"Inshore","Central/Southern","Central California","District 18",36.4166292021463,-122.751094110104,276.455
-538,"Inshore","Central/Southern","Central California","District 18",36.1952576469331,-121.779989314327,69.473
-539,"Inshore","Central/Southern","Central California","District 18",36.2429502499816,-121.924886421318,246.326
-540,"Inshore","Central/Southern","Central California","District 18",36.2499657489846,-122.084406726323,277.04
-541,"Inshore","Central/Southern","Central California","District 18",36.249966022648,-122.251078484348,277.039
-542,"Inshore","Central/Southern","Central California","District 18",36.2499661120486,-122.41775001302,277.038
-543,"Inshore","Central/Southern","Central California","District 18",36.2499659463125,-122.584421304038,277.037
-544,"Inshore","Central/Southern","Central California","District 18",36.2499655937691,-122.751092567264,277.037
-545,"Inshore","Central/Southern","Central California","District 17",36.9164580485665,-123.417784440342,2472.24
-546,"Inshore","Central/Southern","Central California","District 18",36.4164764020544,-123.08443683927,2488.08
-547,"Inshore","Central/Southern","Central California","District 18",36.0501310878154,-121.622866590723,99.0911
-548,"Inshore","Central/Southern","Central California","District 18",36.083049866301,-121.751311912552,276.751
-549,"Inshore","Central/Southern","Central California","District 18",36.083299884892,-121.917735527204,277.619
-550,"Inshore","Central/Southern","Central California","District 18",36.0833009194562,-122.084406914198,277.618
-551,"Inshore","Central/Southern","Central California","District 18",36.0833015118783,-122.251078143835,277.617
-552,"Inshore","Central/Southern","Central California","District 18",36.0833018922618,-122.417749115621,277.617
-553,"Inshore","Central/Southern","Central California","District 18",35.8827993005299,-121.470988407916,64.53
-554,"Inshore","Central/Southern","Central California","District 18",35.9166258455903,-121.584392193142,278.182
-555,"Inshore","Central/Southern","Central California","District 18",35.9166334616074,-121.751061587323,278.199
-556,"Inshore","Central/Southern","Central California","District 18",35.9166350336249,-121.917734464303,278.195
-557,"Inshore","Central/Southern","Central California","District 18",35.91663627886,-122.08440585608,278.194
-558,"Inshore","Central/Southern","Central California","District 18",35.916637072385,-122.251076795385,278.194
-559,"Inshore","Central/Southern","Central California","District 18",35.9166376345927,-122.417747536555,278.193
-560,"Inshore","Central/Southern","Central California","District 18",35.7057525605036,-121.317898394213,28.4413
-561,"Inshore","Central/Southern","Central California","District 18",35.7460233780353,-121.421309374767,263.395
-562,"Inshore","Central/Southern","Central California","District 18",35.7499681160415,-121.584384729823,278.774
-563,"Inshore","Central/Southern","Central California","District 18",35.7499694290894,-121.751059190764,278.772
-564,"Inshore","Central/Southern","Central California","District 18",35.7499707847694,-121.917732086005,278.77
-565,"Inshore","Central/Southern","Central California","District 18",35.7499719530258,-122.084403609277,278.768
-566,"Inshore","Central/Southern","Central California","District 18",35.7499728019318,-122.251074483434,278.768
-567,"Inshore","Central/Southern","Central California","District 18",35.7499735117433,-122.417745222027,278.768
-568,"Inshore","Central/Southern","Central California","District 18",35.9164925261127,-122.751089090803,2503.73
-601,"Inshore","Central/Southern","Central California","District 18",35.5453795159681,-121.129492810783,78.2868
-602,"Inshore","Central/Southern","Central California","District 18",35.5781492999969,-121.254222142222,260.788
-603,"Inshore","Central/Southern","Central California","District 18",35.5833051018161,-121.41770771992,279.344
-604,"Inshore","Central/Southern","Central California","District 18",35.5833049162507,-121.584382232738,279.345
-605,"Inshore","Central/Southern","Central California","District 18",35.5833058299292,-121.75105625854,279.343
-606,"Inshore","Central/Southern","Central California","District 18",35.5833068930115,-121.917729105503,279.342
-607,"Inshore","Central/Southern","Central California","District 18",35.3879284144219,-120.93329971342,162.384
-608,"Inshore","Central/Southern","Central California","District 18",35.4142584611473,-121.086703459524,270.635
-609,"Inshore","Central/Southern","Central California","District 18",35.4166424627229,-121.25103127301,279.915
-610,"Inshore","Central/Southern","Central California","District 18",35.4166418752465,-121.41770547505,279.914
-611,"Inshore","Central/Southern","Central California","District 18",35.4166419893396,-121.58437956985,279.913
-612,"Inshore","Central/Southern","Central California","District 18",35.4166425579442,-121.75105312454,279.912
-613,"Inshore","Central/Southern","Central California","District 18",35.4166433168586,-121.917725724785,279.911
-614,"Inshore","Central/Southern","Central California","District 18",35.1755059372737,-120.784102831485,16.1977
-615,"Inshore","Central/Southern","Central California","District 18",35.2450469992347,-120.933593785109,220.989
-616,"Inshore","Central/Southern","Central California","District 18",35.2499786924769,-121.08435579387,280.483
-617,"Inshore","Central/Southern","Central California","District 18",35.2499786519777,-121.251029609013,280.482
-618,"Inshore","Central/Southern","Central California","District 18",35.2499785806922,-121.417703559853,280.482
-619,"Inshore","Central/Southern","Central California","District 18",35.2499788292049,-121.584377159615,280.48
-620,"Inshore","Central/Southern","Central California","District 18",35.2499793158517,-121.751049946313,280.479
-621,"Inshore","Central/Southern","Central California","District 18",35.2499800118477,-121.917722321928,280.478
-622,"Inshore","Central/Southern","Central California","District 18",35.0734188074568,-120.650811816951,50.3293
-623,"Inshore","Central/Southern","Central California","District 18",35.0824039076807,-120.751596786909,277.835
-624,"Inshore","Central/Southern","Central California","District 18",35.0833131049663,-120.917682501345,281.048
-625,"Inshore","Central/Southern","Central California","District 18",35.0833140216655,-121.084355282866,281.048
-626,"Inshore","Central/Southern","Central California","District 18",35.0833145836245,-121.251028518437,281.047
-627,"Inshore","Central/Southern","Central California","District 18",35.0833150268376,-121.417701710574,281.046
-628,"Inshore","Central/Southern","Central California","District 18",35.0833154703621,-121.584374523522,281.044
-629,"Inshore","Central/Southern","Central California","District 18",35.0833161168735,-121.751046963436,281.043
-630,"Inshore","Central/Southern","Central California","District 18",35.083316828922,-121.91771913258,281.043
-631,"Inshore","Central/Southern","Southern California","District 18",34.8912589544436,-120.647631850194,41.4615
-632,"Inshore","Central/Southern","Southern California","District 18",34.9166560282226,-120.751066110415,281.414
-633,"Inshore","Central/Southern","Southern California","District 18",34.9166486020169,-120.917682518598,281.606
-634,"Inshore","Central/Southern","Southern California","District 18",34.9166498458111,-121.084354795227,281.607
-635,"Inshore","Central/Southern","Southern California","District 18",34.9166507772715,-121.25102729767,281.607
-636,"Inshore","Central/Southern","Southern California","District 18",34.9166514729289,-121.4176997146,281.606
-637,"Inshore","Central/Southern","Southern California","District 18",34.7447022989746,-120.641430013699,84.9766
-638,"Inshore","Central/Southern","Southern California","District 18",34.7499849640989,-120.751008948882,282.167
-639,"Inshore","Central/Southern","Southern California","District 18",34.7499854857849,-120.917681582321,282.166
-640,"Inshore","Central/Southern","Southern California","District 18",34.7499864447988,-121.084353672542,282.166
-641,"Inshore","Central/Southern","Southern California","District 18",34.7499874445858,-121.251025599616,282.166
-642,"Inshore","Central/Southern","Southern California","District 18",34.7499882560279,-121.417697452307,282.166
-643,"Inshore","Central/Southern","Southern California","District 18",34.5565225075577,-120.613071984244,119.756
-644,"Inshore","Central/Southern","Southern California","District 18",34.5833219387527,-120.751007787547,282.725
-645,"Inshore","Central/Southern","Southern California","District 18",34.5833225465228,-120.917680275839,282.724
-646,"Inshore","Central/Southern","Southern California","District 18",34.5833234272497,-121.084352142639,282.722
-647,"Inshore","Central/Southern","Southern California","District 18",34.5833243722581,-121.251023576123,282.722
-648,"Inshore","Central/Southern","Southern California","District 18",34.5833252047281,-121.417695072231,282.722
-649,"Inshore","Central/Southern","Southern California","District 18",35.332984268251,-122.251066996605,3362.31
-650,"Inshore","Central/Southern","Southern California","District 18",34.7498587664653,-121.75104126853,2539.48
-651,"Inshore","Central/Southern","Southern California","District 18",34.3524654517747,-119.466944933688,29.6212
-652,"Inshore","Central/Southern","Southern California","District 18",34.3724141269922,-119.59038927758,129.936
-653,"Inshore","Central/Southern","Southern California","District 18",34.3714739806312,-119.75369555364,128.106
-654,"Inshore","Central/Southern","Southern California","District 18",34.381765225715,-119.925199270245,160.43
-655,"Inshore","Central/Southern","Southern California","District 18",34.3992406442201,-120.085940332221,223.724
-656,"Inshore","Central/Southern","Southern California","District 18",34.4009120843522,-120.250316967684,229.689
-657,"Inshore","Central/Southern","Southern California","District 18",34.396877877654,-120.419684543946,213.662
-658,"Inshore","Central/Southern","Southern California","District 18",34.4166582298814,-120.584333700265,283.281
-659,"Inshore","Central/Southern","Southern California","District 18",34.4166589058174,-120.751006613156,283.28
-660,"Inshore","Central/Southern","Southern California","District 18",34.416659657645,-120.917678836755,283.279
-661,"Inshore","Central/Southern","Southern California","District 18",34.4166605650026,-121.084350258108,283.277
-662,"Inshore","Central/Southern","Southern California","District 18",34.4166614812841,-121.251021287609,283.277
-663,"Inshore","Central/Southern","Southern California","District 18",34.41666234719,-121.417692351749,283.277
-664,"Inshore","Central/Southern","Southern California","District 19",34.2166180807659,-119.295411661342,86.4545
-665,"Inshore","Central/Southern","Southern California","District 19",34.2462894612431,-119.420735452781,269.575
-666,"Inshore","Central/Southern","Southern California","District 19",34.2500035241233,-119.584291491704,283.838
-667,"Inshore","Central/Southern","Southern California","District 19",34.2500042381466,-119.75096502422,283.832
-668,"Inshore","Central/Southern","Southern California","District 19",34.2500030498647,-119.917634564197,283.824
-669,"Inshore","Central/Southern","Southern California","District 19",34.250000539081,-120.084305010159,283.832
-670,"Inshore","Central/Southern","Southern California","District 19",34.2499979375971,-120.250979246168,283.838
-671,"Inshore","Central/Southern","Southern California","District 19",34.2499959366726,-120.417656165335,283.842
-672,"Inshore","Central/Southern","Southern California","District 19",34.2499955705253,-120.584332152436,283.834
-673,"Inshore","Central/Southern","Southern California","District 19",34.2499961672967,-120.751005271174,283.832
-674,"Inshore","Central/Southern","Southern California","District 19",34.2499968361684,-120.917677200388,283.83
-675,"Inshore","Central/Southern","Southern California","District 19",34.2499976949529,-121.08434814614,283.829
-676,"Inshore","Central/Southern","Southern California","District 19",34.2499986178136,-121.251018729248,283.829
-677,"Inshore","Central/Southern","Southern California","District 19",34.2499996077736,-121.417689605766,283.83
-678,"Inshore","Central/Southern","Southern California","District 19",34.0039466293947,-118.496077402881,0.866297
-679,"Inshore","Central/Southern","Southern California","District 19",34.0183324499503,-118.589170766584,60.7701
-680,"Inshore","Central/Southern","Southern California","District 19",34.014332969227,-118.73447794554,41.8519
-681,"Inshore","Central/Southern","Southern California","District 19",34.023443650431,-118.928457728676,75.791
-682,"Inshore","Central/Southern","Southern California","District 19",34.0476837569187,-119.09135985617,158.849
-683,"Inshore","Central/Southern","Southern California","District 19",34.0793577637343,-119.254351498409,268.887
-684,"Inshore","Central/Southern","No. Channel Islands","District 19",34.0841023339953,-119.417702984981,281.451
-685,"Inshore","Central/Southern","No. Channel Islands","District 19",34.0948956156785,-119.583833961919,239.377
-686,"Inshore","Central/Southern","No. Channel Islands","District 19",34.1056779510172,-119.746400995138,205.729
-687,"Inshore","Central/Southern","No. Channel Islands","District 19",34.0910041587805,-119.926611701118,240.814
-688,"Inshore","Central/Southern","No. Channel Islands","District 19",34.0913394249538,-120.082537967988,255.371
-689,"Inshore","Central/Southern","No. Channel Islands","District 19",34.0862538483593,-120.250255275614,272.266
-690,"Inshore","Central/Southern","No. Channel Islands","District 19",34.0890062116551,-120.422344681192,252.04
-691,"Inshore","Central/Southern","Southern California","District 19",34.0833330472001,-120.584330614873,284.385
-692,"Inshore","Central/Southern","Southern California","District 19",34.0833335512938,-120.751003599919,284.383
-693,"Inshore","Central/Southern","Southern California","District 19",34.0833341967404,-120.917675229095,284.38
-694,"Inshore","Central/Southern","Southern California","District 19",34.0833349927038,-121.08434579504,284.379
-695,"Inshore","Central/Southern","Southern California","District 19",34.0833358956574,-121.251016199708,284.38
-696,"Inshore","Central/Southern","Southern California","District 19",34.0833368802329,-121.417686828815,284.38
-697,"Inshore","Central/Southern","Southern California","District 19",34.2498758501392,-121.751033215732,2554.48
-701,"Inshore","Central/Southern","Southern California","District 19",33.8976022876012,-118.46122928432,117.05
-702,"Inshore","Central/Southern","Southern California","District 19",33.9166829032703,-118.584247368998,284.93
-703,"Inshore","Central/Southern","Southern California","District 19",33.916682099279,-118.750920007216,284.932
-704,"Inshore","Central/Southern","Southern California","District 19",33.9166824464381,-118.917594101053,284.934
-705,"Inshore","Central/Southern","Southern California","District 19",33.916681981436,-119.084268010556,284.931
-706,"Inshore","Central/Southern","Southern California","District 19",33.9166803061322,-119.250941538138,284.931
-707,"Inshore","Central/Southern","So. Channel Islands","District 19",33.9166788648977,-119.417615802657,284.931
-708,"Inshore","Central/Southern","So. Channel Islands","District 19",33.9133530874305,-119.582708470816,273.235
-709,"Inshore","Central/Southern","So. Channel Islands","District 19",33.8994907312217,-119.749649071672,225.723
-710,"Inshore","Central/Southern","So. Channel Islands","District 19",33.9117818733313,-119.917711125779,262.79
-711,"Inshore","Central/Southern","So. Channel Islands","District 19",33.8797767796589,-120.07600310405,144.185
-712,"Inshore","Central/Southern","So. Channel Islands","District 19",33.9102432153297,-120.257855033914,255.571
-713,"Inshore","Central/Southern","So. Channel Islands","District 19",33.9166715946213,-120.417650156656,284.944
-714,"Inshore","Central/Southern","Southern California","District 19",33.916671068625,-120.584327594626,284.931
-715,"Inshore","Central/Southern","Southern California","District 19",33.9166714117501,-120.75100067357,284.929
-716,"Inshore","Central/Southern","Southern California","District 19",33.9166719512029,-120.917672254674,284.927
-717,"Inshore","Central/Southern","Southern California","District 19",33.9166725944571,-121.084342819101,284.926
-718,"Inshore","Central/Southern","Southern California","District 19",33.7051516847586,-118.11262259322,95.1592
-719,"Inshore","Central/Southern","Southern California","District 19",33.7097646137978,-118.240070973185,133.811
-720,"Inshore","Central/Southern","Southern California","District 19",33.7392155703483,-118.434046100469,210.614
-721,"Inshore","Central/Southern","Southern California","District 19",33.7500210200518,-118.584246245037,285.475
-722,"Inshore","Central/Southern","Southern California","District 19",33.750020589605,-118.750919785879,285.477
-723,"Inshore","Central/Southern","Southern California","District 19",33.7500207715329,-118.917594186317,285.478
-724,"Inshore","Central/Southern","Southern California","District 19",33.7500204040873,-119.08426777257,285.475
-725,"Inshore","Central/Southern","Southern California","District 19",33.7500193277289,-119.250940606067,285.475
-726,"Inshore","Central/Southern","Southern California","District 19",33.7500182887174,-119.417613644104,285.474
-727,"Inshore","Central/Southern","Southern California","District 19",33.7500175865038,-119.584286014935,285.471
-728,"Inshore","Central/Southern","Southern California","District 19",33.7500171299507,-119.750956530372,285.469
-729,"Inshore","Central/Southern","Southern California","District 19",33.7500161332176,-119.917625410613,285.467
-730,"Inshore","Central/Southern","Southern California","District 19",33.7500142292188,-120.084295667463,285.475
-731,"Inshore","Central/Southern","Southern California","District 19",33.7500118554447,-120.250969880826,285.479
-732,"Inshore","Central/Southern","Southern California","District 19",33.7500104209665,-120.417647108939,285.485
-733,"Inshore","Central/Southern","Southern California","District 19",33.75000977169,-120.584323396969,285.477
-734,"Inshore","Central/Southern","Southern California","District 19",33.750009848914,-120.750996513377,285.475
-735,"Inshore","Central/Southern","Southern California","District 19",33.7500100640687,-120.917668323785,285.473
-736,"Inshore","Central/Southern","Southern California","District 19",33.7500105260581,-121.084339095512,285.472
-737,"Inshore","Central/Southern","Southern California","District 19",33.5233203814299,-117.801817535997,34.7434
-738,"Inshore","Central/Southern","Southern California","District 19",33.5572478273001,-117.927852829713,187.637
-739,"Inshore","Central/Southern","Southern California","District 19",33.5830738731814,-118.084513098371,284.985
-740,"Inshore","Central/Southern","Southern California","District 19",33.5833617392545,-118.25090283996,286.018
-741,"Inshore","Central/Southern","Southern California","District 19",33.5833613260041,-118.417574949765,286.015
-742,"Inshore","Central/Southern","Southern California","District 19",33.5833607195364,-118.58424764123,286.016
-743,"Inshore","Central/Southern","Southern California","District 19",33.5833600752839,-118.750921153255,286.018
-744,"Inshore","Central/Southern","Southern California","District 19",33.5833598196967,-118.917595099371,286.02
-745,"Inshore","Central/Southern","Southern California","District 19",33.5833594132335,-119.084267952107,286.015
-746,"Inshore","Central/Southern","Southern California","District 19",33.5833587444409,-119.250939651129,286.015
-747,"Inshore","Central/Southern","Southern California","District 19",33.58335809827,-119.417611307232,286.014
-748,"Inshore","Central/Southern","Southern California","District 19",33.583357212635,-119.584282721919,286.013
-749,"Inshore","Central/Southern","Southern California","District 19",33.583356183673,-119.750953565476,286.013
-750,"Inshore","Central/Southern","Southern California","District 19",33.5833547781127,-119.917623788176,286.013
-751,"Inshore","Central/Southern","Southern California","District 19",33.5833529562878,-120.084295182803,286.018
-752,"Inshore","Central/Southern","Southern California","District 19",33.5833509765868,-120.250968967297,286.021
-753,"Inshore","Central/Southern","Southern California","District 19",33.5833495599206,-120.417644511706,286.023
-754,"Inshore","Central/Southern","Southern California","District 19",33.5833486075993,-120.584319401371,286.019
-755,"Inshore","Central/Southern","Southern California","District 19",33.5833482955584,-120.750992367891,286.018
-756,"Inshore","Central/Southern","Southern California","District 19",33.3735491165265,-117.615173365412,97.2568
-757,"Inshore","Central/Southern","Southern California","District 19",33.4105743286793,-117.755861119757,261.922
-758,"Inshore","Central/Southern","Southern California","District 19",33.4166999723691,-117.917557732408,286.557
-759,"Inshore","Central/Southern","Southern California","District 19",33.416699375086,-118.084229900333,286.562
-760,"Inshore","Central/Southern","Catalina Island","District 19",33.4175588861489,-118.250046425059,283.316
-761,"Inshore","Central/Southern","Catalina Island","District 19",33.4467096092322,-118.41325869985,158.279
-762,"Inshore","Central/Southern","Catalina Island","District 19",33.4121536486227,-118.588992700583,254.674
-763,"Inshore","Central/Southern","Southern California","District 19",33.4166990315615,-118.750922097644,286.561
-764,"Inshore","Central/Southern","Southern California","District 19",33.4166986461275,-118.917595198875,286.561
-765,"Inshore","Central/Southern","Southern California","District 19",33.4161507813229,-119.084707249182,283.936
-766,"Inshore","Central/Southern","Southern California","District 19",33.4166979653859,-119.250937915092,286.555
-767,"Inshore","Central/Southern","Southern California","District 19",33.4166976296292,-119.417608479809,286.554
-768,"Inshore","Central/Southern","Southern California","District 19",33.4166967382879,-119.584279346813,286.555
-769,"Inshore","Central/Southern","Southern California","District 19",33.4166952491352,-119.750950486995,286.557
-770,"Inshore","Central/Southern","Southern California","District 19",33.416693560866,-119.917621939969,286.557
-771,"Inshore","Central/Southern","Southern California","District 19",33.4166917928832,-120.084294281344,286.56
-772,"Inshore","Central/Southern","Southern California","District 19",33.4166899595756,-120.250967794728,286.561
-773,"Inshore","Central/Southern","Southern California","District 19",33.4166884301194,-120.417641987781,286.562
-774,"Inshore","Central/Southern","Southern California","District 19",33.4166873468853,-120.584315812818,286.56
-775,"Inshore","Central/Southern","Southern California","District 19",33.4166868025855,-120.750988438115,286.559
-776,"Inshore","Central/Southern","Southern California","District 19",33.8333488271806,-121.417682930246,1711.21
-777,"Inshore","Central/Southern","Southern California","District 19",33.5000251287013,-121.084333360829,1717.72
-801,"Inshore","Central/Southern","Southern California","District 19",33.2216722478975,-117.45419156822,119.286
-802,"Inshore","Central/Southern","Southern California","District 19",33.2500015830949,-117.584250930258,286.963
-803,"Inshore","Central/Southern","Southern California","District 19",33.2500394356557,-117.750885389416,287.098
-804,"Inshore","Central/Southern","Southern California","District 19",33.2500380929809,-117.917557520474,287.097
-805,"Inshore","Central/Southern","Southern California","District 19",33.2500371652804,-118.084230107004,287.1
-806,"Inshore","Central/Southern","Catalina Island","District 19",33.2477853119643,-118.248586099734,277.827
-807,"Inshore","Central/Southern","Catalina Island","District 19",33.2439867553542,-118.419743919406,265.576
-808,"Inshore","Central/Southern","Catalina Island","District 19",33.2500366551935,-118.584249247856,287.101
-809,"Inshore","Central/Southern","Southern California","District 19",33.2500364659634,-118.75092162038,287.1
-810,"Inshore","Central/Southern","Southern California","District 19",33.2500364353408,-118.917593901061,287.099
-811,"Inshore","Central/Southern","Southern California","District 19",33.2500364183861,-119.084265177779,287.095
-812,"Inshore","Central/Southern","Southern California","District 19",33.2500364949205,-119.250935441551,287.094
-813,"Inshore","Central/Southern","Southern California","District 19",33.2512407781531,-119.412066942115,260.807
-814,"Inshore","Central/Southern","Southern California","District 19",33.2493938451038,-119.590899394394,254.605
-815,"Inshore","Central/Southern","Southern California","District 19",33.25003380085,-119.75094753319,287.097
-816,"Inshore","Central/Southern","Southern California","District 19",33.250032053551,-119.917619810004,287.099
-817,"Inshore","Central/Southern","Southern California","District 19",33.2500303636021,-120.08429271708,287.099
-818,"Inshore","Central/Southern","Southern California","District 19",33.2500286437665,-120.250965907562,287.099
-819,"Inshore","Central/Southern","Southern California","District 19",33.2500271453954,-120.417639450046,287.099
-820,"Inshore","Central/Southern","Southern California","District 19",33.2500259885453,-120.584312525875,287.097
-821,"Inshore","Central/Southern","Southern California","District 19",33.0446554761867,-117.315221742259,39.4001
-822,"Inshore","Central/Southern","Southern California","District 19",33.0821237955119,-117.418862105532,282.625
-823,"Inshore","Central/Southern","Southern California","District 19",33.0833786891157,-117.584212535013,287.634
-824,"Inshore","Central/Southern","Southern California","District 19",33.0833774742911,-117.750885169149,287.635
-825,"Inshore","Central/Southern","Southern California","District 19",33.0833759049563,-117.917557520947,287.635
-826,"Inshore","Central/Southern","Southern California","District 19",33.0833745528144,-118.084230180728,287.637
-827,"Inshore","Central/Southern","Southern California","District 19",33.0833736016011,-118.250902898905,287.638
-828,"Inshore","Central/Southern","Southern California","District 19",33.0833728685176,-118.417575780719,287.639
-829,"Inshore","Central/Southern","Southern California","District 19",33.0862399917897,-118.5844111598,275.755
-830,"Inshore","Central/Southern","Southern California","District 19",33.0833730113888,-118.750920466106,287.637
-831,"Inshore","Central/Southern","Southern California","District 19",33.0833734860985,-118.917592124095,287.635
-832,"Inshore","Central/Southern","Southern California","District 19",33.0833739485451,-119.084263043126,287.632
-833,"Inshore","Central/Southern","Southern California","District 19",33.0833741628266,-119.250933187319,287.632
-834,"Inshore","Central/Southern","Southern California","District 19",33.0833741188168,-119.417603084541,287.632
-835,"Inshore","Central/Southern","Southern California","District 19",33.083373326456,-119.584273419629,287.633
-836,"Inshore","Central/Southern","Southern California","District 19",33.0833717601124,-119.750944945674,287.635
-837,"Inshore","Central/Southern","Southern California","District 19",33.0833702691788,-119.91761779935,287.636
-838,"Inshore","Central/Southern","Southern California","District 19",33.0833687657917,-120.084291076582,287.634
-839,"Inshore","Central/Southern","Southern California","District 19",33.0833671370715,-120.250963983323,287.635
-840,"Inshore","Central/Southern","Southern California","District 19",33.0833656218537,-120.41763689882,287.635
-841,"Inshore","Central/Southern","Southern California","District 19",33.0833643843808,-120.58430940427,287.634
-842,"Inshore","Central/Southern","Southern California","District 19",32.9147031146511,-117.298299434103,122.108
-843,"Inshore","Central/Southern","Southern California","District 19",32.9167180722693,-117.417541192153,288.166
-844,"Inshore","Central/Southern","Southern California","District 19",32.9167168246987,-117.584213036871,288.168
-845,"Inshore","Central/Southern","Southern California","District 19",32.9167152034204,-117.750885208848,288.168
-846,"Inshore","Central/Southern","Southern California","District 19",32.9167134805684,-117.917557543792,288.169
-847,"Inshore","Central/Southern","Southern California","District 19",32.9167118169739,-118.08423006186,288.169
-848,"Inshore","Central/Southern","Southern California","District 19",32.9167104641465,-118.2509027448,288.169
-849,"Inshore","Central/Southern","Southern California","District 19",32.9318097117555,-118.406094573125,218.27
-850,"Inshore","Central/Southern","Southern California","District 19",32.9113707115542,-118.594325817681,239.589
-851,"Inshore","Central/Southern","Southern California","District 19",32.9167099142228,-118.750919114084,288.167
-852,"Inshore","Central/Southern","Southern California","District 19",32.9167105183778,-118.917590441764,288.167
-853,"Inshore","Central/Southern","Southern California","District 19",32.916711106576,-119.084260988691,288.166
-854,"Inshore","Central/Southern","Southern California","District 19",32.9167112718871,-119.250931114569,288.166
-855,"Inshore","Central/Southern","Southern California","District 19",32.9167111463985,-119.417601239017,288.165
-856,"Inshore","Central/Southern","Southern California","District 19",32.9167104741099,-119.58427186651,288.167
-857,"Inshore","Central/Southern","Southern California","District 19",32.9167093042072,-119.75094347859,288.169
-858,"Inshore","Central/Southern","Southern California","District 19",32.9167081683596,-119.917616292392,288.171
-859,"Inshore","Central/Southern","Southern California","District 19",32.6810498117655,-117.147208823255,11.0209
-860,"Inshore","Central/Southern","Southern California","District 19",32.7376048126554,-117.28086506638,158.43
-861,"Inshore","Central/Southern","Southern California","District 19",32.7500559115554,-117.417541369677,288.698
-862,"Inshore","Central/Southern","Southern California","District 19",32.7500546669718,-117.584213114298,288.698
-863,"Inshore","Central/Southern","Southern California","District 19",32.7500530031766,-117.750885068275,288.698
-864,"Inshore","Central/Southern","Southern California","District 19",32.7500511986857,-117.917557201655,288.699
-865,"Inshore","Central/Southern","Southern California","District 19",32.7500495402775,-118.084229609514,288.7
-866,"Inshore","Central/Southern","Southern California","District 19",32.750048202873,-118.250902308795,288.699
-867,"Inshore","Central/Southern","Southern California","District 19",32.7454406282744,-118.417974825689,271.77
-868,"Inshore","Central/Southern","Southern California","District 19",32.7500467631407,-118.584246755503,288.698
-869,"Inshore","Central/Southern","Southern California","District 19",32.7500471802178,-118.750917771769,288.698
-870,"Inshore","Central/Southern","Southern California","District 19",32.7500477053879,-118.91758850212,288.698
-871,"Inshore","Central/Southern","Southern California","District 19",32.7500482268097,-119.084258976696,288.696
-872,"Inshore","Central/Southern","Southern California","District 19",32.7500483905699,-119.250929255695,288.697
-873,"Inshore","Central/Southern","Southern California","District 19",32.7500482296888,-119.417599761492,288.698
-874,"Inshore","Central/Southern","Southern California","District 19",32.7500475759667,-119.584270712477,288.699
-875,"Inshore","Central/Southern","Southern California","District 19",32.750046650991,-119.750942462665,288.699
-876,"Inshore","Central/Southern","Southern California","District 19",32.7500456051486,-119.917614701066,288.7
-877,"Inshore","Central/Southern","Southern California","District 19",32.5863323600077,-117.143295139353,76.2123
-878,"Inshore","Central/Southern","Southern California","District 19",32.5833951584408,-117.250868133886,289.228
-879,"Inshore","Central/Southern","Southern California","District 19",32.5833938447969,-117.417540682727,289.227
-880,"Inshore","Central/Southern","Southern California","District 19",32.5833923812209,-117.584212487741,289.227
-881,"Inshore","Central/Southern","Southern California","District 19",32.5833908346341,-117.750884343708,289.227
-882,"Inshore","Central/Southern","Southern California","District 19",32.5833891106606,-117.917556318357,289.227
-883,"Inshore","Central/Southern","Southern California","District 19",32.5833874937588,-118.084228582008,289.228
-884,"Inshore","Central/Southern","Southern California","District 19",32.5833862074483,-118.250900897455,289.227
-885,"Inshore","Central/Southern","Southern California","District 19",32.5833850578043,-118.417573259334,289.227
-886,"Inshore","Central/Southern","Southern California","District 19",32.5833844067232,-118.584244910545,289.225
-887,"Inshore","Central/Southern","Southern California","District 19",32.5833846114063,-118.750915680495,289.225
-888,"Inshore","Central/Southern","Southern California","District 19",32.583384974806,-118.917586372799,289.225
-889,"Inshore","Central/Southern","Southern California","District 19",32.5833852762396,-119.084256717699,289.226
-890,"Inshore","Central/Southern","Southern California","District 19",32.5833853931141,-119.250927172652,289.227
-891,"Inshore","Central/Southern","Southern California","District 19",32.5833852325404,-119.417597820243,289.227
-892,"Inshore","Central/Southern","Southern California","District 19",32.5833846459391,-119.58426911468,289.228
-893,"Inshore","Central/Southern","Southern California","District 19",32.58338373993,-119.750940840484,289.229
-894,"Inshore","Central/Southern","Southern California","District 19",32.5833828596271,-119.91761272676,289.229
-895,"Inshore","Central/Southern","Southern California","District 19",33.1667031835081,-120.917654467796,1724.19
-896,"Inshore","Central/Southern","Southern California","District 19",32.7499350300799,-120.250958920553,2598.29
-897,"Inshore","Central/Southern","Southern California","District 19",32.4168054770038,-119.084254391019,869.256
-916,"Inshore","Central/Southern","Southern California","District 19",32.4167333333538,-117.250866437959,289.755
-1032,"Offshore","Central/Southern","San Diego-Offshore","District 19",32.1115156908049,-121.236983138207,97016.7
-1033,"Offshore","Central/Southern","Orange-Offshore","District 19",33.4194399119955,-122.853416147432,16250.1
-1034,"Offshore","Central/Southern","Los Angeles-Offshore","District 19",33.9209999596234,-123.268608659328,15289.2
-1035,"Offshore","Central/Southern","Santa Barbara-Offshore","District 19",34.3397149127838,-123.594666284637,10832.8
-1036,"Offshore","Central/Southern","Morro Bay-Offshore","District 18",35.0926011795127,-124.027400841873,41084.9
-1037,"Offshore","Central/Southern","Monterey-Offshore","District 18",36.5028913953098,-125.15103532092,58662
-1038,"Offshore","Central/Southern","San Francisco-Offshore","District 10",38.0702830834883,-126.175996909358,48278.8
-1040,"Offshore","Northern","Fort Bragg-Offshore","District 7",39.4987139308857,-126.915060551391,41943
-1041,"Offshore","Northern","Eureka-Offshore","District 7",40.7548144814594,-127.188912135783,34321.8
-1042,"Offshore","Northern","Crescent City-Offshore","District 6",41.6750725203062,-127.184160605823,20745.1
+"block_id","block_type","block_region","block_area","block_district","block_ramp","depth","block_band","block_band_lat_dd","block_lat_dd","block_long_dd","block_sqkm"
+101,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 01",41.9165144437198,41.916501452823,-123.917852344575,255.959
+102,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 01",41.9165144437198,41.9181303524908,-124.271276759914,193.625
+103,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 01",41.9165144437198,41.9165127551856,-124.417874772556,255.971
+104,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 01",41.9165144437198,41.9165132262658,-124.584553969878,255.985
+105,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 01",41.9165144437198,41.9165244145482,-124.75122385765,255.994
+106,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 01",41.9165144437198,41.9165144437198,-124.917892394587,255.964
+107,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 02",41.7498415271759,41.6972790144849,-124.155820794793,14.9667
+108,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 02",41.7498415271759,41.7390120834342,-124.264188910007,202.503
+109,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 02",41.7498415271759,41.7498373942891,-124.417872021267,256.618
+110,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 02",41.7498415271759,41.7498402267781,-124.584544795399,256.622
+111,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 02",41.7498415271759,41.7498410364823,-124.751217467312,256.62
+112,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 02",41.7498415271759,41.7498415271759,-124.917888829604,256.618
+113,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 03",41.5831754360313,41.4406155262751,-123.956414653244,8.13363
+114,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 03",41.5831754360313,41.5707155632825,-124.132511917742,101.942
+115,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 03",41.5831754360313,41.583173928635,-124.251191943832,257.272
+116,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 03",41.5831754360313,41.5831742498625,-124.417865466707,257.276
+117,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 03",41.5831754360313,41.5831746154262,-124.584539039888,257.275
+118,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 03",41.5831754360313,41.5831750583348,-124.751211528498,257.275
+119,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 03",41.5831754360313,41.5831754360313,-124.917883143712,257.274
+120,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 04",41.4165094535394,41.4180802719391,-124.118891271599,151.097
+121,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 04",41.4165094535394,41.4165095271918,-124.251189414843,257.927
+122,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 04",41.4165094535394,41.4165089655866,-124.417861824907,257.928
+123,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 04",41.4165094535394,41.4165089241542,-124.584534285515,257.928
+124,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 04",41.4165094535394,41.4165091811703,-124.751206393934,257.928
+125,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 04",41.4165094535394,41.4165094535394,-124.917878066491,257.927
+126,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 05",41.249843466212,41.2604484382739,-124.1345621487,98.4299
+127,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 05",41.249843466212,41.2498441005173,-124.25118675475,258.576
+128,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 05",41.249843466212,41.2498432773206,-124.417858270238,258.578
+129,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 05",41.249843466212,41.2498430512441,-124.58453013411,258.578
+130,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 05",41.249843466212,41.2498432690262,-124.751201921005,258.578
+131,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 05",41.249843466212,41.249843466212,-124.917873513996,258.577
+132,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 06",41.0831777254502,41.0594844691802,-124.147950029816,39.825
+133,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 06",41.0831777254502,41.0831786929849,-124.251183497884,259.224
+134,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 06",41.0831777254502,41.0831775925633,-124.41785453069,259.225
+135,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 06",41.0831777254502,41.0831772143748,-124.584525935332,259.226
+136,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 06",41.0831777254502,41.0831774450164,-124.751197620357,259.226
+137,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 06",41.0831777254502,41.0831777254502,-124.917869290977,259.226
+138,"Midshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms",NA,NA,41.7498411876097,-125.251229658964,2309.55
+139,"Midshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms",NA,NA,41.2498441605481,-125.251217078419,2327.19
+201,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 07",40.9165131659614,40.9494164306455,-124.149297897253,39.2476
+202,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 07",40.9165131659614,40.9170518821285,-124.251740037985,258.02
+203,"Inshore","Northern","Northern California","District 6","Zone 1","< 100 fathoms","Band 07",40.9165131659614,40.916512078809,-124.4178500134,259.871
+204,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 07",40.9165131659614,40.9165117736797,-124.584521413501,259.872
+205,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 07",40.9165131659614,40.9165120455549,-124.751193278001,259.872
+206,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 07",40.9165131659614,40.9165124844918,-124.91786526923,259.872
+207,"Inshore","Northern","Northern California","District 6","Zone 1","> 100 fathoms","Band 07",40.9165131659614,40.9165131659614,-125.08453758141,259.872
+208,"Inshore","Northern","Northern California","District 8","Zone 1","< 100 fathoms","Band 08",40.7498486244447,40.8243968715354,-124.142576105515,44.1428
+209,"Inshore","Northern","Northern California","District 9","Zone 1","< 100 fathoms","Band 08",40.7498486244447,40.7204739808467,-124.233034822651,21.5209
+210,"Inshore","Northern","Northern California","District 7","Zone 1","< 100 fathoms","Band 08",40.7498486244447,40.7666028723803,-124.281548287858,147.625
+211,"Inshore","Northern","Northern California","District 7","Zone 1","< 100 fathoms","Band 08",40.7498486244447,40.7498472625811,-124.417844610171,260.514
+212,"Inshore","Northern","Northern California","District 7","Zone 1","< 100 fathoms","Band 08",40.7498486244447,40.749846980468,-124.584516527906,260.515
+213,"Inshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms","Band 08",40.7498486244447,40.7498473819922,-124.751188876251,260.515
+214,"Inshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms","Band 08",40.7498486244447,40.7498479863503,-124.917861464627,260.516
+215,"Inshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms","Band 08",40.7498486244447,40.7498486244447,-125.084534278383,260.516
+216,"Inshore","Northern","Northern California","District 7","Zone 1","< 100 fathoms","Band 09",40.5831846133625,40.6469025121337,-124.322161361428,10.232
+217,"Inshore","Northern","Northern California","District 7","Zone 1","< 100 fathoms","Band 09",40.5831846133625,40.5888695400117,-124.425542355315,233.412
+218,"Inshore","Northern","Northern California","District 7","Zone 1","< 100 fathoms","Band 09",40.5831846133625,40.5831831673933,-124.584511296508,261.157
+219,"Inshore","Northern","Northern California","District 7","Zone 1","< 100 fathoms","Band 09",40.5831846133625,40.583183420312,-124.751184637725,261.157
+220,"Inshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms","Band 09",40.5831846133625,40.5831840067746,-124.91785784171,261.157
+221,"Inshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms","Band 09",40.5831846133625,40.5831846133625,-125.084531176871,261.158
+222,"Inshore","Northern","Northern California","District 7","Zone 1","< 100 fathoms","Band 10",40.4165212903334,40.4116039412012,-124.441378245353,184.268
+223,"Inshore","Northern","Northern California","District 7","Zone 1","< 100 fathoms","Band 10",40.4165212903334,40.4165203086036,-124.584506566214,261.796
+224,"Inshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms","Band 10",40.4165212903334,40.416520447603,-124.751180625056,261.797
+225,"Inshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms","Band 10",40.4165212903334,40.4165207464824,-124.917854647631,261.797
+226,"Inshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms","Band 10",40.4165212903334,40.4165212903334,-125.084528437996,261.796
+227,"Inshore","Northern","Northern California","District 7","Zone 1","< 100 fathoms","Band 11",40.2498586184054,40.1897380276616,-124.298962862715,34.9392
+228,"Inshore","Northern","Northern California","District 7","Zone 1","< 100 fathoms","Band 11",40.2498586184054,40.2472529425784,-124.423135656627,244.439
+229,"Inshore","Northern","Northern California","District 7","Zone 1","< 100 fathoms","Band 11",40.2498586184054,40.2498579403713,-124.584502747111,262.434
+230,"Inshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms","Band 11",40.2498586184054,40.2498579860703,-124.751177336937,262.434
+231,"Inshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms","Band 11",40.2498586184054,40.2498581965744,-124.917851894959,262.434
+232,"Inshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms","Band 11",40.2498586184054,40.2498586184054,-125.084526052289,262.433
+233,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 12",40.0831962350671,40.049031666219,-124.120250980622,97.3514
+234,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 12",40.0831962350671,40.0797328560423,-124.254479999229,250.154
+235,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 12",40.0831962350671,40.0831962329361,-124.417824554087,263.068
+236,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 12",40.0831962350671,40.0831959895959,-124.584499306422,263.069
+237,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 12",40.0831962350671,40.0831959406684,-124.751174391557,263.069
+238,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 12",40.0831962350671,40.0831960034399,-124.91784934229,263.069
+239,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 12",40.0831962350671,40.0831962350671,-125.084523674411,263.068
+240,"Midshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms",NA,NA,40.749850320967,-125.417880215764,2344.64
+241,"Midshore","Northern","Northern California","District 7","Zone 1","> 100 fathoms",NA,NA,40.2498598876129,-125.417872450993,2361.88
+242,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 13",39.9165344885018,39.8827080720895,-123.957753999726,91.2949
+243,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 13",39.9165344885018,39.9159414411986,-124.085066167888,261.659
+244,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 13",39.9165344885018,39.9165353569593,-124.251146884477,263.698
+245,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 13",39.9165344885018,39.9165349243344,-124.417821508333,263.7
+246,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 13",39.9165344885018,39.9165346863727,-124.584496825237,263.701
+247,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 13",39.9165344885018,39.9165344885018,-124.751172140123,263.701
+248,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 14",39.7498735317891,39.6914073478844,-123.817124197471,18.0828
+249,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 14",39.7498735317891,39.7486457413023,-123.919534737546,258.59
+250,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 14",39.7498735317891,39.7498756081075,-124.084471264875,264.326
+251,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 14",39.7498735317891,39.7498750679101,-124.251145005789,264.328
+252,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 14",39.7498735317891,39.7498745546896,-124.417819745375,264.33
+253,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 14",39.7498735317891,39.7498740165211,-124.584495260217,264.331
+254,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 14",39.7498735317891,39.7498735317891,-124.751170593826,264.331
+255,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 15",39.5832128933282,39.580068064937,-123.806879346129,86.243
+256,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 15",39.5832128933282,39.5832165873365,-123.91779762579,264.949
+257,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 15",39.5832128933282,39.5832161684849,-124.084469806509,264.954
+258,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 15",39.5832128933282,39.5832153467259,-124.25114381014,264.956
+259,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 15",39.5832128933282,39.5832144880418,-124.417818765539,264.958
+260,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 15",39.5832128933282,39.5832136463637,-124.584494253197,264.959
+261,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 15",39.5832128933282,39.5832128933282,-124.751169525519,264.959
+262,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 16",39.4165534972783,39.4337089875067,-123.822882148885,31.5395
+263,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 16",39.4165534972783,39.4165576369888,-123.917796693173,265.576
+264,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 16",39.4165534972783,39.4165571009266,-124.084469535782,265.58
+265,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 16",39.4165534972783,39.4165559433267,-124.251143718589,265.582
+266,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 16",39.4165534972783,39.4165547355874,-124.41781868633,265.584
+267,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 16",39.4165534972783,39.4165534972783,-124.584494011485,265.584
+268,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 17",39.2498931464305,39.2331569596536,-123.805675481607,81.3509
+269,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 17",39.2498931464305,39.249898625639,-123.917797578926,266.202
+270,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 17",39.2498931464305,39.2498977235623,-124.08447067485,266.205
+271,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 17",39.2498931464305,39.2498962259497,-124.251144727787,266.206
+272,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 17",39.2498931464305,39.24989467006,-124.417819375801,266.207
+273,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 17",39.2498931464305,39.2498931464305,-124.584494193542,266.208
+274,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 18",39.0832323329645,39.0776419862849,-123.770328918507,202.203
+275,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 18",39.0832323329645,39.0832385705978,-123.917800601034,266.824
+276,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 18",39.0832323329645,39.0832374554882,-124.08447291562,266.827
+277,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 18",39.0832323329645,39.0832358521012,-124.251146311776,266.827
+278,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 18",39.0832323329645,39.0832340879926,-124.417820262391,266.829
+279,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 18",39.0832323329645,39.0832323329645,-124.584494436171,266.828
+280,"Midshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms",NA,NA,39.7498732541628,-125.084519217059,2378.96
+281,"Midshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms",NA,NA,39.2498905397124,-124.91784196859,2395.85
+301,"SF Bay","Central/Southern","Sacramento River & Delta Area","District 12","Zone 3","< 100 fathoms",NA,NA,38.0652230735377,-122.38283604312,257.886
+401,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 19",38.9165726193258,38.8484746738413,-123.655383135206,8.04079
+402,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 19",38.9165726193258,38.9098307981228,-123.765238369676,214.958
+403,"Inshore","Northern","Northern California","District 7","Zone 2","< 100 fathoms","Band 19",38.9165726193258,38.9165763404632,-123.917802083989,267.447
+404,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 19",38.9165726193258,38.9165756661198,-124.084474291076,267.449
+405,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 19",38.9165726193258,38.9165741834759,-124.251147399587,267.448
+406,"Inshore","Northern","Northern California","District 7","Zone 2","> 100 fathoms","Band 19",38.9165726193258,38.9165726193258,-124.417820830017,267.449
+407,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 20",38.7499103069244,38.6928338430862,-123.470508668194,34.6703
+408,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 20",38.7499103069244,38.7365416737979,-123.595740520758,212.644
+409,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 20",38.7499103069244,38.7499128159976,-123.751129099939,268.065
+410,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 20",38.7499103069244,38.7499132196294,-123.917801561123,268.066
+411,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 20",38.7499103069244,38.7499128489286,-124.084474380308,268.066
+412,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 20",38.7499103069244,38.7499117153582,-124.251147572596,268.066
+413,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 20",38.7499103069244,38.7499103069244,-124.417820915848,268.065
+414,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 21",38.5832477359598,38.5231964864653,-123.298579702128,36.2504
+415,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 21",38.5832477359598,38.5747767990244,-123.426837206481,231.052
+416,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 21",38.5832477359598,38.5832484866974,-123.584457206603,268.679
+417,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 21",38.5832477359598,38.5832493307104,-123.751129199298,268.68
+418,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 21",38.5832477359598,38.5832498218114,-123.91780172935,268.681
+419,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 21",38.5832477359598,38.5832495942271,-124.08447456857,268.681
+420,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 21",38.5832477359598,38.5832488100285,-124.251147583921,268.681
+421,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 21",38.5832477359598,38.5832477359598,-124.417820666028,268.68
+422,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 22",38.4165861755549,38.3860597720159,-123.128349666515,89.9947
+423,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 22",38.4165861755549,38.4149940642362,-123.252536302356,263.716
+424,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 22",38.4165861755549,38.4165834328161,-123.417788277231,269.286
+425,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 22",38.4165861755549,38.4165848145264,-123.584458536457,269.29
+426,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 22",38.4165861755549,38.4165857655631,-123.75113003115,269.291
+427,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 22",38.4165861755549,38.4165862365282,-123.917802122749,269.292
+428,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 22",38.4165861755549,38.4165861755549,-124.084474709042,269.293
+430,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 23",38.2499226359254,38.1934621240574,-122.948505431142,61.4875
+431,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 23",38.2499226359254,38.2458350798207,-123.087524649425,254.811
+432,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 23",38.2499226359254,38.2499198276049,-123.25111853062,269.897
+433,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 23",38.2499226359254,38.2499206642102,-123.417789082455,269.897
+434,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 23",38.2499226359254,38.2499216567028,-123.584459681617,269.899
+435,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 23",38.2499226359254,38.2499222803865,-123.751130946915,269.9
+436,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 23",38.2499226359254,38.24992270282,-123.917802637292,269.901
+437,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 23",38.2499226359254,38.2499226359254,-124.084474790612,269.902
+438,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 24",38.0832590879393,38.0687459618759,-122.949977663235,86.4344
+439,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 24",38.0832590879393,38.0836626706076,-123.084867825007,269.071
+440,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 24",38.0832590879393,38.0832582144097,-123.251118159508,270.504
+441,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 24",38.0832590879393,38.0832582613441,-123.417789373341,270.505
+442,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 24",38.0832590879393,38.083258648694,-123.584460329161,270.506
+443,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 24",38.0832590879393,38.0832589518942,-123.751131545246,270.508
+444,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 24",38.0832590879393,38.0832591797192,-123.917803037521,270.508
+445,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 24",38.0832590879393,38.0832590879393,-124.08447473631,270.509
+446,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 25",37.9165955500193,37.8589062110253,-122.624504589854,48.5783
+447,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 25",37.9165955500193,37.8918612692295,-122.764385470813,173.73
+448,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 25",37.9165955500193,37.9160971589376,-122.917342088852,269.415
+449,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 25",37.9165955500193,37.9162553754832,-123.084757342012,269.968
+450,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 25",37.9165955500193,37.9165953151254,-123.251117862488,271.115
+451,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 25",37.9165955500193,37.9165952635773,-123.417789371444,271.114
+452,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 25",37.9165955500193,37.9165953569213,-123.584460557019,271.113
+453,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 25",37.9165955500193,37.9165955500193,-123.751131741491,271.113
+455,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 26",37.7499319879918,37.7483827501384,-122.586850670902,262.838
+456,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 26",37.7499319879918,37.7499306072732,-122.751098291697,271.719
+457,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 26",37.7499319879918,37.749941892651,-122.917754948525,271.661
+458,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 26",37.7499319879918,37.7499967236099,-123.084548848992,271.332
+459,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 26",37.7499319879918,37.7499311158086,-123.251117962644,271.717
+460,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 26",37.7499319879918,37.7499314759133,-123.417789412664,271.716
+461,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 26",37.7499319879918,37.7499318086248,-123.584460525146,271.715
+462,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 26",37.7499319879918,37.7499319879918,-123.751131536707,271.715
+464,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 27",37.5832684702689,37.5854377590732,-122.587203122358,262.196
+465,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 27",37.5832684702689,37.5832693683977,-122.751099279043,272.317
+466,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 27",37.5832684702689,37.5832681155885,-122.917773322984,272.317
+467,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 27",37.5832684702689,37.5832675337867,-123.084446124291,272.315
+468,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 27",37.5832684702689,37.5832677826104,-123.251117713987,272.316
+469,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 27",37.5832684702689,37.583268099988,-123.417789035101,272.316
+470,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 27",37.5832684702689,37.5832683446426,-123.584460100324,272.315
+471,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 27",37.5832684702689,37.5832684702689,-123.751131051197,272.316
+472,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 28",37.4166049799077,37.4037089949809,-122.462909347796,116.527
+473,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 28",37.4166049799077,37.4166086992985,-122.584426594165,272.918
+474,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 28",37.4166049799077,37.4166073918265,-122.751100025569,272.917
+475,"Inshore","Central/Southern","Central California","District 10","Zone 3","< 100 fathoms","Band 28",37.4166049799077,37.4166060683875,-122.917773192544,272.915
+476,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 28",37.4166049799077,37.4166051672344,-123.084445585603,272.913
+477,"Inshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms","Band 28",37.4166049799077,37.4166049799077,-123.251117119443,272.913
+478,"Inshore","Central/Southern","Central California","District 10","Zone 4","< 100 fathoms","Band 29",37.2499423597132,37.2471823426638,-122.4521156838,158.172
+479,"Inshore","Central/Southern","Central California","District 10","Zone 4","< 100 fathoms","Band 29",37.2499423597132,37.2499452314647,-122.584426865516,273.513
+480,"Inshore","Central/Southern","Central California","District 10","Zone 4","< 100 fathoms","Band 29",37.2499423597132,37.2499445098191,-122.751099886375,273.512
+481,"Inshore","Central/Southern","Central California","District 10","Zone 4","< 100 fathoms","Band 29",37.2499423597132,37.249943538466,-122.917772553811,273.511
+482,"Inshore","Central/Southern","Central California","District 10","Zone 4","> 100 fathoms","Band 29",37.2499423597132,37.2499427298784,-123.084444663985,273.509
+483,"Inshore","Central/Southern","Central California","District 10","Zone 4","> 100 fathoms","Band 29",37.2499423597132,37.2499423597132,-123.251116168642,273.509
+484,"Midshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms",NA,NA,38.749907197467,-124.751166428622,2412.57
+485,"Midshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms",NA,NA,38.2499214145875,-124.417819184183,2429.11
+486,"Midshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms",NA,NA,37.7499319613036,-124.084474148679,2445.44
+487,"Midshore","Central/Southern","Central California","District 10","Zone 3","> 100 fathoms",NA,NA,37.3332735452854,-123.584458927463,1639.27
+488,"SF Bay","Central/Southern","San Francisco Bay","District 13","Zone 3","< 100 fathoms",NA,NA,37.8146149043795,-122.361289733838,459.063
+489,"SF Bay","Central/Southern","San Francisco Bay","District 13","Zone 3","< 100 fathoms",NA,NA,37.5843247537215,-122.216152061066,302.874
+501,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 30",37.0832801566311,37.0457291659944,-122.284641842249,100.383
+502,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 30",37.0832801566311,37.0815856202543,-122.419546888999,267.497
+503,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 30",37.0832801566311,37.0832820596706,-122.584426987596,274.105
+504,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 30",37.0832801566311,37.08328157266,-122.751099508118,274.105
+505,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 30",37.0832801566311,37.0832808356214,-122.917771770505,274.104
+506,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 30",37.0832801566311,37.0832801566311,-123.084443538233,274.103
+507,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 31",36.9166172139283,36.8526194862627,-121.823064031519,9.74843
+508,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 31",36.9166172139283,36.8957117084667,-121.923871355916,198.834
+509,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 31",36.9166172139283,36.8976248480925,-122.087088777294,210.472
+510,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 31",36.9166172139283,36.9163927745381,-122.251303003258,273.915
+511,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 31",36.9166172139283,36.9166191652464,-122.417754102374,274.696
+512,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 31",36.9166172139283,36.9166190470616,-122.58442647042,274.696
+513,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 31",36.9166172139283,36.9166186022244,-122.751098622776,274.695
+514,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 31",36.9166172139283,36.9166179275348,-122.917770547453,274.695
+515,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 31",36.9166172139283,36.9166172139283,-123.084442040565,274.694
+516,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 32",36.7499541192884,36.761952427719,-121.817668510537,51.5131
+517,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 32",36.7499541192884,36.7499567670222,-121.917733643827,275.286
+518,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 32",36.7499541192884,36.7499564943952,-122.084407082957,275.286
+519,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 32",36.7499541192884,36.7499564131184,-122.251080204231,275.285
+520,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 32",36.7499541192884,36.7499562689628,-122.417752995279,275.285
+521,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 32",36.7499541192884,36.7499559909676,-122.584425314228,275.285
+522,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 32",36.7499541192884,36.7499554148633,-122.751097197172,275.284
+523,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 32",36.7499541192884,36.7499548151533,-122.917768865642,275.284
+524,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 32",36.7499541192884,36.7499541192884,-123.084440295987,275.283
+525,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 33",36.5832920786758,36.6577681888333,-121.829709808504,1.85193
+526,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 33",36.5832920786758,36.6026395334741,-121.940967078753,141.933
+527,"Inshore","Central/Southern","Central California","District 17","Zone 4","< 100 fathoms","Band 33",36.5832920786758,36.5832936380393,-122.084405655185,275.873
+528,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 33",36.5832920786758,36.5832933520718,-122.251078902596,275.873
+529,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 33",36.5832920786758,36.5832931061654,-122.417751744389,275.872
+530,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 33",36.5832920786758,36.583292653724,-122.584423918754,275.871
+531,"Inshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms","Band 33",36.5832920786758,36.5832920786758,-122.751095667968,275.871
+532,"Inshore","Central/Southern","Central California","District 18","Zone 4","< 100 fathoms","Band 34",36.4166284669845,36.4083804012368,-121.95769944515,139.56
+533,"Inshore","Central/Southern","Central California","District 18","Zone 4","< 100 fathoms","Band 34",36.4166284669845,36.416629705857,-122.084405650093,276.459
+534,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 34",36.4166284669845,36.4166296003144,-122.251078392934,276.458
+535,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 34",36.4166284669845,36.4166293911279,-122.417750728105,276.457
+536,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 34",36.4166284669845,36.4166289994174,-122.584422557385,276.456
+537,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 34",36.4166284669845,36.4166284669845,-122.751094110846,276.455
+538,"Inshore","Central/Southern","Central California","District 18","Zone 4","< 100 fathoms","Band 35",36.2499645560066,36.1952464695084,-121.779989751033,69.473
+539,"Inshore","Central/Southern","Central California","District 18","Zone 4","< 100 fathoms","Band 35",36.2499645560066,36.2429540686839,-121.924895892342,246.326
+540,"Inshore","Central/Southern","Central California","District 18","Zone 4","< 100 fathoms","Band 35",36.2499645560066,36.2499647114,-122.084406726073,277.04
+541,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 35",36.2499645560066,36.24996498501,-122.251078484498,277.039
+542,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 35",36.2499645560066,36.2499650744245,-122.417750013518,277.038
+543,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 35",36.2499645560066,36.2499649086504,-122.584421304716,277.037
+544,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 35",36.2499645560066,36.2499645560066,-122.751092568042,277.037
+545,"Midshore","Central/Southern","Central California","District 17","Zone 4","> 100 fathoms",NA,NA,36.9166160061678,-123.417784444429,2472.24
+546,"Midshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms",NA,NA,36.4166271961015,-123.084436843364,2488.08
+547,"Inshore","Central/Southern","Central California","District 18","Zone 4","< 100 fathoms","Band 36",36.083300553073,36.0501273064897,-121.622873233764,99.0911
+548,"Inshore","Central/Southern","Central California","District 18","Zone 4","< 100 fathoms","Band 36",36.083300553073,36.0830509381767,-121.751311710464,276.751
+549,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 36",36.083300553073,36.0832985457801,-121.917735527749,277.619
+550,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 36",36.083300553073,36.0832995802676,-122.084406914585,277.618
+551,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 36",36.083300553073,36.08330017265,-122.251078144355,277.617
+552,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 36",36.083300553073,36.083300553073,-122.417749116303,277.617
+553,"Inshore","Central/Southern","Central California","District 18","Zone 4","< 100 fathoms","Band 37",35.9166359945017,35.882809546607,-121.470999881302,64.53
+554,"Inshore","Central/Southern","Central California","District 18","Zone 4","< 100 fathoms","Band 37",35.9166359945017,35.9166245577606,-121.584392090171,278.182
+555,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 37",35.9166359945017,35.9166318203255,-121.751061589236,278.199
+556,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 37",35.9166359945017,35.9166333932229,-121.917734466104,278.195
+557,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 37",35.9166359945017,35.9166346387136,-122.084405857544,278.194
+558,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 37",35.9166359945017,35.9166354322753,-122.251076796922,278.194
+559,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 37",35.9166359945017,35.9166359945017,-122.417747538041,278.193
+560,"Inshore","Central/Southern","Central California","District 18","Zone 4","< 100 fathoms","Band 38",35.7499715715895,35.7057612088535,-121.317903163304,28.4413
+561,"Inshore","Central/Southern","Central California","District 18","Zone 4","< 100 fathoms","Band 38",35.7499715715895,35.7460271160545,-121.421314455207,263.395
+562,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 38",35.7499715715895,35.7499661739422,-121.584384731559,278.774
+563,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 38",35.7499715715895,35.749967487747,-121.751059192904,278.772
+564,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 38",35.7499715715895,35.7499688440843,-121.917732088094,278.77
+565,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 38",35.7499715715895,35.7499700128059,-122.084403611136,278.768
+566,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 38",35.7499715715895,35.749970861745,-122.251074485254,278.768
+567,"Inshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms","Band 38",35.7499715715895,35.7499715715895,-122.417745223695,278.768
+568,"Midshore","Central/Southern","Central California","District 18","Zone 4","> 100 fathoms",NA,NA,35.9166362437785,-122.751089097116,2503.73
+601,"Inshore","Central/Southern","Central California","District 18","Zone 5","< 100 fathoms","Band 39",35.5833046529897,35.5453813438531,-121.129500598569,78.2868
+602,"Inshore","Central/Southern","Central California","District 18","Zone 5","< 100 fathoms","Band 39",35.5833046529897,35.5781539508399,-121.254227651058,260.788
+603,"Inshore","Central/Southern","Central California","District 18","Zone 5","< 100 fathoms","Band 39",35.5833046529897,35.5833028608794,-121.417707721052,279.344
+604,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 39",35.5833046529897,35.5833026751488,-121.584382234712,279.345
+605,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 39",35.5833046529897,35.5833035894108,-121.751056260776,279.343
+606,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 39",35.5833046529897,35.5833046529897,-121.917729107876,279.342
+607,"Inshore","Central/Southern","Central California","District 18","Zone 5","< 100 fathoms","Band 40",35.4166407784763,35.3879293655807,-120.93331069208,162.384
+608,"Inshore","Central/Southern","Central California","District 18","Zone 5","< 100 fathoms","Band 40",35.4166407784763,35.4142609483433,-121.08670639503,270.635
+609,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 40",35.4166407784763,35.4166399236445,-121.251031273966,279.915
+610,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 40",35.4166407784763,35.4166393361221,-121.417705475991,279.914
+611,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 40",35.4166407784763,35.4166394501635,-121.584379571484,279.913
+612,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 40",35.4166407784763,35.4166400191571,-121.751053126673,279.912
+613,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 40",35.4166407784763,35.4166407784763,-121.917725727152,279.911
+614,"Inshore","Central/Southern","Central California","District 18","Zone 5","< 100 fathoms","Band 41",35.2499771759666,35.1754968341969,-120.784101740245,16.1977
+615,"Inshore","Central/Southern","Central California","District 18","Zone 5","< 100 fathoms","Band 41",35.2499771759666,35.245050213201,-120.933600771601,220.989
+616,"Inshore","Central/Southern","Central California","District 18","Zone 5","< 100 fathoms","Band 41",35.2499771759666,35.2499758564391,-121.08435579437,280.483
+617,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 41",35.2499771759666,35.2499758157202,-121.251029609801,280.482
+618,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 41",35.2499771759666,35.2499757441982,-121.417703560976,280.482
+619,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 41",35.2499771759666,35.2499759930314,-121.584377161278,280.48
+620,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 41",35.2499771759666,35.249976479837,-121.751049948333,280.479
+621,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 41",35.2499771759666,35.2499771759666,-121.917722324212,280.478
+622,"Inshore","Central/Southern","Central California","District 18","Zone 5","< 100 fathoms","Band 42",35.0833136964648,35.0734372658714,-120.650812319976,50.3293
+623,"Inshore","Central/Southern","Central California","District 18","Zone 5","< 100 fathoms","Band 42",35.0833136964648,35.0824092792627,-120.751597734499,277.835
+624,"Inshore","Central/Southern","Central California","District 18","Zone 5","< 100 fathoms","Band 42",35.0833136964648,35.0833099731312,-120.917682501452,281.048
+625,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 42",35.0833136964648,35.0833108893114,-121.084355283216,281.048
+626,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 42",35.0833136964648,35.083311451056,-121.251028519044,281.047
+627,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 42",35.0833136964648,35.0833118941853,-121.417701711823,281.046
+628,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 42",35.0833136964648,35.0833123377739,-121.584374525281,281.044
+629,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 42",35.0833136964648,35.0833129842926,-121.751046965398,281.043
+630,"Inshore","Central/Southern","Central California","District 18","Zone 5","> 100 fathoms","Band 42",35.0833136964648,35.0833136964648,-121.917719134741,281.043
+631,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 43",34.9166480446009,34.8912876021988,-120.64764128975,41.4615
+632,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 43",34.9166480446009,34.9166526161011,-120.751066094398,281.414
+633,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 43",34.9166480446009,34.9166451737618,-120.917682519435,281.606
+634,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 43",34.9166480446009,34.9166464175105,-121.084354796155,281.607
+635,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 43",34.9166480446009,34.9166473489137,-121.251027298903,281.607
+636,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 43",34.9166480446009,34.9166480446009,-121.417699716116,281.606
+637,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 44",34.7499845329017,34.7447275725466,-120.641433573453,84.9766
+638,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 44",34.7499845329017,34.7499812405002,-120.751008949631,282.167
+639,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 44",34.7499845329017,34.7499817624082,-120.917681583214,282.166
+640,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 44",34.7499845329017,34.7499827216252,-121.084353673694,282.166
+641,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 44",34.7499845329017,34.7499837214336,-121.251025601034,282.166
+642,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 44",34.7499845329017,34.7499845329017,-121.417697453918,282.166
+643,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 45",34.5833211874531,34.5565247789598,-120.61309243701,119.756
+644,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 45",34.5833211874531,34.5833179211201,-120.751007788464,282.725
+645,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 45",34.5833211874531,34.5833185289607,-120.917680276924,282.724
+646,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 45",34.5833211874531,34.5833194099894,-121.08435214402,282.722
+647,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 45",34.5833211874531,34.5833203549782,-121.25102357767,282.722
+648,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 45",34.5833211874531,34.5833211874531,-121.417695073992,282.722
+649,"Midshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms",NA,NA,35.3333106883549,-122.251067016895,3362.31
+650,"Midshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms",NA,NA,34.7499862824945,-121.751041279822,2539.48
+651,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 46",34.4166580366441,34.352460728505,-119.466944893364,29.6212
+652,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 46",34.4166580366441,34.3724006080071,-119.590392439296,129.936
+653,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 46",34.4166580366441,34.3714587601609,-119.753697252465,128.106
+654,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 46",34.4166580366441,34.3817544783963,-119.925206287902,160.43
+655,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 46",34.4166580366441,34.3992366681552,-120.08594276014,223.724
+656,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 46",34.4166580366441,34.4009090118404,-120.250315983729,229.689
+657,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 46",34.4166580366441,34.396872769047,-120.419688390795,213.662
+658,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 46",34.4166580366441,34.4166539185573,-120.584333701375,283.281
+659,"Inshore","Central/Southern","Southern California","District 18","Zone 5","< 100 fathoms","Band 46",34.4166580366441,34.4166545947735,-120.751006614067,283.28
+660,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 46",34.4166580366441,34.4166553468589,-120.917678837864,283.279
+661,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 46",34.4166580366441,34.4166562545566,-121.084350259644,283.277
+662,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 46",34.4166580366441,34.4166571708025,-121.251021289331,283.277
+663,"Inshore","Central/Southern","Southern California","District 18","Zone 5","> 100 fathoms","Band 46",34.4166580366441,34.4166580366441,-121.417692353729,283.277
+664,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 47",34.2499950046822,34.2166221454213,-119.295416410965,86.4545
+665,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 47",34.2499950046822,34.2462913914016,-119.420739760982,269.575
+666,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 47",34.2499950046822,34.2499989194466,-119.58429149332,283.838
+667,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 47",34.2499950046822,34.2499996349662,-119.750965025949,283.832
+668,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 47",34.2499950046822,34.2499984479308,-119.917634566008,283.824
+669,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 47",34.2499950046822,34.2499959351383,-120.08430501204,283.832
+670,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 47",34.2499950046822,34.2499933328076,-120.250979248102,283.838
+671,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 47",34.2499950046822,34.249991330901,-120.417656166421,283.842
+672,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 47",34.2499950046822,34.2499909663931,-120.584332153559,283.834
+673,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 47",34.2499950046822,34.2499915635963,-120.751005272211,283.832
+674,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 47",34.2499950046822,34.2499922329195,-120.917677201722,283.83
+675,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 47",34.2499950046822,34.2499930920515,-121.084348147797,283.829
+676,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 47",34.2499950046822,34.2499940148018,-121.251018731039,283.829
+677,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 47",34.2499950046822,34.2499950046822,-121.417689607755,283.83
+678,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.0039465753621,-118.496077461241,0.866297
+679,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.0183142006101,-118.589169284292,60.7701
+680,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.014313497531,-118.73448848178,41.8519
+681,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.0234253786377,-118.928458700299,75.791
+682,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.047672565638,-119.091366031561,158.849
+683,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.0793589545219,-119.254356166076,268.887
+684,"Inshore","Central/Southern","No. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.0840967944046,-119.417702829755,281.451
+685,"Inshore","Central/Southern","No. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.0948943904592,-119.583835572437,239.377
+686,"Inshore","Central/Southern","No. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.1056716124823,-119.746407416308,205.729
+687,"Inshore","Central/Southern","No. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.0910043201959,-119.926601912006,240.814
+688,"Inshore","Central/Southern","No. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.0913398660206,-120.082541196297,255.371
+689,"Inshore","Central/Southern","No. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.0862566645516,-120.250256249636,272.266
+690,"Inshore","Central/Southern","No. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.0889986757806,-120.422338944566,252.04
+691,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 48",34.0833319854023,34.0833281511927,-120.584330615954,284.385
+692,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 48",34.0833319854023,34.0833286558528,-120.751003601147,284.383
+693,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 48",34.0833319854023,34.0833293017889,-120.917675230583,284.38
+694,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 48",34.0833319854023,34.0833300980076,-121.08434579672,284.379
+695,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 48",34.0833319854023,34.0833310008856,-121.251016201547,284.38
+696,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 48",34.0833319854023,34.0833319854023,-121.417686830766,284.38
+697,"Midshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms",NA,NA,34.2499965529768,-121.751033227343,2554.48
+701,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 49",33.9166674085762,33.8976141177249,-118.461240088974,117.05
+702,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 49",33.9166674085762,33.9166777170452,-118.584247369967,284.93
+703,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 49",33.9166674085762,33.9166769122782,-118.750920007706,284.932
+704,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 49",33.9166674085762,33.9166772589026,-118.917594101565,284.934
+705,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 49",33.9166674085762,33.9166767943988,-119.084268010215,284.931
+706,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 49",33.9166674085762,33.9166751186297,-119.25094153815,284.931
+707,"Inshore","Central/Southern","So. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 49",33.9166674085762,33.9166736770261,-119.417615803361,284.931
+708,"Inshore","Central/Southern","So. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 49",33.9166674085762,33.9133558682713,-119.58270580979,273.235
+709,"Inshore","Central/Southern","So. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 49",33.9166674085762,33.8994861387088,-119.749647039029,225.723
+710,"Inshore","Central/Southern","So. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 49",33.9166674085762,33.9117818092921,-119.917711816011,262.79
+711,"Inshore","Central/Southern","So. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 49",33.9166674085762,33.879766746927,-120.075992453055,144.185
+712,"Inshore","Central/Southern","So. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 49",33.9166674085762,33.9102452562143,-120.257863345039,255.571
+713,"Inshore","Central/Southern","So. Channel Islands","District 19","Zone 5","< 100 fathoms","Band 49",33.9166674085762,33.9166664044897,-120.417650158216,284.944
+714,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 49",33.9166674085762,33.9166658812155,-120.584327597248,284.931
+715,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 49",33.9166674085762,33.9166662249183,-120.751000676125,284.929
+716,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 49",33.9166674085762,33.9166667649917,-120.917672257125,284.927
+717,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 49",33.9166674085762,33.9166674085762,-121.084342821428,284.926
+718,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 50",33.750005049732,33.70514262529,-118.112624911606,95.1592
+719,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 50",33.750005049732,33.7097530314968,-118.240066492568,133.811
+720,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 50",33.750005049732,33.7392169495467,-118.434059637542,210.614
+721,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 50",33.750005049732,33.7500155425134,-118.584246244717,285.475
+722,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 50",33.750005049732,33.7500151116991,-118.750919785508,285.477
+723,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 50",33.750005049732,33.7500152934705,-118.917594186182,285.478
+724,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 50",33.750005049732,33.7500149267677,-119.084267772189,285.475
+725,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 50",33.750005049732,33.7500138501633,-119.250940606271,285.475
+726,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 50",33.750005049732,33.7500128109392,-119.417613645023,285.474
+727,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 50",33.750005049732,33.7500121094141,-119.584286016766,285.471
+728,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 50",33.750005049732,33.7500116536554,-119.750956532026,285.469
+729,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 50",33.750005049732,33.7500106576377,-119.917625411234,285.467
+730,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 50",33.750005049732,33.7500087519058,-120.084295666859,285.475
+731,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 50",33.750005049732,33.7500063769031,-120.250969880755,285.479
+732,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 50",33.750005049732,33.7500049412975,-120.417647110256,285.485
+733,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 50",33.750005049732,33.7500042939221,-120.584323399384,285.477
+734,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 50",33.750005049732,33.7500043717345,-120.750996515825,285.475
+735,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 50",33.750005049732,33.7500045874683,-120.917668326231,285.473
+736,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 50",33.750005049732,33.750005049732,-121.084339097846,285.472
+737,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 51",33.5833425287822,33.523317234673,-117.801819151007,34.7434
+738,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 51",33.5833425287822,33.557240906964,-117.92786423135,187.637
+739,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 51",33.5833425287822,33.5830706094156,-118.084512905296,284.985
+740,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 51",33.5833425287822,33.5833559724568,-118.25090283994,286.018
+741,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 51",33.5833425287822,33.5833555591368,-118.417574948513,286.015
+742,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 51",33.5833425287822,33.5833549519648,-118.584247639388,286.016
+743,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 51",33.5833425287822,33.5833543076483,-118.750921151949,286.018
+744,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 51",33.5833425287822,33.5833540520714,-118.917595098513,286.02
+745,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 51",33.5833425287822,33.5833536465198,-119.084267951642,286.015
+746,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 51",33.5833425287822,33.5833529776217,-119.250939651504,286.015
+747,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 51",33.5833425287822,33.5833523313818,-119.417611308417,286.014
+748,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 51",33.5833425287822,33.583351445958,-119.584282723541,286.013
+749,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 51",33.5833425287822,33.5833504173829,-119.750953566741,286.013
+750,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 51",33.5833425287822,33.5833490121877,-119.917623788505,286.013
+751,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 51",33.5833425287822,33.5833471892498,-120.084295182232,286.018
+752,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 51",33.5833425287822,33.5833452087844,-120.250968967075,286.021
+753,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 51",33.5833425287822,33.583343791495,-120.417644512688,286.023
+754,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 51",33.5833425287822,33.5833428403376,-120.584319403489,286.019
+755,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 51",33.5833425287822,33.5833425287822,-120.750992370183,286.018
+756,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.3735385522565,-117.615178233127,97.2568
+757,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.4105744796634,-117.755868080538,261.922
+758,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.4166939175095,-117.917557731968,286.557
+759,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.4166933193461,-118.084229900328,286.562
+760,"Inshore","Central/Southern","Catalina Island","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.4175564905192,-118.250046957406,283.316
+761,"Inshore","Central/Southern","Catalina Island","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.4467011308317,-118.413255230714,158.279
+762,"Inshore","Central/Southern","Catalina Island","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.4121458725153,-118.588996788071,254.674
+763,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 52",33.4166807470387,33.4166929758956,-118.750922097495,286.561
+764,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.4166925903331,-118.917595199395,286.561
+765,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.4161444121943,-119.084707880791,283.936
+766,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 52",33.4166807470387,33.4166919103142,-119.25093791642,286.555
+767,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.4166915745321,-119.417608481509,286.554
+768,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.4166906830077,-119.584279348393,286.555
+769,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.4166891938583,-119.750950488327,286.557
+770,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 52",33.4166807470387,33.4166875055013,-119.917621940653,286.557
+771,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 52",33.4166807470387,33.416685736937,-120.084294281531,286.56
+772,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 52",33.4166807470387,33.4166839033664,-120.250967795174,286.561
+773,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 52",33.4166807470387,33.4166823736573,-120.417641988777,286.562
+774,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 52",33.4166807470387,33.4166812910214,-120.584315814497,286.56
+775,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 52",33.4166807470387,33.4166807470387,-120.750988440105,286.559
+776,"Midshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms",NA,NA,33.8333376932163,-121.417682937879,1711.21
+777,"Midshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms",NA,NA,33.5000117245617,-121.084333367603,1717.72
+801,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 53",33.2500196447116,33.2216735422204,-117.454202414443,119.286
+802,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 53",33.2500196447116,33.2499961563029,-117.584250711299,286.963
+803,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 53",33.2500196447116,33.2500330920155,-117.750885389409,287.098
+804,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 53",33.2500196447116,33.2500317496158,-117.917557519975,287.097
+805,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 53",33.2500196447116,33.2500308215494,-118.084230106818,287.1
+806,"Inshore","Central/Southern","Catalina Island","District 19","Zone 5","< 100 fathoms","Band 53",33.2500196447116,33.2477821161544,-118.248583368907,277.827
+807,"Inshore","Central/Southern","Catalina Island","District 19","Zone 5","< 100 fathoms","Band 53",33.2500196447116,33.2439873763598,-118.419747545771,265.576
+808,"Inshore","Central/Southern","Catalina Island","District 19","Zone 5","< 100 fathoms","Band 53",33.2500196447116,33.2500303121101,-118.584249248003,287.101
+809,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 53",33.2500196447116,33.250030122758,-118.750921620834,287.1
+810,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 53",33.2500196447116,33.2500300920408,-118.917593901899,287.099
+811,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 53",33.2500196447116,33.2500300756555,-119.084265178988,287.095
+812,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 53",33.2500196447116,33.2500301521248,-119.250935442929,287.094
+813,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 53",33.2500196447116,33.2512350770808,-119.412068503331,260.807
+814,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 53",33.2500196447116,33.2493882941924,-119.590900024556,254.605
+815,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 53",33.2500196447116,33.2500274574045,-119.750947534199,287.097
+816,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 53",33.2500196447116,33.2500257098047,-119.917619810621,287.099
+817,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 53",33.2500196447116,33.2500240196948,-120.084292717387,287.099
+818,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 53",33.2500196447116,33.2500222996578,-120.250965908124,287.099
+819,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 53",33.2500196447116,33.2500208011482,-120.417639451032,287.099
+820,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 53",33.2500196447116,33.2500196447116,-120.584312527461,287.097
+821,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 54",33.0833577534637,33.0446636893938,-117.315226562385,39.4001
+822,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 54",33.0833577534637,33.0821208322896,-117.418863294923,282.625
+823,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833720578743,-117.584212534434,287.634
+824,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833708433116,-117.750885168573,287.635
+825,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833692741452,-117.917557520469,287.635
+826,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833679219468,-118.084230180239,287.637
+827,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833669709781,-118.250902898913,287.638
+828,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833662380452,-118.417575781032,287.639
+829,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 54",33.0833577534637,33.0862404548923,-118.584411363964,275.755
+830,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833663810865,-118.750920467106,287.637
+831,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.083366855798,-118.917592125415,287.635
+832,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833673185775,-119.084263044523,287.632
+833,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833675329606,-119.250933188667,287.632
+834,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833674890738,-119.417603085799,287.632
+835,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833666962828,-119.58427342049,287.633
+836,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833651293104,-119.750944946436,287.635
+837,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833636377138,-119.91761780001,287.636
+838,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833621344789,-120.084291076948,287.634
+839,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833605057779,-120.250963984007,287.635
+840,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833589905933,-120.417636899738,287.635
+841,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 54",33.0833577534637,33.0833577534637,-120.584309405742,287.634
+842,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 55",32.9167012505068,32.9147212785699,-117.298301363134,122.108
+843,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 55",32.9167012505068,32.9167111549812,-117.417541191403,288.166
+844,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 55",32.9167012505068,32.9167099071295,-117.584213036209,288.168
+845,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 55",32.9167012505068,32.9167082858845,-117.750885208114,288.168
+846,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 55",32.9167012505068,32.9167065630147,-117.917557543333,288.169
+847,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 55",32.9167012505068,32.9167048992707,-118.084230061341,288.169
+848,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 55",32.9167012505068,32.9167035465421,-118.250902744444,288.169
+849,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 55",32.9167012505068,32.9318086596219,-118.406106051559,218.27
+850,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 55",32.9167012505068,32.9113727272047,-118.594328825165,239.589
+851,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 55",32.9167012505068,32.9167029970157,-118.750919114843,288.167
+852,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 55",32.9167012505068,32.9167036013698,-118.917590442993,288.167
+853,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 55",32.9167012505068,32.9167041899971,-119.084260989921,288.166
+854,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 55",32.9167012505068,32.916704355304,-119.250931115526,288.166
+855,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 55",32.9167012505068,32.916704229771,-119.417601239766,288.165
+856,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 55",32.9167012505068,32.9167035571113,-119.584271866579,288.167
+857,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 55",32.9167012505068,32.9167023867462,-119.75094347858,288.169
+858,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 55",32.9167012505068,32.9167012505068,-119.917616292751,288.171
+859,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 56",32.7500384014823,32.6810492874182,-117.147209900933,11.0209
+860,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 56",32.7500384014823,32.7376166817512,-117.280880889573,158.43
+861,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 56",32.7500384014823,32.7500487081619,-117.417541369459,288.698
+862,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 56",32.7500384014823,32.7500474634637,-117.584213113911,288.698
+863,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 56",32.7500384014823,32.7500457995747,-117.750885067946,288.698
+864,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 56",32.7500384014823,32.7500439950669,-117.917557201418,288.699
+865,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 56",32.7500384014823,32.7500423364245,-118.084229609474,288.7
+866,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 56",32.7500384014823,32.7500409990959,-118.250902308953,288.699
+867,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 56",32.7500384014823,32.7454408686764,-118.417975517635,271.77
+868,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 56",32.7500384014823,32.7500395600028,-118.584246756366,288.698
+869,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 56",32.7500384014823,32.7500399772851,-118.750917772869,288.698
+870,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 56",32.7500384014823,32.7500405025328,-118.917588503481,288.698
+871,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 56",32.7500384014823,32.7500410240988,-119.084258978054,288.696
+872,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 56",32.7500384014823,32.7500411878035,-119.250929256805,288.697
+873,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 56",32.7500384014823,32.7500410269234,-119.417599762364,288.698
+874,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 56",32.7500384014823,32.7500403728603,-119.584270712929,288.699
+875,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 56",32.7500384014823,32.7500394475892,-119.750942463143,288.699
+876,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 56",32.7500384014823,32.7500384014823,-119.917614701638,288.7
+877,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 57",32.5833753709352,32.5863541305445,-117.143291687283,76.2123
+878,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 57",32.5833753709352,32.583395653453,-117.250867846169,289.228
+879,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 57",32.5833753709352,32.5833863558665,-117.417540682952,289.227
+880,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 57",32.5833753709352,32.5833848924614,-117.584212487869,289.227
+881,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 57",32.5833753709352,32.5833833457741,-117.750884343741,289.227
+882,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 57",32.5833753709352,32.5833816217208,-117.917556318356,289.227
+883,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 57",32.5833753709352,32.5833800046467,-118.08422858229,289.228
+884,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 57",32.5833753709352,32.5833787183638,-118.250900898103,289.227
+885,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 57",32.5833753709352,32.5833775686643,-118.417573260173,289.227
+886,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 57",32.5833753709352,32.5833769181853,-118.58424491193,289.225
+887,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 57",32.5833753709352,32.5833771229725,-118.750915681953,289.225
+888,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 57",32.5833753709352,32.5833774865634,-118.917586374293,289.225
+889,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 57",32.5833753709352,32.5833777882125,-119.084256719144,289.226
+890,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 57",32.5833753709352,32.5833779050262,-119.250927173861,289.227
+891,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 57",32.5833753709352,32.5833777443009,-119.417597821317,289.227
+892,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms","Band 57",32.5833753709352,32.5833771573559,-119.584269115444,289.228
+893,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 57",32.5833753709352,32.5833762513435,-119.75094084135,289.229
+894,"Inshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms","Band 57",32.5833753709352,32.5833753709352,-119.91761272769,289.229
+895,"Midshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms",NA,NA,33.1666875210703,-120.917654472221,1724.19
+896,"Midshore","Central/Southern","Southern California","District 19","Zone 5","> 100 fathoms",NA,NA,32.7500357278604,-120.250958924842,2598.29
+897,"Midshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms",NA,NA,32.4167145567997,-119.084254392413,869.256
+916,"Inshore","Central/Southern","Southern California","District 19","Zone 5","< 100 fathoms",NA,NA,32.4167255593315,-117.250866438588,289.755
+1032,"Offshore","Central/Southern","San Diego-Offshore","District 19","Zone 5","> 100 fathoms",NA,NA,32.1033460782215,-121.243943430675,97016.7
+1033,"Offshore","Central/Southern","Orange-Offshore","District 19","Zone 5","> 100 fathoms",NA,NA,33.4159382982181,-122.853591507702,16250.1
+1034,"Offshore","Central/Southern","Los Angeles-Offshore","District 19","Zone 5","> 100 fathoms",NA,NA,33.9178256223671,-123.26905950064,15289.2
+1035,"Offshore","Central/Southern","Santa Barbara-Offshore","District 19","Zone 5","> 100 fathoms",NA,NA,34.3360654425624,-123.594746136937,10832.8
+1036,"Offshore","Central/Southern","Morro Bay-Offshore","District 18","Zone 5","> 100 fathoms",NA,NA,35.0892363352491,-124.029445576018,41084.9
+1037,"Offshore","Central/Southern","Monterey-Offshore","District 18","Zone 4","> 100 fathoms",NA,NA,36.5009122842817,-125.154589053746,58662
+1038,"Offshore","Central/Southern","San Francisco-Offshore","District 10","Zone 3","> 100 fathoms",NA,NA,38.0686496560107,-126.179194241065,48278.8
+1040,"Offshore","Northern","Fort Bragg-Offshore","District 7","Zone 2","> 100 fathoms",NA,NA,39.4969857600033,-126.916670673684,41943
+1041,"Offshore","Northern","Eureka-Offshore","District 7","Zone 1","> 100 fathoms",NA,NA,40.7532116162711,-127.188486368238,34321.8
+1042,"Offshore","Northern","Crescent City-Offshore","District 6","Zone 1","> 100 fathoms",NA,NA,41.6718743957984,-127.184429344879,20745.1

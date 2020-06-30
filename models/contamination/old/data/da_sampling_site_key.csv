@@ -1,0 +1,13 @@
+scenario,type,area,location,lat_dd,long_dd,depths_fathoms
+current,required,Crescent City,Klamath River,41.55,-124.183333,"15, 30, 45"
+current,required,Crescent City,St. George Reef,41.766667,-124.25,"15, 25, 35"
+current,required,Trinidad,Lagoons,41.266667,-124.15,"15, 30, 45"
+current,required,Trinidad,Trinidad Head,41.05,-124.15,"15, 30, 45"
+current,required,Eureka,LP Eureka,40.833333,-124.233333,"15, 30, 45"
+current,required,Eureka,Eel River,40.65,-124.383333,"15, 25, 35"
+current,required,Fort Bragg,Usal,39.8,-123.883333,"15, 25, 35"
+current,required,Fort Bragg,Jack Ass,39.866667,-123.95,"15, 25, 35"
+current,informational,Bodega Bay,Russian River,38.433333,-123.183333,"15, 30, 45"
+current,informational,Bodega Bay,Point Reyes,38.033333,-123.05,"15, 30, 45"
+current,informational,Half Moon Bay,Duxbury,37.833333,-122.766667,"15, 25, 35"
+current,informational,Half Moon Bay,Half Moon Bay,37.616667,-122.683333,"15, 25, 35"

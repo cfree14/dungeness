@@ -32,6 +32,15 @@ pcontam <- readRDS(file.path(stressordir, "pcontaminated_block_week.Rds")) %>%
 nwhales_ramp_wk <- read.csv(file.path(stressordir, "nwhales_by_ramp_zone_and_week.csv"), as.is=T) %>% 
   mutate(season_yr=substr(season, 1, 4) %>% as.numeric())
 
+# DA sampling
+################################################################################
+
+# Read key
+da_site_key <- read.csv("models/contamination/data/da_sampling_sites.csv")
+
+# Read p(contam predictions)
+pcontam_brick <- brick("models/contamination/paper/output/dungeness_crab_model_rf_cda_predictions.gri") # REPLACE THIS WITH FINAL MODEL
+
 
 # Initial biomass
 ################################################################################

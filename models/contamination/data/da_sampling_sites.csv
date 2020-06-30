@@ -1,0 +1,13 @@
+"area","location","type","lat_dd","long_dd","depths","block_id"
+"Crescent City","St. George Reef","required",41.7666666666667,-124.25,"15, 25, 35 fathoms",108
+"Crescent City","Klamath River","required",41.55,-124.183333333333,"15, 30, 45 fathoms",115
+"Trinidad","Lagoons","required",41.2666666666667,-124.15,"15, 30, 45 fathoms",126
+"Trinidad","Trinidad Head","required",41.05,-124.15,"15, 30, 45 fathoms",132
+"Eureka","LP Eureka","required",40.8333333333333,-124.233333333333,"15, 30, 45 fathoms",202
+"Eureka","Eel River","required",40.65,-124.383333333333,"15, 25, 35 fathoms",217
+"Fort Bragg","Jack Ass","required",39.8666666666667,-123.98,"15, 25, 35 fathoms",242
+"Fort Bragg","Usal","required",39.8,-123.913333333333,"15, 25, 35 fathoms",249
+"Bodega Bay","Russian River","informational",38.4333333333333,-123.183333333333,"15, 30, 45 fathoms",423
+"Bodega Bay","Point Reyes","informational",38.0333333333333,-123.05,"15, 30, 45 fathoms",439
+"Half Moon Bay","Duxbury","informational",37.8333333333333,-122.766666666667,"15, 25, 35 fathoms",447
+"Half Moon Bay","Half Moon Bay","informational",37.6166666666667,-122.683333333333,"15, 25, 35 fathoms",465

@@ -30,15 +30,16 @@ sapply(list.files(codedir), function(x) source(file.path(codedir, x)))
 ######################
 
 # Run one year with no fishing
-data1 <- run_model(yrs2sim=2015, effort_dynamics="none")
+data1 <- run_model(yrs2sim=2015:2016, effort_dynamics="none", nweeks=5)
 plot_results(data1)
 
 # Constant fishing
 ######################
 
 # Run one year with constant fishing (no management)
-data2 <- run_model(yrs2sim=2015, effort_dynamics="constant")
+data2 <- run_model(yrs2sim=2015, effort_dynamics="constant", nweeks=16)
 plot_results(data2)
+plot_closures(data2)
 
 # Run one year with constant fishing (and management)
 data3 <- run_model(yrs2sim=2015, effort_dynamics="constant", management="entanglement trigger")
@@ -46,8 +47,14 @@ plot_results(data3)
 plot_closures(data3)
 
 # Effort reduction
-data3 <- run_model(yrs2sim=2015, effort_dynamics="constant", management="effort reduction", mgmt_options=list(E_red_prop=0.5))
+data4 <- run_model(yrs2sim=2015, effort_dynamics="constant", management="effort reduction", mgmt_options=list(E_red_prop=0.5))
 plot_results(data3)
+
+# Domoic management
+data5 <- run_model(yrs2sim=2015, effort_dynamics="constant", management="current domoic", 
+                   mgmt_options=list(ncrabs_sampled=6, delay_thresh=2, reopen_thresh=1))
+plot_closures(data5, zone="da", plot_name="2015_da_mgmt")
+plot_results(data5)
 
 
 # Realistic fishing
@@ -55,7 +62,7 @@ plot_results(data3)
 
 # Run one year with biomass-coupled fishing (no management)
 # Smaller b stretches slope, smaller a extends how long plateau lasts
-data4 <- run_model(yrs2sim=2014:2018, effort_dynamics="biomass-coupled", a=0.4, b=0.1)
+data4 <- run_model(yrs2sim=2014, effort_dynamics="biomass-coupled", a=0.4, b=0.1)
 plot_results(data4, plot_obs=F)
 plot_closures(data4)    #, plot_name="2015_no_management_closures")
 

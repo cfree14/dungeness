@@ -1,0 +1,17 @@
+Year,Number,Date,Species (parts),Fishery type,Action (close/open),Reason,Where,Link
+2014,NA,"October 10, 2014","Lobster (viscera), rock crab (viscera), mussels, clams, scallops",Recreational,close,Domoic acid,Ventura county,NA
+2015,15-016,"February 6, 2015","Lobster (viscera), rock crab (viscera), mussels, clams, scallops",Recreational,open,Domoic acid,Ventura county,https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-016.aspx
+2015,15-031,"May 1, 2015",Mussels,Recreational,close,Domoic acid,California coast,https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-031.aspx
+2015,15-038,"June 1, 2015","Mussels, clams",Recreational,close,Domoic acid,Monterey and Santa Cruz counties,https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-038.aspx
+2015,15-038,"June 1, 2015","Anchovies (viscera), sardines (viscera), crab (viscera)",Commercial/recreational,close,Domoic acid,Monterey and Santa Cruz counties,https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-038.aspx
+2015,15-041,"June 8, 2015",Scallops (viscera),Recreational,close,Domoic acid,Monterey and Santa Cruz counties,https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-041.aspx
+2015,15-047,"July 3, 2015","Mussels, clams",Recreational,close,Domoic acid,"Monterey, Santa Cruz, and Santa Barbara counties",https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-047.aspx
+2015,15-047,"July 3, 2015","Anchovies, sardines, crabs",Commercial/recreational,close,Domoic acid,"Monterey, Santa Cruz, and Santa Barbara counties",https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-047.aspx
+2015,15-063,"August 26, 2015","Mussels, clams, scallops (viscera)",Recreational,close,Domoic acid,Humboldt or Del Norte counties,https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-063.aspx
+2015,15-080,"October 31, 2015",Mussels,Recreational,open,Domoic acid,"California coast (except Del Norte, Humboldt, Santa Cruz, Monterey and Santa Barbara counties)",https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-080.aspx
+2015,15-082,"November 3, 2015","Dungeness crab, rock crab",Commercial/recreational,close,Domoic acid,Santa Barbara county north,https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-082.aspx
+2015,15-086,"November 13, 2015","Mussels, clams",Recreational,open,Domoic acid,"Monterey, Santa Cruz, and Santa Barbara counties",https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-086.aspx
+2015,15-086,"November 13, 2015","Anchovies, sardines",Commercial/recreational,open,Domoic acid,"Monterey, Santa Cruz, and Santa Barbara counties",https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-086.aspx
+2015,15-089,"December 9, 2015",Mussels,Recreational,open,Domoic acid,Humboldt and Del Norte counties,https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-089.aspx
+2015,15-094,"December 31, 2015","Dungeness crab, rock crab",Commercial/recreational,open,Domoic acid,Santa Barbara/Ventura County Line to 35°40'N latitude,https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-094.aspx
+2015,15-094,"December 31, 2015","Dungeness crab (viscera), rock crab (viscera)",Commercial/recreational,close,Domoic acid,Santa Barbara/Ventura County Line to 35°40'N latitude,https://www.cdph.ca.gov/Programs/OPA/Pages/NR15-094.aspx

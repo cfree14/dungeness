@@ -32,6 +32,12 @@ pcontam <- readRDS(file.path(stressordir, "pcontaminated_block_week.Rds")) %>%
 nwhales_ramp_wk <- read.csv(file.path(stressordir, "nwhales_by_ramp_zone_and_week.csv"), as.is=T) %>% 
   mutate(season_yr=substr(season, 1, 4) %>% as.numeric())
 
+# Inputs
+################################################################################
+
+# Read scheduled closures key
+scheduled_closures_key <- read.csv(file="models/popdy/v2/inputs/scheduled_closures.csv", as.is=T)
+
 # DA sampling
 ################################################################################
 

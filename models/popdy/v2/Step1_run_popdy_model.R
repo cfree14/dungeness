@@ -23,36 +23,66 @@ sapply(list.files(codedir), function(x) source(file.path(codedir, x)))
 # management: "none", "April 1 closure", "entanglement trigger", "marine life concentration trigger", "dynamic MLC block closures", "effort reduction"
 
 
-# Run model once
+# Run model
 ################################################################################
 
 # No fishing
-######################
+###################################################
 
-# Run one year with no fishing
-data1 <- run_model(yrs2sim=2015:2016, effort_dynamics="none", nweeks=5)
+# No fishing
+data1 <- run_model(yrs2sim=2015, effort_dynamics="none")
 plot_results(data1)
 
+
+
 # Constant fishing
-######################
+###################################################
 
-# Run one year with constant fishing (no management)
-data2 <- run_model(yrs2sim=2015, effort_dynamics="constant", nweeks=16)
-plot_results(data2)
+# Constant fishing (no management)
+data2 <- run_model(yrs2sim=2015, effort_dynamics="constant")
 plot_closures(data2)
+plot_results(data2)
 
-# Run one year with constant fishing (and management)
-data3 <- run_model(yrs2sim=2015, effort_dynamics="constant", management="entanglement trigger")
-plot_results(data3)
+# MLC closures
+#############################
+
+# Constant fishing (early closure)
+data3 <- run_model(yrs2sim=2015, effort_dynamics="constant", management="early closure")
 plot_closures(data3)
+plot_results(data3)
+
+# Constant fishing (scheduled closures)
+data4 <- run_model(yrs2sim=2015, effort_dynamics="constant", management="scheduled closures")
+plot_closures(data4)
+plot_results(data4)
+
+# Constant fishing (dynamic closures)
+data5 <- run_model(yrs2sim=2015, effort_dynamics="constant", management="dynamic closures")
+plot_closures(data5)
+plot_results(data5)
+
+# Entanglement triggers
+#############################
+
+# Entanglement triggered closure
+data6 <- run_model(yrs2sim=2015, effort_dynamics="constant", management="entanglement trigger", nweeks=20)
+plot_closures(data6)
+plot_results(data6)
+
+# Entanglement triggered gear reduction
+data7 <- run_model(yrs2sim=2015, effort_dynamics="constant", management="entanglement triggered gear reduction", mgmt_options=list(E_red_prop=0.5), nweeks=25)
+plot_closures(data7)
+plot_results(data7)
+
+
 
 # Effort reduction
 data4 <- run_model(yrs2sim=2015, effort_dynamics="constant", management="effort reduction", mgmt_options=list(E_red_prop=0.5))
 plot_results(data3)
 
 # Domoic management
-data5 <- run_model(yrs2sim=2015, effort_dynamics="constant", management="current domoic", 
-                   mgmt_options=list(ncrabs_sampled=6, delay_thresh=2, reopen_thresh=1))
+data5 <- run_model(yrs2sim=2014:2018, effort_dynamics="constant", management="current domoic", 
+                   mgmt_options=list(ncrabs_sampled=6, delay_thresh=3, reopen_thresh=0))
 plot_closures(data5, zone="da", plot_name="2015_da_mgmt")
 plot_results(data5)
 
@@ -60,11 +90,47 @@ plot_results(data5)
 # Realistic fishing
 ######################
 
+# No management
+###########################
+
 # Run one year with biomass-coupled fishing (no management)
 # Smaller b stretches slope, smaller a extends how long plateau lasts
 data4 <- run_model(yrs2sim=2014, effort_dynamics="biomass-coupled", a=0.4, b=0.1)
 plot_results(data4, plot_obs=F)
 plot_closures(data4)    #, plot_name="2015_no_management_closures")
+
+# Domoic managament
+###########################
+
+# Domoic management
+data5 <- run_model(yrs2sim=2014:2018, effort_dynamics="biomass-coupled", a=0.4, b=0.1,
+                   management=c("current domoic", "entanglement trigger"),
+                   mgmt_options=list(ncrabs_sampled=6, delay_thresh=3, reopen_thresh=1))
+plot_closures(data5, zone="ramp")
+plot_results(data5)
+
+
+# Whale management
+###########################
+
+# Entanglement trigger
+data5 <- run_model(yrs2sim=2014:2018, effort_dynamics="biomass-coupled", a=0.4, b=0.1, management="entanglement trigger")
+plot_results(data5)
+plot_closures(data5)
+
+# Scheduled closures
+data5 <- run_model(yrs2sim=2014:2018, effort_dynamics="biomass-coupled", a=0.4, b=0.1, management="scheduled closures")
+plot_closures(data5)
+plot_results(data5)
+
+
+# Entanglement triggered gear reduction
+data5 <- run_model(yrs2sim=2014, effort_dynamics="biomass-coupled", a=0.4, b=0.1, 
+                   management="entanglement triggered gear reduction", mgmt_options=list(E_red_prop=0.5), nweeks=25)
+plot_results(data5)
+plot_closures(data5)
+
+
 
 # Run one year with biomass-coupled fishing (and management)
 data5 <- run_model(yrs2sim=2015, effort_dynamics="biomass-coupled", a=0.4, b=0.1, management="marine life concentration trigger")

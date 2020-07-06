@@ -19,7 +19,7 @@ plot_results <- function(output, plot_obs=F, plot_name=NULL){
   # Split output
   results <- output$results
   params <- output$parameters
-  
+
   # Summarize weekly stats
   stats <- results %>% 
     # Calculate weekly stats
@@ -44,6 +44,12 @@ plot_results <- function(output, plot_obs=F, plot_name=NULL){
     group_by(season, week) %>% 
     summarise(n_entangled=sum(entanglements_n, na.rm=T)) %>% 
     filter(n_entangled>0)
+  
+  # Format max number of traps for plotting
+  max_traps <- output$max_traps %>% 
+    mutate(variable="# of traps\n(1000s)") %>% 
+    rename(value=ntraps_max) %>% 
+    mutate(value=value/1000)
   
   # Build observations dataset
   # obs <- data_wk_avg %>% 
@@ -72,8 +78,10 @@ plot_results <- function(output, plot_obs=F, plot_name=NULL){
     geom_area() +
     # Add observations
     # geom_line(obs, mapping=aes(x=week, y=value, fill=NULL), color="black", alpha=alpha_value) +
-    # Add entanglment lines
+    # Add entanglement lines
     geom_vline(entanglements, mapping=aes(xintercept=week), color="navyblue") +
+    # Plot maximum number of traps
+    geom_line(data= max_traps, mapping=aes(x=week, y=value), inherit.aes = F, linetype="dotted") +
     # Labels
     labs(x="Week", y="", title=title_text) +
     scale_fill_discrete(name="Region") +

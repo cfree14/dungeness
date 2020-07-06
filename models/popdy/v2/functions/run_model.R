@@ -3,8 +3,8 @@
 if(F){
   yrs2sim <- 2015
   effort_dynamics <- "constant" # none or constant
-  management <- "current domoic"
-  nweeks <- 25
+  management <- "scheduled closures"
+  nweeks <- 52
   mgmt_options <- list(delay_thresh=2, reopen_thresh=1, ncrabs_sampled=6)
   mgmt_options <- NULL
   # mgmt_options <- list(E_red_prop=0.5)
@@ -19,8 +19,12 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
   ############################################
   
   # Input options
-  mgmt_secenarios <- c("none", "April 1 closure", "entanglement trigger", "marine life concentration trigger", 
-                       "dynamic MLC block closures", "effort reduction",
+  mgmt_secenarios <- c("none", 
+                       "early closure", 
+                       "scheduled closures",
+                       "entanglement trigger", "entanglement triggered gear reduction",
+                       "marine life concentration trigger", 
+                       "dynamic closures", "effort reduction",
                        "current domoic")
   effort_secenarios <- c("none", "constant", "biomass-coupled")
   
@@ -41,9 +45,9 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
   Nmort_step <- Nmort / 52 # natural morality (wk-1) - Hordyk et al. 2015
   
   # Whale entanglement parameters
-  p_entanglement <- 1e-5 # probability that an encounter leads to an entanglement
-  obs_delay_min_wks <- 0 # minimum number of days from entanglement to observation of entanglement
-  obs_delay_max_wks <- 5 # maximum number of days from entanglement to observation of entanglement
+  p_entanglement <- 1e-5 # probability that an encounter leads to an observed entanglement
+  obs_delay_min_wks <- 0 # minimum number of weeks from entanglement to observation of entanglement
+  obs_delay_max_wks <- 5 # maximum number of weeks from entanglement to observation of entanglement
   mgmt_delay_wks <- 2 # number of weeks before management action is engaged
   
   # On converting mortality time-scales:
@@ -54,9 +58,9 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
   # or a weekly rate M = 4.6/52 = 0.088 week−1`, where tmax = 52 week"
   
   # Fleet parameters
-  ntraps_max <- 130000
+  ntraps_max_init <- 130000
   if("effort reduction" %in% management){
-    ntraps_max <- ntraps_max * mgmt_options$E_red_prop
+    ntraps_max_init <- ntraps_max_init * mgmt_options$E_red_prop
   }
   
   # Setup domoic management
@@ -77,13 +81,16 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
   # yr <- 2015; t <- 1; x <- 103
   for(yr in yrs2sim){
     
+    # Build containers
+    ######################################
+    
     # Time step key
     step_key <- time_step_key %>% 
       filter(year %in% yr)
     
     # Initial biomass
     b0_mt <- B0_stats$B0_mt_avg
-    b0_mt <- rnorm(n=1, mean=B0_stats$B0_mt_avg, sd=B0_stats$B0_mt_sd)
+    # b0_mt <- rnorm(n=1, mean=B0_stats$B0_mt_avg, sd=B0_stats$B0_mt_sd)
     
     # Build data container
     # Biomass = biomass at beginning of week
@@ -93,6 +100,7 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
     
     # Build entanglements container
     entanglements_df <- tibble(
+      season=as.character(),
       block_ramp=as.character(),
       block_dzone=as.character(),
       block_id=as.numeric(), 
@@ -100,6 +108,14 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
       week_obs_delay=as.numeric(), 
       week_observed=as.numeric(),  
       week_mgmt_action=as.numeric())
+    
+    # Build max number of traps container
+    max_traps_df <- tibble(season=paste(yr, yr-2000+1, sep="-"),
+                           week=1:nweeks,
+                           ntraps_max=ntraps_max_init)
+    
+    # Domoic acid sampling
+    ######################################
     
     # Domoic management
     if("current domoic" %in% management){
@@ -136,20 +152,31 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
       da_survey_results <- NULL
     }
     
-    # April 1st closure
-    if("April 1 closure" %in% management){
-      apr1date <- ymd(paste(yr+1, 4, 1, sep="-"))
-      pop_df <- pop_df %>% 
-        mutate(closure=ifelse(date >= apr1date & closure=="Season open", "April 1 closure", closure),
-               fishing_yn=ifelse(date >= apr1date, F, fishing_yn))
+    
+    # Schedule whale closures
+    ######################################
+    
+    # Whale surveys
+    whale_surveys <- conduct_whale_surveys()
+    
+    # Early closure
+    if("early closure" %in% management){
+      pop_df <- schedule_early_closure(pop_df, date_md="4/1")
+    }
+    
+    # Scheduled closures
+    if("scheduled closures" %in% management){
+      pop_df <- schedule_hotspot_closures(pop_df, closures_key=scheduled_closures_key, yr)
+    }
+    
+    # MLC-triggered closures
+    if("MLC-triggered closures" %in% management){
+      pop_df <- schedule_triggered_closures(pop_df, whale_survey)
     }
     
     # Dynamic block closures
-    if("dynamic MLC block closures" %in% management){
-      whales_sqkm_thresh <- 0.03
-      pop_df <- pop_df %>% 
-        mutate(closure=ifelse(whales_sqkm >= whales_sqkm_thresh & closure=="Season open", "Marine life concentration closure", closure),
-               fishing_yn=ifelse(whales_sqkm >= whales_sqkm_thresh, F, fishing_yn))
+    if("dynamic closures" %in% management){
+      pop_df <- schedule_dynamic_closures(pop_df, whales_sqkm_thresh=0.03)
     }
   
   
@@ -162,6 +189,10 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
       
       # Calculate CA wide values
       #########################################
+      
+      # Number of traps
+      ntraps_max_t <- max_traps_df %>% 
+        filter(week==t) %>% pull(ntraps_max)
       
       # If first time step
       if(t==1){
@@ -275,7 +306,7 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
                                  b0_mt = b0_mt,
                                  a = a, 
                                  b = b, 
-                                 ntraps_max=ntraps_max)
+                                 ntraps_max=ntraps_max_t) # maximum number of traps for this time step (could be reduced from initial based on mgmt)
         
         # Calculate fishing mortality
         F_block_t <- calc_f(E=E_block_t, q=q)
@@ -305,11 +336,15 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
         pop_df$encounters_n[pop_df$week==t & pop_df$block_id==x] <- N_encounters_block_t
         pop_df$entanglements_n[pop_df$week==t & pop_df$block_id==x] <- N_entanglements_block_t
         
-        # If any entanglements occured, record them and determine when they get observed
+        # If any entanglements occurred, record them and determine when they get observed
         if(N_entanglements_block_t>0){
           
+          # Print statement
+          print(paste0(N_entanglements_block_t, " entanglement(s) in block ", x, " (", ramp_zone, ") in week ", t))
+          
           # Build entanglement data
-          entanglement_obs <- tibble(block_ramp=ramp_zone,
+          entanglement_row <- tibble(season=paste(yr, yr-2000+1, sep="-"),
+                                     block_ramp=ramp_zone,
                                      block_dzone=da_zone,
                                      block_id=x,
                                      week_entangled=t,
@@ -320,27 +355,40 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
                    week_mgmt_action=week_observed+mgmt_delay_wks)
           
           # Add to entanglement container
-          entanglements_df <- bind_rows(entanglements_df, entanglement_obs)
-          
-        }
-        
-        # Management actions
-        ######################
-        
-        # Entanglement closure
-        if("entanglement trigger" %in% management){
-          
-          # If there is an entanglement, close zone for remainder of season
-          if(N_entanglements_block_t>0){
-            # Shut down fishing for remainder of season in this zone
-            pop_df$closure[pop_df$week > t & pop_df$block_ramp==ramp_zone & pop_df$closure=="Season open"] <- "Entanglement closure"
-            pop_df$fishing_yn[pop_df$week > t & pop_df$block_ramp==ramp_zone] <- F
-            print(paste0(ramp_zone, " closed in week ", t, " due to entanglement in block ", x))
-          }
+          entanglements_df <- bind_rows(entanglements_df, entanglement_row)
           
         }
         
       } # closes cell loop
+      
+      # If any entanglements were OBSERVED in this time step, schedule zonal closure
+      if("entanglement trigger" %in% management | "entanglement triggered gear reduction" %in% management){
+        if(t %in% entanglements_df$week_observed){
+          
+          # Entanglements observed this week
+          entanglement_obs <- entanglements_df %>% 
+            filter(week_observed==t)
+          zones_to_close <- sort(unique(entanglement_obs$block_ramp))
+          zones_to_close_text <- paste(zones_to_close, collapse = ", ")
+          wk_to_close <- unique(entanglement_obs$week_mgmt_action)
+            
+          # Print statement
+          block_zones_text <- paste(paste0(entanglement_obs$block_id, " (", entanglement_obs$block_ramp, ")"), collapse=", ")
+          
+          # If closing zone in response to trigger
+          if("entanglement trigger" %in% management){
+            print(paste0("Entanglement(s) observed in block(s) ", block_zones_text, " in week ", t, ". ", zones_to_close_text, " scheduled to close in week ", wk_to_close, "."))
+            pop_df$closure[pop_df$week >= wk_to_close & pop_df$block_ramp %in% zones_to_close & pop_df$closure=="Season open"] <- "Entanglement closure"
+            pop_df$fishing_yn[pop_df$week >= wk_to_close & pop_df$block_ramp %in% zones_to_close] <- F
+          }
+          
+          # If reducing gear in response to trigger...
+          if("entanglement triggered gear reduction" %in% management){
+            print(paste0("Entanglement(s) observed in block(s) ", block_zones_text, " in week ", t, ". Gear reduction scheduled for week ", wk_to_close, "."))
+            max_traps_df$ntraps_max[max_traps_df$week>=wk_to_close] <- max_traps_df$ntraps_max[1] * mgmt_options$E_red_prop
+          }
+        }
+      }
     
     } # closes time loop
     
@@ -349,10 +397,12 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
     pop_df_merge <- pop_df
     entanglements_df_merge <- entanglements_df
     da_survey_results_merge <- da_survey_results
+    max_traps_df_merge <- max_traps_df
   }else{
     pop_df_merge <- bind_rows(pop_df_merge, pop_df)
-    entanglements_df_merge <- bind_rows(ntanglements_df_merge, entanglements_df)
+    entanglements_df_merge <- bind_rows(entanglements_df_merge, entanglements_df)
     da_survey_results_merge <- bind_rows(da_survey_results_merge, da_survey_results)
+    max_traps_df_merge <- bind_rows(max_traps_df_merge, max_traps_df)
   }
     
   } # closes year loop
@@ -378,7 +428,8 @@ run_model <- function(yrs2sim, effort_dynamics, a, b, management="none", mgmt_op
   output <- list(results=pop_df_merge,
                  entanglements=entanglements_df_merge,
                  parameters=params, 
-                 da_survey_results=da_survey_results_merge)
+                 da_survey_results=da_survey_results_merge,
+                 max_traps=max_traps_df_merge)
   
   # Return results
   return(output)
